@@ -1,45 +1,87 @@
-\documentclass[12pt,twoside]{mitthesis}
-\usepackage{lgrind}
-\pagestyle{plain}
-
-
+\documentclass{ThesisStyle} 
 \begin{document}
+\selectlanguage{english}
+\input{Physics_Commands.tex}
 
 
-%\include{cover}
+%------------------------------------------------------------------------------
 
-\pagestyle{plain}
+%%%%%%%%%%% COVER
+\frontmatter
+\pagenumbering{roman}
+
+%\includepdf[pages=1-]{Cover/CoverTheseFinal.pdf}
+%\clearemptydoublepage
+
+%\includepdf[pages=1-]{Cover/AbstractThesisFinal.pdf}
+%\clearemptydoublepage
+
+%\includepdf[pages=1-]{frontmatter/Acknowledgements.pdf}
+%\clearemptydoublepage
+
+
+%------------------------------------------------------------------------------
+
+%%%%%%%%%%% TABLE OF CONTENTS
+\renewcommand{\contentsname}{Table of Contents}
+\maxtocdepth{subsection}
 \tableofcontents
-\newpage
+\addtocontents{toc}{\par\nobreak \mbox{}\hfill{\bf Page}\par\nobreak}
+\clearemptydoublepage
+
+
+%------------------------------------------------------------------------------
 
 %%%%%%%%%%% CHAPTERS
+\mainmatter
 
-\input{Chapters/Main/Introduction/Chapter}
+\import{Chapters/Main/Introduction/}{Chapter.tex}
+\clearemptydoublepage
 
-\input{Chapters/Main/Charmonia/Chapter}
+\import{Chapters/Main/Charmonia/}{Chapter.tex}
+\clearemptydoublepage
 
-\input{Chapters/Main/WBoson/Chapter}
+\import{Chapters/Main/WBoson/}{Chapter.tex}
+\clearemptydoublepage
 
-\input{Chapters/Main/Conclusion/Chapter}
+\import{Chapters/Main/Conclusion/}{Chapter.tex}
+\clearemptydoublepage
+
 
 %------------------------------------------------------------------------------
 
 %%%%%%%%%%% APPENDIX
-\clearpage
 \appendix
+
+
+%%Change the geometry for signal extraction plots
+%\newgeometry{margin=1cm,includefoot}
+%\restoregeometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %------------------------------------------------------------------------------
 
 %%%%%%%%%%% BIBLIOGRAPHY
-
-\begin{singlespace}
+\backmatter
+\bibliographystyle{kp}
 \bibliography{Thesis}
-\bibliographystyle{plain}
-\end{singlespace}
+\clearemptydoublepage
 
 
-\listoffigures
+%------------------------------------------------------------------------------
+
+%%%%%%%%%%% LIST OF FIGURES AND TABLES
+\clearemptydoublepage
 \listoftables
+\addtocontents{lot}{\par\nobreak\textbf{{\scshape Table} \hfill Page}\par\nobreak}
+
+
+\clearemptydoublepage
+\listoffigures
+\addtocontents{lof}{\par\nobreak\textbf{{\scshape Figure} \hfill Page}\par\nobreak}
+\clearemptydoublepage
+
 
 % END OF THESIS
 \end{document}
