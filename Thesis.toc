@@ -1,0 +1,12 @@
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1.1}Physics}{3}
+\contentsline {section}{\numberline {1.2}CMS Detector}{3}
+\contentsline {chapter}{\numberline {2}Charmonia}{5}
+\contentsline {section}{\numberline {2.1}Theory}{5}
+\contentsline {section}{\numberline {2.2}Analysis}{5}
+\contentsline {section}{\numberline {2.3}Results}{5}
+\contentsline {chapter}{\numberline {3}W Boson}{7}
+\contentsline {section}{\numberline {3.1}Theory}{7}
+\contentsline {section}{\numberline {3.2}Analysis}{7}
+\contentsline {section}{\numberline {3.3}Results}{7}
+\contentsline {chapter}{\numberline {4}Conclusion}{9}

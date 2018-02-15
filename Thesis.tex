@@ -1,0 +1,45 @@
+\documentclass[12pt,twoside]{mitthesis}
+\usepackage{lgrind}
+\pagestyle{plain}
+
+
+\begin{document}
+
+
+%\include{cover}
+
+\pagestyle{plain}
+\tableofcontents
+\newpage
+
+%%%%%%%%%%% CHAPTERS
+
+\input{Chapters/Main/Introduction/Chapter}
+
+\input{Chapters/Main/Charmonia/Chapter}
+
+\input{Chapters/Main/WBoson/Chapter}
+
+\input{Chapters/Main/Conclusion/Chapter}
+
+%------------------------------------------------------------------------------
+
+%%%%%%%%%%% APPENDIX
+\clearpage
+\appendix
+
+%------------------------------------------------------------------------------
+
+%%%%%%%%%%% BIBLIOGRAPHY
+
+\begin{singlespace}
+\bibliography{Thesis}
+\bibliographystyle{plain}
+\end{singlespace}
+
+
+\listoffigures
+\listoftables
+
+% END OF THESIS
+\end{document}
