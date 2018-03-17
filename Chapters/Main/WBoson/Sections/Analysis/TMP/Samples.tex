@@ -1,0 +1,50 @@
+\subsection{Samples} \label{sec:WBoson_Analysis_Samples}
+
+The \W-boson production is analyzed using proton-lead (\pPb) collision data taken at a center-of-mass energy per nucleon pair of $\sqrtsnn = 8.16$~\TeV by the CMS collaboration at the end of 2016. The total integrated luminosity of the recorded data corresponds to 173.4~\nbinv, currently known within 5$\%$~\cite{LUMI}.
+
+In the first part of the \pPb run (labelled as \RunPbp), the proton was heading towards negative pseudorapidity $-\eta$, according to the CMS detector convention~\cite{CMS}, with an energy of 6.5~\TeV and colliding a lead nuclei at 2.56~\TeV~\cite{LHC}. In the second part of the \pPb run (labelled as \RunpPb), the proton was going towards $+\eta$, still boosted compared to the lead nuclei. The integrated luminosity of the \RunPbp and \RunpPb runs were 62.6~\nbinv and 110.8~\nbinv, respectively.
+
+Due to the energy difference between the \pPb colliding beams, the nucleon-nucleon CM frame is not at rest with respect to the laboratory (LAB) frame. Massless particles emitted at a pseudorapidity $\eta_{CM}$ in the CM frame experience a longitudinal boost as described in equation \ref{eq:CMShift}.
+
+\begin{equation}
+\abs{\Delta{\eta}_{CM}} = \frac{1}{2}\times\left|\ln\left(\frac{Z_{Pb}\times A_{p}}{Z_{p}\times A_{Pb}}\right)\right| = \frac{1}{2}\times\ln\left(\frac{208}{82}\right) = 0.465
+\label{eq:CMShift}
+\end{equation}
+
+The shift between the CM and LAB frames depends on the orientation of the beams, and are applied in the following way:
+
+\begin{itemize}
+\item \RunPbp\ (1st run): $\eta_{LAB} = \eta_{CM} - 0.465$
+\item \RunpPb\ (2nd run): $\eta_{LAB} = \eta_{CM} + 0.465$
+\end{itemize}
+
+The \W-boson results presented in \sect{sec:WBoson_Results} are expressed in the CM frame with the proton-going side defining the region of $+\eta$ according to the CMS convention~\cite{CMS}.
+
+%%------------------------------------------------------------%%
+\subsubsection{Simulation} \label{sec:WBoson_Analysis_MCSamples}
+
+Fully reconstructed Monte Carlo (MC) samples are used to describe the \W-boson and the different sources of Electro-Weak (EWK) backgrounds.
+
+DESCRIBE THE BACKGROUNDS
+
+The MC samples were generated using the Next-to-Leading order (NLO) generator \POWHEG v2 \cite{POWHEG,POWHEG_2,POWHEGBOX}. In order to take into account NLO Quantum Chromo-Dynamic (QCD) and Electro-Weak (EWK) corrections, the \POWHEGBOX packages \verb#W_ew-BMMNP# \cite{POWHEGBOX_W_ew_BMNNP} and \verb#Z_ew-BMMNPV# \cite{POWHEGBOX_Z_ew_BMNNP} are used to generate the $\pp\to\W\to l\PGnl$ and $\pp\to\DY\to l^{+}l^{-}$ processes, respectevely. The $\pp\to\ttbar$ are generated using the \POWHEGBOX package \verb#hvq# \cite{POWHEGBOX_hvq}, which is a heavy flavour quark generator at NLO QCD. 
+
+Since the data is based on \pPb collisions, the simulation of both proton-proton (\pp) and proton-neutron (\pn) collisions is important. The simulation was performed using \POWHEG by scaling the parton densities based on the isospin symmetry between up and down quarks. This is done by first generating \pp collisions using the CT14 parton distribution function~\cite{CT14}. Then the nuclear corrections are applied using the EPPS16 nuclear modification factors derived for Pb ions \cite{EPPS16}. And finally the parton densities are scaled according to \eq{eq:PbScaling}, where A is the mass number and Z is the atomic number, which for the lead isotope corresponds to 208 and 82, respectively. The parton showering is performed by hadronizing the \POWHEG events in \PYTHIA 8.212~\cite{PYTHIA8} with the CUETP8M1 underlying event (UE) tune~\cite{PYTHIA_TUNE,UE_pp}.
+
+\begin{equation}
+\label{eq:PbScaling}
+\cPqu_{\Pb} = \frac{Z}{A}\times{\cPqu_{\Pp}} + \frac{A-Z}{A}\times{\cPqd_{\Pp}}  \qquad\text{and}\qquad  \cPqd_{\Pb} = \frac{Z}{A}\times{\cPqd_{\Pp}} + \frac{A-Z}{A}\times{\cPqu_{\Pp}}
+\end{equation}
+
+The decay of \PGt particles is handled in \PYTHIA using the \TAUOLA C++ Interface 1.1.5~\cite{TAUOLA}, including final state radiative (FSR) QED corrections using~\PHOTOS 2.15 \cite{PHOTOS}. The full CMS detector response is simulated in all MC samples, based on \GEANTfour~\cite{GEANT4}, considering a realistic aligment and calibration of the beam spot and the different sub-detectors of CMS, tuned on data. The MC events are reconstructed with the standard CMS \pp reconstruction software used during 2016 data taking.
+
+To consider a more realistic distribution of the underlying environment present in the \pPb collisions, the MC signal events were embedded in a minimum bias sample generated with \EPOS~\cite{EPOS}, taking into account the \pPb boost direction. The EPOS MC samples were tuned to reproduce the global event properties of the \pPb data such as the charged-hadron transverse momentum (\pt) spectrum and the particle multiplicity \cite{dNdEta_pPb}.
+
+Since the CMS detector is symmetric with respect to the beam orientation, the \pPb and \Pbp samples are merged in order to maximize the statistics of the MC and data samples. This is done by first flipping the sign of the pseudorapidity of particles from the \RunPbp sample measured in the laboratory frame, and then combine them with the events from the \RunpPb sample. In the case of the simulated samples, the events are reweighted before merging them, so that the simulated luminosity match the integrated luminosity recorded in each \pPb run. The combined sample is labelled as "\pA" and corresponds to \pPb collisions with the proton always going towards $+\eta$.
+
+
+% END OF SUBSECTION
+
+
+
+

@@ -1,70 +1,115 @@
-\newcommand{\ncoll}{\ensuremath{N_\text{coll}}}
-\newcommand{\npart}{\ensuremath{N_\text{part}}}
-\newcommand{\npartNcoll}{\ensuremath{\langle N_\text{part} \rangle_{N_\text{coll}}}}
-\newcommand {\pp}        {\ensuremath{\mathrm {p\kern-0.05em p}}}
-\newcommand {\PbPb}      {\ensuremath{\mathrm{Pb\mbox{--}Pb}}}
-\newcommand {\PbPbinbf}  {\ensuremath{\mathrm{\mbox{\bf{Pb}--\bf{Pb}}}}}
-\newcommand {\CuCu}      {\ensuremath{\mathrm{Cu\mbox{--}Cu}}}
-\newcommand {\AuAu}      {\ensuremath{\mathrm{Au\mbox{--}Au}}}
-\newcommand {\nucnuc}    {\ensuremath{\mathrm{A\mbox{--}A}}}
-\newcommand {\pPb}       {\ensuremath{\mathrm{p\mbox{--}Pb}}}
-\newcommand\abs[1]{\left|#1\right|}
+%%%%%%%%%%%%%% W ANALYSIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand {\ee}        {\ensuremath{e^+e^-}}
-\newcommand {\mumu}      {\ensuremath{\mu^+\mu^-}}
-\newcommand {\mumuMB}    {\ensuremath{\mu \mu \mbox{-} \mathrm{MB}}}
-\newcommand {\invmass}      {\ensuremath{M_{\mu \mu}}}
-\newcommand {\ccbar}     {\ensuremath{{\mathrm c}\bar{{\mathrm c}}}}
-\newcommand {\ppbar}     {\ensuremath{{\mathrm p}\bar{{\mathrm p}}}}
-\newcommand {\qcbar}     {\ensuremath{\bar{{\mathrm c}}}}
-\newcommand {\qc}        {\ensuremath{\mathrm c}}
-\newcommand {\jpsi}      {\ensuremath{\mathrm{J}\kern-0.02em/\kern-0.05em\psi}}
-\newcommand {\psip}      {\ensuremath{\psi\mathrm{(2S)}}}
-\newcommand {\chic}      {\ensuremath{\chi_{c}}}
-\newcommand {\psiratio}  {\ensuremath{\left[ \psip / \jpsi \right]}}
-\newcommand {\ycms}        {\ensuremath{y_{\mathrm{cms}} }}
-\newcommand {\pt}        {\ensuremath{p_{\mathrm{\textsc{t}}}}}
-\newcommand {\ptsq}      {\ensuremath{p_{\mathrm{\textsc{t}}}^{2}}}
-\newcommand {\meanpt}    {\ensuremath{\langle p_{\mathrm{\textsc{t}}} \rangle}}
-\newcommand {\meanptJpsi}    {\ensuremath{\langle p_{\mathrm{\textsc{t}}} \rangle^{\jpsi}}}
-\newcommand {\meanptsq}  {\ensuremath{\langle p_{\mathrm{\textsc{t}}}^{2} \rangle}}
-\newcommand {\rAA}       {\ensuremath{r_\mathrm{AA}}}
-\newcommand {\pttrig}    {\ensuremath{p_{\mathrm{\textsc{t}}}^{\mathrm{trig}}}}
-\newcommand {\y}         {\ensuremath{y}}
-\newcommand {\avrg}[1]   {\ensuremath{\langle #1\rangle}}
-\newcommand {\sqrtSnn}           {\ensuremath{\sqrt{s_{_{\mathrm{NN}}}}}}
-\newcommand {\sqrtSnninbf}       {\ensuremath{\sqrt{s_{_{\mathrm{NN}}}}}}
-\newcommand {\sqrtSnnE}[2][TeV]  {$\sqrtSnn = #2\,\mathrm{#1}$}
-\newcommand {\sqrtSnnEinbf}[2][TeV]  {$\sqrtSnninbf = #2\,\mathrm{#1}$}
-\newcommand {\sqrtS}             {\ensuremath{\sqrt{s}}\,}
-\newcommand {\sqrtSE}[2][TeV]    {$\sqrtS = #2\,\mathrm{#1}$}
-\newcommand {\Raa}       {\ensuremath{R_\mathrm{AA}}}
-\newcommand {\RaaRatio}       {\ensuremath{R_\mathrm{AA}^{\frac{5.02}{2.76}}}}
-\newcommand {\raa}       {\ensuremath{r_\mathrm{AA}}}
-\newcommand {\RpPb}       {\ensuremath{R_\mathrm{pPb}}}
-\newcommand {\Taa}       {\ensuremath{\langle T_\mathrm{AA} \rangle}}
-\newcommand {\Ncoll}     {\ensuremath{\langle N_{\mathrm{coll}} \rangle}}
-\newcommand {\Npart}     {\ensuremath{\langle N_{\mathrm{part}} \rangle}}
+% Analysis Observables
+\newcommand{\ChgAsym}{{\cal C}\xspace}
+\newcommand{\RFB}{\ensuremath{\text{R}_\text{FB}}\xspace}
+\newcommand{\RFBp}{\ensuremath{\text{R}_\text{FB}^+}\xspace}
+\newcommand{\RFBm}{\ensuremath{\text{R}_\text{FB}^-}\xspace}
 
-\newcommand {\mev}       {\ensuremath{\,\mathrm{MeV}}}
-\newcommand {\gev}       {\ensuremath{\,\mathrm{GeV}}}
-\newcommand {\tev}       {\ensuremath{\,\mathrm{TeV}}}
-\newcommand {\mevc}      {\ensuremath{\,\mathrm{MeV}\kern-0.05em/\kern-0.02em c}}
-\newcommand {\mevcc}     {\ensuremath{\,\mathrm{MeV}\kern-0.05em/\kern-0.02em c^2}}
-\newcommand {\gevc}      {\ensuremath{\,\mathrm{GeV}\kern-0.05em/\kern-0.02em c}}
-\newcommand {\gevcc}     {\ensuremath{\,\mathrm{GeV}\kern-0.05em/\kern-0.02em c^2}}
-\newcommand {\gevcsq}    {\ensuremath{\,\mathrm{GeV}^2\kern-0.05em/\kern-0.02em c^2}}
-\newcommand {\gevfmcube} {\ensuremath{\,\mathrm{GeV}\kern-0.05em/\kern-0.02em \mathrm{fm}^3}}
-%\newcommand {\Ae}        {\ensuremath{A\kern-0.1em\times\kern-0.1em\varepsilon}}
-\newcommand {\Ae}        {\ensuremath{A\varepsilon}}
-\newcommand {\Fnorm}     {\ensuremath{F_{\mathrm{norm}}}}
-\newcommand {\Tc}        {\ensuremath{T_{\mathrm{c}}}}
+% Physics Particles and Decays
+\newcommand{\PW}{\ensuremath{\text{W}}}
+\newcommand{\PWp}{\ensuremath{\text{W}^+}}
+\newcommand{\PWm}{\ensuremath{\text{W}^-}}
+\newcommand{\PZ}{\ensuremath{\text{Z}}\xspace}
+\newcommand{\PGm}{\ensuremath{\mu}\xspace} % muon
+\newcommand{\PGmm}{\ensuremath{\mu^-}\xspace} % muon
+\newcommand{\PGmp}{\ensuremath{\mu^+}\xspace} % muon
+\newcommand{\PGmpm}{\ensuremath{\mu^\pm}\xspace} % muon
+\newcommand{\PGn}{\ensuremath{\nu}\xspace} % generic neutrino
+\newcommand{\PAGn}{\ensuremath{\overline{\nu}}\xspace} % generic neutrino
+\newcommand{\PGnl}{\ensuremath{\nu_\text{l}}\xspace} % lepton neutrino
+\newcommand{\PAGnl}{\ensuremath{\overline{\nu}_\text{l}}\xspace} % anti-lepton neutrino
+\newcommand{\PGnGm}{\ensuremath{\nu_\PGm}\xspace} % muon neutrino
+\newcommand{\PAGnGm}{\ensuremath{\overline{\nu}_\PGm}\xspace} % anti-muon neutrino
+\newcommand{\PGnGt}{\ensuremath{\nu_\PGt}\xspace} % tau neutrino
+\newcommand{\PAGnGt}{\ensuremath{\overline{\nu}_\PGt}\xspace} % anti-tau neutrino
+\newcommand{\PGt}{\ensuremath{\tau}\xspace} % tau
+\newcommand{\PAGt}{\ensuremath{\overline{\tau}}\xspace} % anti-tau
+\newcommand{\PQt}{\ensuremath{\text{t}}\xspace} % t
+\newcommand{\PQb}{\ensuremath{\text{b}}\xspace} % b
+\newcommand{\cPqu}{\ensuremath{\text{u}}} % u for u quark
+\newcommand{\cPqd}{\ensuremath{\text{d}}} % d for d quark
+\newcommand{\cPaqu}{\ensuremath{\overline{\text{u}}}} % u for u quark
+\newcommand{\cPaqd}{\ensuremath{\overline{\text{d}}}} % d for d quark
+%%
+\newcommand{\mumu}{\ensuremath{\PGmp\PGmm}\xspace}
+\newcommand{\tautau}{\ensuremath{\PGt\PAGt}\xspace}
+\newcommand{\W}{\ensuremath{\PW}\xspace}
+\newcommand{\Wp}{\ensuremath{\PWp}\xspace}
+\newcommand{\Wm}{\ensuremath{\PWm}\xspace}
+\newcommand{\DY}{\ensuremath{\PZ/\gamma*}\xspace} % Drell-Yan
+\newcommand{\DYToMuMu}{\ensuremath{\DY\to\mumu}\xspace}
+\newcommand{\Z}{\ensuremath{\PZ}\xspace}
+\newcommand{\ZToMuMu}{\ensuremath{\Z\to\mumu}\xspace}
+\newcommand{\DYToTauTau}{\ensuremath{\DY\to\tautau}\xspace}
+\newcommand{\ZToTauTau}{\ensuremath{\Z\to\tautau}\xspace}
+\newcommand{\WToMuNu}{\ensuremath{\W\to\PGm\PGnGm}\xspace}
+\newcommand{\WToMuNuPl}{\ensuremath{\PWp\to\PGmp\PGnGm}\xspace}
+\newcommand{\WToMuNuMi}{\ensuremath{\PWm\to\PGmm\PAGnGm}\xspace}
+\newcommand{\WToTauNu}{\ensuremath{\W\to\PGt\PGnGt}\xspace}
+\newcommand{\WToTauNuPl}{\ensuremath{\PWp\to\PAGt\PGnGt}\xspace}
+\newcommand{\WToTauNuMi}{\ensuremath{\PWm\to\PGt\PAGnGt}\xspace}
+\newcommand{\ttbar}{\ensuremath{\text{t}\overline{\text{t}}}\xspace} % t-tbar
+\newcommand{\JPsi}{\ensuremath{\text{J}\hspace{-.08em}/\hspace{-.14em}\psi}\xspace} % J/Psi (no mass)
 
-\newcommand {\red}[1]      {\textcolor{red}{#1}}
-\newcommand {\green}[1]    {\textcolor{green}{#1}}
-\newcommand {\blue}[1]     {\textcolor{blue}{#1}}
-\newcommand {\orange}[1]   {\textcolor{orange}{#1}}
-\renewcommand{\arraystretch}{1.2} % more vertical space in tables, look nicer
+% Collision Types
+\newcommand{\Pp}{\ensuremath{\text{p}}}
+\newcommand{\Pb}{\ensuremath{\text{Pb}}\xspace}
+\newcommand{\pp}{{\ensuremath{\Pp\Pp}}\xspace}
+\newcommand{\pn}{{\ensuremath{{\Pp}n}}\xspace}
+\newcommand{\pPb}{\ensuremath{\Pp\text{Pb}}\xspace}
+\newcommand{\Pbp}{\ensuremath{\text{Pb}\Pp}\xspace}
+\newcommand{\RunpPb}{\ensuremath{\Pp-\Pb}\xspace}
+\newcommand{\RunPbp}{\ensuremath{\Pb-\Pp}\xspace}
+\newcommand{\pA}{\ensuremath{\Pp-\text{A}}\xspace}
 
-\newcommand {\ThisThesis}     {\textbf{\color{red}[This thesis]}}
+% Physics Units
+\newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
+\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+\newcommand{\GeVc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+\newcommand{\GeVcc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+\newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^\text{$-$1}}}\xspace}
 
+% Physics Symbols ...
+\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\Em}{\ensuremath{E\hspace{-0.6em}/}\xspace}
+\newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\MET}{\ETm}
+\newcommand{\ETmiss}{\ETm}
+\newcommand{\ptmiss}{\ensuremath{\pt^\text{miss}}\xspace}
+\newcommand{\ETslash}{\ensuremath{E_{\mathrm{T}}\hspace{-1.1em}/\kern0.45em}\xspace}
+\newcommand{\VETslash}{\ensuremath{{\vec E}_{\mathrm{T}}\hspace{-1.1em}/\kern0.45em}\xspace}
+\newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
+\newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
+\newcommand{\sqrtsnn}{\ensuremath{\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}}\xspace}
+\newcommand{\Lumi}{\ensuremath{\mathcal{L}}\xspace}%both upper and lower
+
+% Software Programs
+\newcommand{\CMSSW} {{\textsc{cmssw}}\xspace}
+\newcommand{\EVTGEN} {{\textsc{evtgen}}\xspace}
+\newcommand{\FEWZ} {{\textsc{fewz}}\xspace}
+\newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}
+\newcommand{\GEANT} {{\textsc{geant}}\xspace}
+\newcommand{\POWHEG} {{\textsc{powheg}}\xspace}
+\newcommand{\HIJING} {{\textsc{hijing}}\xspace}
+\newcommand{\HYDJET} {{\textsc{hydjet}}\xspace}
+\newcommand{\MCFM} {\textsc{mcfm}\xspace}
+\newcommand{\PHOTOS} {\textsc{photos}\xspace}
+\newcommand{\PYTHIA} {{\textsc{pythia}}\xspace}
+\newcommand{\TAUOLA} {\textsc{tauola}\xspace}
+\newcommand{\POWHEGBOX} {{\textsc{powheg}}-{\textsc{box}}\xspace}
+\newcommand{\EPOS} {{\textsc{epos}}\xspace}
+\newcommand{\PYQUEN} {{\textsc{pyquen}}\xspace}
+
+% Operators
+\newcommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
+\newcommand{\eexp}[1]{\ensuremath{{\text e}^{#1}}\xspace}
+
+% References to Equations, Figures, Tables, Sections or Chapters
+\newcommand{\eq}[1]{Eq.~\eqref{#1}\xspace}
+\newcommand{\fig}[1]{Fig.~\ref{#1}\xspace}
+\newcommand{\tab}[1]{Table~\ref{#1}\xspace}
+\newcommand{\sect}[1]{Section~\ref{#1}\xspace}
+\newcommand{\chp}[1]{Chapter~\ref{#1}\xspace}

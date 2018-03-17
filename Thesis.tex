@@ -1,8 +1,12 @@
-\documentclass{ThesisStyle} 
-\begin{document}
+\documentclass{ThesisStyle}
 \selectlanguage{english}
-\input{Physics_Commands.tex}
+\usepackage{amsmath,amssymb}
+\usepackage{xspace}
+\usepackage{lineno}
 
+\begin{document}
+
+\input{Physics_Commands.tex}
 
 %------------------------------------------------------------------------------
 
@@ -41,7 +45,9 @@
 \import{Chapters/Main/Charmonia/}{Chapter.tex}
 \clearemptydoublepage
 
+\begin{linenumbers}
 \import{Chapters/Main/WBoson/}{Chapter.tex}
+\end{linenumbers}
 \clearemptydoublepage
 
 \import{Chapters/Main/Conclusion/}{Chapter.tex}

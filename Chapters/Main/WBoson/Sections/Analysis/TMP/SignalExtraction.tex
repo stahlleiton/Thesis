@@ -1,0 +1,232 @@
+
+\subsection{Signal Extraction}\label{sec:WBoson_Analysis_SignalExtraction}
+
+The signal and background are extracted by fitting the \ETslash distribution in data. The main background sources come from QCD and electroweak processes.
+
+The QCD background includes events where a high $p_{T}$ muon is produced from a semileptonic decay of quarks (multijet background, see \sect{sec:WBoson_Analysis_BackgroundSources}). Most of these muons come from \PQb\ quark decays and light meson (pion and kaon) decays in flight. The dominant electroweak processes are the \DYToMuMu (Drell-Yan) and \WToTauNu as mentioned in \sect{sec:WBoson_Analysis_EWKBackground}. The shape of the signal and background is estimated by using MET templates to describe the signal and the electroweak backgrounds, and a MET functional form derived from data to describe the multijet background as explained in \sect{sec:WBoson_Analysis_QCDBackground}.
+
+The simulated samples of \DYToMuMu , \DYToTauTau , \WToMuNu and \WToTauNu are normalized to the total integrated luminosity recorded in data using the NLO cross sections derived from the \POWHEG MC samples scaled by the number of nucleons in the Pb ion. The normalization is done by reweighting all MC events by a global factor defined as $w_{MC} = (\sigma\times\Lumi_{data})/N_{gen}$. In the case of the \ttbar MC, the samples are normalized using $\sigma_{\ttbar} = 45~\nbinv$, which corresponds to the total cross section measured in \pPb collisions at 8.16~\TeV recently published by CMS \cite{HIN-17-002}. Table \ref{tab:MCSamples} summarizes all the cross sections used to normalize the MC samples.
+
+Several corrections are applied to the MC samples before producing the templates, in order to describe better the data. First, the event activity in the simulations are reweighted using the energy deposited in the HF calorimeters as explained in \sect{sec:WBoson_Analysis_EventActivityReweighting}. Afterwards, since the muon $\eta_{CM}$ distribution is used to bin the data, the MC muon efficiency is corrected by applying the nominal TnP scale factors event by event, as mentioned in \sect{sec:WBoson_Analysis_CorrectedEfficiency}. And finally, the resolution of the hadronic recoil component of the MET in MC is corrected as shown in \sect{sec:WBoson_Analysis_RecoilCorrection}, improving the agreement of the \ETslash distribution between data and MC.
+
+Once the signal and the EWK MC samples are fully corrected, the MC templates are extracted in each muon $\eta_{CM}$ bin, by creating a histogram of the MET distribution in bins of 2~\GeVc.
+
+
+\subsubsection{QCD Background}\label{sec:WBoson_Analysis_QCDBackground}
+
+
+The QCD background is described using a data-driven method. The functional form of the multijet \ETslash distribution is derived by fitting the MET in a region dominated by non-isolated muons selected after inverting the nominal muon isolation cut mentioned in \sect{sec:WBoson_Analysis_MuonIsolation}. All analysis cuts are applied except for the muon isolation cut. The general strategy is to first determine the dependence of the QCD functional form with respect to the muon isolation and then extrapolate the QCD shape down to low muon isolation values (signal region).
+
+The nominal QCD \ETslash functional form is based on a modified version of the Rayleigh distribution as shown in \eq{eq:QCD_Nominal}.
+
+\begin{equation}
+f_{QCD}\left(x\right) = x {e}^{-{{x}^{2}}/{\left(2\left(\sigma_{0} + \sigma_{1}\tilde{x} + \sigma_{2}\left(2{\tilde{x}}^{2}-1\right)\right)^{2}\right)}} \quad \textrm{, where} \quad \tilde{x} = (x/50) - 1
+\label{eq:QCD_Nominal}
+\end{equation}
+
+The free parameters are $\sigma_{0}$ ,  $\sigma_{1}$ and $\sigma_{2}$. The fit parameters have been arranged following a Chebyshev polynomial of second order, to reduce the correlation between parameters and improve the stability of the fits.
+
+In order to derive the muon isolation dependence of the QCD parameters, the \ETslash distribution function is fitted over the following five muon isolation bins : [ 0.4 , 0.5 , 0.6 , 0.7 , 0.8 , 0.9 ]. The normalization of the QCD background is left free in the fits to the data.
+
+The bins with lower muon isolation values ($\text{iso} < 0.4$) are discarded due to the large contamination from EWK processes. The results of the QCD fits for each muon isolation bin are shown in \fig{fig:QCD_Fits}, for positive and negative muon decays.
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuMi_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_40_50.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuMi_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_50_60.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuMi_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_60_70.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuMi_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_70_80.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuMi_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_80_90.pdf}
+%%
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuPl_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_40_50.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuPl_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_50_60.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuPl_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_60_70.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuPl_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_70_80.pdf}
+  \includegraphics[width=0.19\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/DATA/PA/PLOT_MET_DATA_QCDToMuPl_PA_Model_ModifiedRayleigh_MuEtaCM_-286_193_MuIso_80_90.pdf}
+ \end{center}
+ \caption{Fit of the QCD background for $0.4~<~\text{iso}~<~0.5$ , $0.5~<~\text{iso}~<~0.6$ , $0.6~<~\text{iso}~<~0.7$ , $0.7~<~\text{iso}~<~0.8$ and $0.8~<~\text{iso}~<~0.9$. The top and bottom plots corresponds to negative and positve muon decays, respectively. Only the results inclusive in muon $\eta_{CM}$ are shown.}
+ \label{fig:QCD_Fits}
+\end{figure}
+
+The dependence of the three parameters $\sigma_{0}$ ,  $\sigma_{1}$ and $\sigma_{2}$ with the muon isolation variable is fitted by a linear function. The results of the linear fits are then used to  extrapolate the shape of the QCD background to the signal region (average muon isolation of 0.03), as shown in \fig{fig:QCD_Extrapolation}. The values of the parameters corresponding to this extrapolation are given in \tab{tab:QCD_Extrapolation}.
+
+\begin{table}[htbp]
+  \begin{center}
+  \begin{tabular}{|c|c|c|}\hline
+  Parameter & $QCD \to \mu^{-}$ & $QCD \to \mu^{+}$ \\\hline
+  $\sigma_{0}$ & 14.59$\pm$0.18 & 14.72$\pm$0.17 \\\hline
+  $\sigma_{1}$ & 6.30$\pm$0.24 & 6.76$\pm$0.23 \\\hline
+  $\sigma_{2}$ & 0.49$\pm$0.15 & 0.47$\pm$0.13 \\\hline
+  \end{tabular}
+  \end{center}
+  \caption{QCD shape parameters in the inclusive $\eta_{CM}$ bin, extrapolated to the signal region ($\text{iso} = 0.03$).}
+  \label{tab:QCD_Extrapolation}
+\end{table}
+
+The dependence on $\eta_{CM}$ of the QCD shape has been studied and the results are shown in \fig{fig:QCD_Extrapolation_Eta}. The extrapolated results do not vary significantly with respect to $\eta_{CM}$ and have been found to be consistent with the $\eta$-inclusive results, within the fit uncertainties. Therefore, the $\eta$-inclusive extrapolated results for each muon charge are used to fix the QCD background shape when fitting the signal.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION/PA/graph_Sigma0_QCDToMuMi_PA_-29_eta_19_250_pt_1000000.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION/PA/graph_Sigma1_QCDToMuMi_PA_-29_eta_19_250_pt_1000000.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION/PA/graph_Sigma2_QCDToMuMi_PA_-29_eta_19_250_pt_1000000.pdf}
+%%
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION/PA/graph_Sigma0_QCDToMuPl_PA_-29_eta_19_250_pt_1000000.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION/PA/graph_Sigma1_QCDToMuPl_PA_-29_eta_19_250_pt_1000000.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION/PA/graph_Sigma2_QCDToMuPl_PA_-29_eta_19_250_pt_1000000.pdf}
+ \end{center}
+ \caption{Extrapolation of the parameters of the QCD background shape to the signal region: $\sigma_{0}$ (left), $\sigma_{1}$ (middle) and $\sigma_{2}$ (right), separated in negative (top) and positive (bottom) muon decays. Only the results inclusive in muon $\eta_{CM}$ are shown.}
+ \label{fig:QCD_Extrapolation}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION_ETA/PA/exGraph_ETA_Sigma0_QCDToMuMi_PA.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION_ETA/PA/exGraph_ETA_Sigma1_QCDToMuMi_PA.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION_ETA/PA/exGraph_ETA_Sigma2_QCDToMuMi_PA.pdf}
+%%
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION_ETA/PA/exGraph_ETA_Sigma0_QCDToMuPl_PA.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION_ETA/PA/exGraph_ETA_Sigma1_QCDToMuPl_PA.pdf}
+  \includegraphics[width=0.27\textwidth]{Figures/WBoson/Analysis/SignalExtraction/QCD_Template/EXTRAPOLATION_ETA/PA/exGraph_ETA_Sigma2_QCDToMuPl_PA.pdf}
+ \end{center}
+ \caption{Muon $\eta_{CM}$ dependence of the QCD background shape parameters extrapolated to the signal region: $\sigma_{0}$ (left), $\sigma_{1}$ (middle) and $\sigma_{2}$ (right), separated in negative (top) and positive (bottom) muon decays. The red line represents the inclusive result. The position and width of the green box represents the weighted mean and RMS, respectively.}
+ \label{fig:QCD_Extrapolation_Eta}
+\end{figure}
+
+\subsubsection{Electroweak Background}\label{sec:WBoson_Analysis_EWKBackground}
+
+Among all the electroweak background sources, the dominant one in the \W signal region is the Drell-Yan process. The Drell-Yan background is mainly made of \ZToMuMu events, where one of the muons is produced outside of the detector coverage ($|\eta|<$ 2.4) or did not pass the selection criteria. The other type of EWK sources considered in this analysis are \DYToTauTau, \WToTauNu and \ttbar. The EWK background represents around $13.3\%$ of the events in the signal region, divided as: \DYToMuMu ($9.4\%$), \WToTauNu ($2.4\%$), \DYToTauTau ($1.0\%$) and \ttbar ($0.5\%$). Other EWK processes such as double boson decays have been checked to contribute less than $0.03\%$, so they are not considered.
+
+The contribution of each EWK background is described using \ETslash templates derived from the MC samples. The MET templates are produced following the procedure explained at the beginning of this section.
+
+
+\subsubsection{Fit Model}
+
+The raw \WToMuNu yields are extracted by performing an unbinned log-likelihood fit of the observed \ETslash distribution in each muon $\eta_{CM}$ bin. The fits are done using a combination of binned templates and a continous functional form. The data analysis framework RooFit v3.60 \cite{RooFit} is used to make the fits.
+
+The total fit model includes five contributions: the signal \WToMuNu template ($\mathcal{T}_{W}$), the EWK backgrounds \DYToMuMu, \WToTauNu, \DYToTauTau and \ttbar templates ($\mathcal{T}_{EWK}$), and the QCD data-driven functional form ($\mathcal{F}_{QCD}$). The model used to fit the data is shown in \eq{eq:FitModel}.
+
+\begin{equation}
+\resizebox{0.935\textwidth}{!}{%
+${ N_{\W} \times \left( {\mathcal{T}_{\W}} + {r_{\DYToMuMu} \cdot \mathcal{T}_{\DYToMuMu}} + {r_{\WToTauNu} \cdot \mathcal{T}_{\WToTauNu}} + {r_{\DYToTauTau} \cdot \mathcal{T}_{\DYToTauTau}} + {r_{\ttbar} \cdot \mathcal{T}_{\ttbar}} \right) } + { N_{QCD} \times \mathcal{F}_{QCD} }$%
+}
+\label{eq:FitModel}
+\end{equation}
+
+The signal and the EWK background shapes are defined based on \ETslash templates, evaluated from MC simulations. Since the fits become too unstable if the EWK background yields are left free, the following criteria is used to constrain their yields. First, the \DYToMuMu , \WToTauNu, \DYToTauTau and the \ttbar raw yields are expressed in terms of $N_{EWK} = r_{EWK}\times N_{W}$. Afterwards, the ratio of raw yields ($r_{EWK}$) is fixed to its corresponding value derived from MC after having normalized all the MC samples to the recorded integrated luminosity and applied all analysis corrections and selection cuts. This criteria assume that the nuclear modification of the electroweak sources scales in the same way as the \W signal, which is expected at least for the \WToTauNu and the \DY processes.
+
+The QCD contribution, as explained in section~\ref{sec:WBoson_Analysis_QCDBackground}, is taken into account by means of a functional form depending on three parameters. For the fit of the \ETslash distribution the $\sigma_{0}$ , $\sigma_{1}$ and $\sigma_{2}$ are fixed to the extrapolated values mentioned in \tab{tab:QCD_Extrapolation}.
+
+The \ETslash distribution is fitted separately for \WToMuNuPl and \WToMuNuMi candidates. Only the signal raw yield ($N_{\W}$) and the QCD normalization ($N_{QCD}$) are left free when fitting the \W signal region. The fits are done in both the inclusive selected events and in bins of muon pseudorapidity in the center of mass frame $\eta_{CM}$.
+
+
+\subsubsection{Raw Yields}
+
+
+The results of the fits to the data in each of the different muon $\eta_{CM}$ bins are summarized in \tab{tab:RawYields_WToMuMi_PA} for $\W^{-}$ and in \tab{tab:RawYields_WToMuPl_PA} for $\W^{+}$. The plots of the MET fits for all the pseudorapidity regions are shown in \fig{fig:METFits_WToMuMi_PA} for $\W^{-}$ and in \fig{fig:METFits_WToMuPl_PA} for $\W^{+}$.
+
+\input{Tables/WBoson/Analysis/SignalExtraction/DATA/PA/rawYield_PA.tex}
+
+
+\begin{figure}[!h]
+\begin{center}
+\begin{tiny}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-286_-260_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-260_-240_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-240_-220_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-220_-193_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-193_-180_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-180_-160_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-160_-140_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-140_-120_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-120_-100_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-100_-80_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-80_-60_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-60_-40_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-40_-20_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-20_0_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_0_20_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_20_40_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_40_60_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_60_80_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_80_100_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_100_120_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_120_140_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_140_160_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_160_180_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_180_193_MuIso_0_15.pdf}
+\end{tiny}
+\caption{Fits of the MET distribution in the signal region for negative muons with $\pt~>~25$~GeV/c. Data is shown in black while the MC templates are in color.}
+\label{fig:METFits_WToMuMi_PA}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!h]
+\begin{center}
+\begin{tiny}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-286_-260_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-260_-240_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-240_-220_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-220_-193_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-193_-180_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-180_-160_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-160_-140_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-140_-120_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-120_-100_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-100_-80_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-80_-60_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-60_-40_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-40_-20_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-20_0_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_0_20_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_20_40_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_40_60_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_60_80_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_80_100_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_100_120_MuIso_0_15.pdf}
+\\
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_120_140_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_140_160_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_160_180_MuIso_0_15.pdf}
+\includegraphics[width=0.23\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/DATA/PA/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_180_193_MuIso_0_15.pdf}
+\end{tiny}
+\caption{Fits of the MET distribution in the signal region for positive muons with $\pt~>~25$~GeV/c. Data is shown in black while the MC templates are in color.}
+\label{fig:METFits_WToMuPl_PA}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\subsubsection{Corrected Yields}
+
+The raw yields extracted from the fits are corrected to take into account the efficiency of the detector. The corrected yields are derived from the raw yields after dividing by the MC efficiency corrected with the Tag-And-Probe method as described in \sect{sec:WBoson_Analysis_CorrectedEfficiency}. The formula used to derived the corrected yields is shown in \eq{eq:CorrectedYield}.
+
+\begin{equation}
+N^{\pm}_{corr} = \frac{N^{\pm}_{raw}}{\epsilon^{MC}_{corr}}
+\label{eq:CorrectedYield}
+\end{equation}
+
+The statistical uncertainty of the corrected yields are computed based on error propagation according to the following equation:
+
+\begin{equation}
+\delta{N^{\pm}_{corr}} = \frac{\delta{N^{\pm}_{raw}}}{\epsilon^{MC}_{corr}}
+\label{eq:CorrectedYieldStatError}
+\end{equation}
+
+The results of the corrected yields with respect to the muon $\eta_{CM}$ are summarized in \tab{tab:CorrYields_WToMuMi_PA} for $\W^{-}$ and in \tab{tab:CorrYields_WToMuPl_PA} for $\W^{+}$.
+
+\input{Tables/WBoson/Analysis/SignalExtraction/DATA/PA/corrYield_PA.tex}
+
+% END OF SUBSECTION
+\clearpage
