@@ -3,6 +3,11 @@
 \usepackage{amsmath,amssymb}
 \usepackage{xspace}
 \usepackage{lineno}
+\usepackage{graphicx}
+\usepackage{feynmp-auto}
+\usepackage{scalerel}
+
+\newcommand{\mybrace}[1]{\scaleleftright[\dimexpr6pt+#1\dimexpr0.11pt]{.}{\rule[\dimexpr5pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{-1pt}}
 
 \begin{document}
 
@@ -71,7 +76,7 @@
 %%%%%%%%%%% BIBLIOGRAPHY
 \backmatter
 \bibliographystyle{kp}
-\bibliography{Thesis}
+\bibliography{Bibliography/WBoson_Analysis,Bibliography/WBoson_Theory}
 \clearemptydoublepage
 
 
