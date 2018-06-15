@@ -15,7 +15,7 @@ where $u$ is the Dirac spinor of each particle, $\gamma_{\mu}$ is the Dirac matr
 
 In the upcoming years, the physicists Tsung Dao Lee and Chen Ning Yang started to doubt the conservation of weak parity after not finding any experimental evidence so far~\cite{LeeYang}. In an attempt to test the conservation of parity in weak interactions, Lee and Yang proposed in 1956 to study the $\beta$ decays of Cobalt (${}^{60}$Co) and measure the projection of the momemtum of electrons along the spin axis of the Cobalt nucleus~\cite{LeeYang}. If the decay process conserves parity then electrons would be produced in all directions. The experiment to test the conservation of weak parity was realized by Chien-Shiung Wu in 1957. The results of Wu's research showed that electrons were preferentially produced in the opposite direction to the Cobalt spin~\cite{WuParityViolation}, which meant that parity was not conserved in weak interactions.
 
-Apart from parity, one can also associate a helicity to particles. The particle's helicity is considered right-handed if the direction of the particle's momemtum and spin are the same, and left-handed otherwise. In 1958, Goldhaber, Grodzins and Sunyar measured the neutrino helicity at Brookhaven National Laboratory (BNL) and discovered that neutrinos were always left-handed and antineutrinos were right-handed~\cite{NeutrinoHelicity}. As a consequence of the discovery of parity violation and the neutrino helicity, Lee and Yang modified Fermi's weak theory and introduced an axial vector term, giving rise to the V-A (vector-axial) theory of weak interactions. Even though parity (P) and charge conjugation (C) (transforms particles into their antiparticles) were violated separately, it was assumed that the combined CP operation was still conserved by the weak force.
+Apart from parity, one can also associate a helicity to particles. The particle's helicity is considered right-handed if the direction of the particle's momemtum and spin are the same, and left-handed otherwise. In 1958, Goldhaber, Grodzins and Sunyar measured the neutrino helicity at Brookhaven National Laboratory (BNL) and discovered that neutrinos were always left-handed and antineutrinos were right-handed~\cite{NeutrinoHelicity}. As a consequence of the discovery of parity violation and the neutrino helicity, Robert Marshak and George Sudarshan modified Fermi's weak theory and introduced an axial vector term, giving rise to the V-A (vector-axial) theory of weak interactions~\cite{VATheory}. Even though parity (P) and charge conjugation (C) (transforms particles into their antiparticles) were violated separately, it was assumed that the combined CP operation was still conserved by the weak force.
 
 The assumption of the conservation of CP did not last long. An experiment performed at BNL by James Christenson, James Cronin, Val Fitch and Rene Turlay~\cite{KMeson} in 1964 concluded that the long-lived $K_{L}$ meson (CP=-1) was able to decay to two pions (CP=+1) violating CP in the process. To explain the CP violation in weak theory, Makoto Kobayashi and Toshihide Maskawa~\cite{CKMMatrix} extended the formulation of the Cabibbo matrix to include three generation of quarks and a CP-violating phase term. The Cabibbo matrix was originally computed by Nicola Cabibbo~\cite{CabibboMatrix} including four quarks to explain the different amplitudes observed between the up, down and strange quark transitions. The development of the Cabibbo, Kobayashi and Maskawa (CKM) matrix led to the prediction of the bottom and top quarks, discovered later in 1977~\cite{BottomQuarkDiscovery} and 1995~\cite{TopQuarkDiscovery}, respectively.
 
@@ -129,172 +129,12 @@ where $f_{L}$ correspond to left-handed fermions and $\bar{f}_{R}$ represents ri
 \end{table}
 
 
-\subsection{Hadron collisions at the LHC}
+\subsection{Nuclear PDF}
 
-Hadrons are not elementary particules due to their internal structure composed of partons (i.e. quarks and gluons). The production of particles in hadronic collisions depends on the evolution of the partons inside the hadrons and the parton momentum transfer during the hard scattering. In this thesis, the production of {\PW} bosons is determined from collisions of protons against Lead ions (\pPb), so we need to take into account the interplay between protons and Pb nuclei.
-
-Protons can be described as a collection of three valence quarks: one down quark and two up quarks. The quantum properties of the proton, such as the electric charge or spin, are derived from the valence quarks. The interaction between valence quarks is mediated by the exchange of gluons. Gluons inside the hadrons can also produce quark-antiquark pairs and other gluons through self interactions. The quark-antiquark pairs produced inside the hadron are called sea quarks and only exist virtually. The gluons and sea quarks do not contribute to the quantum numbers of hadrons but they play a key role in the interaction of hadrons with other particles.
-
-Since the strength of the strong interactions decreases with energy,  the partons can be considered effectively free within the proton during high energy collisions. In this case, each parton carries a fraction of the proton's total momemtum, represented by the quantity called Bjorken x~\cite{BjorkenX} (labelled simply as x), given by:
-
-\begin{equation}
-p_{parton} = xp_{proton}
-\end{equation}
-
-The parton distribution functions (PDF) describes the probability that a parton carries a given fraction of the proton's momemtum. The PDFs can not be currently calculated due to the nonperturbative nature of QCD, but they can be constrained from fits to experimental data due to the factorization theorem.
-
-The factorization theorem indicates that the cross section of a given process in hadronic collisions can be factorized, in all orders of the perturbative expasion, into a partonic cross section and the  nonperturvative PDFs of the incoming hadrons. The partonic cross section can be derived using perturbative QCD regardless of the incoming hadron while the PDFs can be determined from global fits to the data since they are universal (i.e. the PDFs are independent of the initial process). The hadronic cross section in a given final state can be expressed at leading order, using the factorization theorem, as:
-
-\begin{equation}
-\sigma_{h1,h2} = \sum_{f1,f2=(q,\bar{q},g)}\int_{0}^{1}dx_{1}dx_{2}f_{1}^{h1}\left(x_{1},Q^{2}\right)f_{2}^{h2}\left(x_{2},Q^{2}\right)\hat{\sigma}_{f_{1}f_{2}}
-\label{eq:FactTheorem}
-\end{equation}
-
-where $Q^{2}$ is the momentum scale, $f\left(x,Q^{2}\right)$ is the PDF, and $\hat{\sigma}$ represents the partonic cross section. The $Q^{2}$ scale dependence of the PDFs is described by the parton evolution equations developed by Dokshiftzer, Gribov, Lipatov, Altarelli and Parisi (DGLAP)~\cite{DGLAP_1,DGLAP_2,DGLAP_3}. 
-
-In the DGLAP formalism, the PDFs can be expressed in terms of kernels $P_{q_{1}q_{2}}$ (called splitting functions), and the evolution equations of the quark $q$ and gluon $g$ densities can be written as:
-
-\begin{equation}
-  \begin{alignedat}{1}
-    \frac{d}{dt}q_{i}\left(x,t\right) &= \frac{\alpha_{s}\left(Q\right)}{2\pi}\left[q_{i}\circledast{P_{qq}} + g_{i}\circledast{P_{qg}}\right] \\
-    \frac{d}{dt}g\left(x,t\right) &= \frac{\alpha_{s}\left(Q\right)}{2\pi}\left[\sum_{i}\left(q_{i}+\bar{q}_{i}\right)\circledast{P_{gq}} + g_{i}\circledast{P_{gg}}\right] \\
-    \left[q\circledast{P}\right] &= \int_{x}^{1}d\epsilon\frac{(q\left(\epsilon,t\right)}{\epsilon}\times{P\left(\frac{x}{\epsilon}\right)}
-  \end{alignedat}
-  \label{eq:DGLAP}
-\end{equation}
-
-where $t \propto \mathrm{Log}\left(Q^{2}\right)$, and $P_{q_{1}q_{2}}$ is the probability of finding a parton $q_{1}$ in another parton $q_{2}$. In other words, the DGLAP evolution equations state that the PDF of a given parton $q$ at an x value is determined from the contribution of all the partons at higher momentum fraction considering their probability of decaying into the parton $q$.
-
-From the definition of the PDFs, one can also formulate a set of structure functions defined as:
-
-\begin{equation}
-F^{p}_{2}\left(x\right) = \sum_{f}e_{f}^{2}f\left(x,Q^{2}\right)x
-\end{equation}
-
-where $e_{f}$ is the electric charge of a given fermion $f$. The structure functions were extensively measured in Deep-Inelastic Scattering (DIS) collisions at the Hadron-Elektron-Ringanlage (HERA) accelarator by the ZEUS and H1 collaborations. The measurements of the $F_{2}$ structure function performed by the ZEUS collaboration~\cite{HERAStrucFunc} at HERA are shown in \fig{fig:HERAStrucFunc}.
-
-\begin{figure}[htbp]
- \begin{center}
-  \includegraphics[width=0.5\textwidth]{Figures/WBoson/Theory/Structure_Function.png}
- \end{center}
-\caption{NLO QCD fits to the to the ZEUS $F_{2}$ structure function data from 1996, 1997 and proton fixed-target at HERA. The error bands of the fit represent the total experimental uncertainty from both correlated and uncorrelated sources. Figure taken from Ref.~\cite{HERAStrucFunc}}
- \label{fig:HERAStrucFunc}
-\end{figure}
-
-The DIS process consists in the inelastic scattering of electrons off protons as presented in \fig{dia:DIS}. In the DIS process, the momentum transferred from the electron to the proton is defined as $Q^{2} = -q^{2} = -\left(k - k'\right)^{2}$ and the corresponding Bjorken x fraction is $x = {Q^{2}}\big/{2\left(p^{h}_{in}.q\right)}$. Even though DIS experiments were not able to probe the gluons directly, the DIS data showed that valence quarks did only carry half of the proton momentum been the rest carried by the gluons.
-
-\begin{figure}[htbp]
-  \vspace{10mm}
-  \begin{center}
-  \begin{fmffile}{DIS}
-    \begin{fmfgraph*}(160,100)
-      \fmfleft{ip,il}
-      \fmfright{x1,x2,x3,o1,o2,o3,o4,ol}
-      \fmfset{arrow_len}{10}
-      % lepton
-      \fmflabel{$\text{e}^-$}{il}
-      \fmflabel{$\text{e}^-$}{ol}
-      \fmf{fermion,label=$k$, label.side=left}{il,vl}
-      \fmf{fermion,label=$k'$,label.side=left}{vl,ol}
-      \fmf{phantom,tension=0.6}{vl,vp}
-      % proton
-      \fmfv{l=$\text{p}^+$,l.a=-160}{ip} % l.a = label.angle
-      \fmf{phantom,tension=1}{ip,vp,x1}
-      \fmffreeze
-      \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01}
-      \fmfi{fermion,label=$p$,label.side=left}
-                    {vpath (__ip,__vp) scaled 1.01 shifted (-1.4, 6)}
-      \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted ( 1.4,-6)}
-      \fmfblob{25}{vp}
-      % X
-      \fmfv{l=\mybrace{40} $X$,l.a=10}{x2}
-      \fmf{fermion}{vp,x1}
-      \fmf{phantom}{vp,x2} % to help \fmfi
-      \fmfi{fermion}{vpath (__vp,__x2) scaled 0.98 shifted (0,2.2)}
-      \fmffreeze
-      % photon
-      \fmf{photon,label=\vspace{-4pt}\hspace{5pt}{$q$},label.side=left}{vl,v}
-      % parton
-      \fmf{fermion,label=$xp$,label.side=left}{vp,v}
-      \fmf{fermion}{v,o2}
-    \end{fmfgraph*}
-  \end{fmffile}
-  \end{center}
-  \caption{Feynman diagram of deep inelastic scattering of electrons against protons}
-  \label{dia:DIS}
-\end{figure}
-
-Another important process that takes place in hadron colliders is the Drell-Yan (DY) production.  In the DY process a quark from one hadron and an antiquark from another hadron annihilate into a virtual photon ($\gamma^{*}$) or {\PZ} boson which then decays to a pair of leptons as shown in \fig{dia:DY}. Drell-Yan production is used to constrain the quark PDFs in a wide range of momentum fraction x depending on the invariant mass of the dilepton pair. In addition, the Drell-Yan process also contributes to the background of the {\PW} boson production when one the DY final state leptons is generated outside of the detector acceptance.
-
-\begin{figure}[htbp]
-  \vspace{10mm}
-  \begin{center}
-\begin{fmffile}{DY}
-  \begin{fmfgraph*}(160,160)
-    \fmfleft{i1,iq,i2,ip,i3}
-    \fmfright{y1,y2,y3,o1,f1,o2,o3,o4,f2,o5,x3,x2,x1}
-    \fmfset{arrow_len}{10}
-    % skeleton
-    \fmf{phantom,tension=0.48}{vq,vp}
-    \fmf{phantom}{ip,vp,x1}
-    \fmf{phantom}{iq,vq,y1}
-    \fmffreeze
-    % parton
-    \fmfv{l=$x_1p_1$,l.a=-90,l.d=22}{vp} % cheat: actually a line label
-    \fmfv{l=$x_2p_2$,l.a=90,l.d=22}{vq} % cheat: actually a line label
-    \fmf{fermion,tension=1.6}{vp,v}
-    \fmf{fermion,tension=1.6}{v,vq}
-    % hard process
-    \fmfshift{20 right}{f1,f2}
-    \fmfv{l=$\bar{f}$}{f1}
-    \fmfv{l=$f$}{f2}
-    \fmf{boson,tension=2,label=$\text{Z}^0/\gamma^*$,label.side=left}{v,vf}
-    \fmf{fermion,tension=2}{f1,vf,f2}
-    % proton 1
-    \fmfv{l=${h}_{A}$,l.a=180,l.d=10}{ip}
-    \fmf{phantom}{ip,vp}
-    \fmfi{fermion,l=$p_1$,l.s=left,l.d=8}
-                  {vpath (__ip,__vp) scaled 1.01 shifted (-2.4, 6)}
-    \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted (-2.4, 0)}
-    \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted (-2.4,-6)}
-    % proton 2
-    \fmfv{l=${h}_{B}$,l.a=180,l.d=10}{iq}
-    \fmf{phantom}{iq,vq}
-    \fmfi{fermion}{vpath (__iq,__vq) scaled 1.01 shifted (-2.4, 6)}
-    \fmfi{fermion}{vpath (__iq,__vq) scaled 1.01 shifted (-2.4, 0)}
-    \fmfi{fermion,l=$p_2$,l.s=right,l.d=8}
-                  {vpath (__iq,__vq) scaled 1.01 shifted (-2.4,-6)}
-    % X 2
-    \fmfshift{25 left}{x1}
-    \fmfshift{20 left}{x2,x3}
-    \fmf{phantom}{vp,x1} % to help \fmfi
-    \fmf{phantom}{vp,x2} % to help \fmfi
-    \fmf{phantom}{vp,x3} % to help \fmfi
-    \fmfi{fermion}{vpath (__vp,__x1) scaled 1.0 shifted ( 0.0, 2.0)}
-    \fmfi{fermion}{vpath (__vp,__x2) scaled 1.0 shifted ( 0.0, 0.0)}
-    \fmfi{fermion}{vpath (__vp,__x3) scaled 1.0 shifted ( 0.0,-2.0)}
-    \fmfblob{25}{vp}
-    % X 2
-    \fmfshift{25 left}{y1}
-    \fmfshift{20 left}{y2,y3}
-    \fmf{phantom}{vq,y1} % to help \fmfi
-    \fmf{phantom}{vq,y2} % to help \fmfi
-    \fmf{phantom}{vq,y3} % to help \fmfi
-    \fmfi{fermion}{vpath (__vq,__y1) scaled 1.0 shifted ( 0.0,-2.0)}
-    \fmfi{fermion}{vpath (__vq,__y2) scaled 1.0 shifted ( 0.0, 0.0)}
-    \fmfi{fermion}{vpath (__vq,__y3) scaled 1.0 shifted ( 0.0, 2.0)}
-    \fmfblob{25}{vq}
-  \end{fmfgraph*}
-\end{fmffile}
-  \end{center}
-  \caption{Feynman diagram of neutral charged Drell-Yan process}
-  \label{dia:DY}
-\end{figure}
-
-
-We have considered until now only the structure of protons, but the nuclear enviroment of ions can also impact the production of particles. Pb ions are composed of 82 protons and 126 neutrons. The neutron PDF can be derived from the proton PDF using isospin symmetry (i.e. by exchanging the up and down quark PDFs), while assuming the same gluon PDF as in the proton. If no nuclear modifications are expected, protons and neutrons should then behave as free particles inside the nucleus, and one could simply sum the PDFs of the protons and neutrons scaled accordingly. In this case, the ratio of the PDF of protons bounded in the nucleus (nuclear PDF) over the free-proton PDF should be one.
+Beams of Pb ions composed of 82 protons and 126 neutrons are used at the LHC. In proton-lead collisions, the PDF of the nucleons (i.e. neutrons and protons) is modified by the presence of the nuclear enviroment of the Pb ion. The neutron PDF can be derived from the proton PDF using isospin symmetry (i.e. by exchanging the up and down quark PDFs), while assuming the same gluon PDF as in the proton. If no nuclear modifications are expected, protons and neutrons should then behave as free particles inside the nucleus, and one could simply sum the PDFs of the protons and neutrons scaled accordingly. In this case, the ratio of the PDF of protons bounded in the nucleus (nuclear PDF) over the free-proton PDF should be one.
 
 To determine the nuclear modifications, the heavy ion measurements were first compared to results using deuterium. The European Muon Collaboration (EMC) measured the structure function of DIS in iron and deuterium targets between 1977 and 1988, and observed a depletion of the iron PDFs relative to the deuterium PDFs at $x>0.2$ (EMC region)~\cite{EMCStrucFunc_1} and at $x<0.01$ (shadowing region)~\cite{EMCStrucFunc_2}. Subsequent results found an enhancement at the intermediate region $0.01 < x < 0.2$ (antishadowing region)~\cite{NMCStrucFunc}. Since current heavy ion data is more limited than data from proton collisions, the global fits of the nuclear PDFs are less accurate than the proton PDFs.
+
 
 \subsection{PDF global fits}
 
@@ -492,7 +332,7 @@ The cross sections of negative and positive charged leptons, shown in \eq{eq:WPr
 
 Multiple proton-proton and proton-neutron hard scatterings takes place during \pPb collisions. In this case, the {\PW} bosons are mainly produced from interactions between the valence quarks and sea antiquarks of the nucleons. The dominant production modes of $\PW^{+}$ bosons correspond to up quark and down antiquark annihilation while for $\PW^{-}$ bosons correspond to down quark and up antiquark annihilation. The annihilation between light quarks and heavier antiquarks is also possible but highly suppressed according to the CKM matrix elements. Therefore, the inclusive {\PW} boson cross section measured in \pPb data is mostly sensitive to the proton and Pb-nucleus PDFs of light quarks and antiquarks.
 
-In addition, the {\PW} boson cross sections can be compared between different beam energies. According to Arleo and Chapon~\cite{WProdScaling}, at small enough x values, the {\PW} boson cross section follows a power-like scaling as a function of $\snn$, where \eq{eq:WProd} can be approximately reduced to:
+In addition, the {\PW} boson cross sections can be compared between different beam energies. According to Arleo, Chapon and Paukkunen~\cite{WProdScaling}, at small enough x values, the {\PW} boson cross section follows a power-like scaling as a function of $\snn$, where \eq{eq:WProd} can be approximately reduced to:
 
 \begin{equation}
   \begin{alignedat}{2}
@@ -504,7 +344,7 @@ In addition, the {\PW} boson cross sections can be compared between different be
 
 where $\alpha$ is the scaling parameter, and $\xi_{p} = \left(M_{\PW}\big/\sqrtsnn\right)e^{-\eta}$ and $\xi_{Pb} = \left(M_{\PW}\big/\sqrtsnn\right)e^{\eta}$ are the x values at $\pt=M_{\PW}/2$ in the proton and Pb ion, respectively. Moreover, the functions $F^{\pm}_{\pPb}$ and $G^{\pm}_{\pPb}$ do not depend explicitely on $s$ or $\eta$.
 
-Furthermore, since the scaling parameter does not depend on the lepton pseudorapidity or the charge of the {\PW} boson, the dependence on $\snn$ cancels in ratios of {\PW} boson cross sections. We can then measure assymmetries to improve the sensitivity to different aspects of the {\PW} boson production. Two of the most commonly used are the lepton charge asymmetry defined in \eq{eq:MuonChargeAsymmetry} and the forward-backward ratio presented in \eq{eq:MuonForwardBackwardAsymmetry}. Thus, according to \eq{eq:WProdScaling}, the {\PW} boson asymmetries only depends on $\xi_{\mathrm{p}}$ and $\xi_{\mathrm{Pb}}$ for $|\eta|>>0$.
+Furthermore, since the scaling parameter does not depend on the lepton pseudorapidity or the charge of the {\PW} boson, the dependence on $\snn$ cancels in ratios of {\PW} boson cross sections. We can then measure assymmetries to improve the sensitivity to different aspects of the {\PW} boson production. Two of the most commonly used are the lepton charge asymmetry defined in \eq{eq:MuonChargeAsymmetry} and the forward-backward ratio presented in \eq{eq:MuonForwardBackwardAsymmetry}. Thus, according to \eq{eq:WProdScaling}, the {\PW} boson asymmetries only depends on $\xi_{\mathrm{p}}$ and $\xi_{\mathrm{Pb}}$ for $|\eta|>>0.5\mathrm{ln}\left(\snn\big/M_{\PW}^{2}\right)$.
 
 
 % END OF SECTION

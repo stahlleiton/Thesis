@@ -1,3 +1,654 @@
-\section{Physics}\label{sec:Introduction_Physics}
+\section{Standard model}\label{sec:Introduction_SM}
+
+The standard model (SM) is a theoretical framework that describes the properties of elementary particles and their interactions. The SM was developed during the 20th century through the collaborative effort of many physicists. According to the SM, all matter in the universe is composed, at the most fundamental level, of elementary particles called fermions. Fermions are particles with half-integer spin which behave according to Fermi-Dirac statistics formulated by Enrico Fermi~\cite{FermiDiracStatistics_1} and Paul Dirac~\cite{FermiDiracStatistics_2} in 1926. As a consequence, fermions are restricted by the Pauli exclusion principle~\cite{PauliExclusion} which dictates that two or more fermions with the same quantum numbers cannot occupy the same quantum state.
+
+In addition, fermions can be classified as leptons or quarks. There are six leptons arranged in three "generations": the electron ($e^{-}$) and the electron neutrino ($\nu_{e}$), the muon ($\mu^{-}$) and the muon neutrino ($\nu_{\mu}$), and the tau ($\tau^{-}$) and the tau neutrino ($\nu_{\tau}$). The neutrinos are electrically neutral and almost massless, while the other leptons have negative electric charge (-1) and sizeable masses. In the case of quarks, there are six "flavours" paired also in three generations of increasing mass. The up and down quarks belong to the first generation, while the more heavier quarks are included in the second generation (charm and strange quarks) and third generation (top and bottom quarks). The up (u), charm (c) and top (t) quarks have positive electric charge (+2/3) while the down (d), strange (s) and bottom (b) quarks have negative electric charge (-1/3). Each quark also carry another quantum number called colour charge that can have three different values labelled as red, green and blue. Moreover, each fermion has an associated antiparticle with the same mass but with opposite charges. The positron ($e^{+}$) is the antiparticle of the electron, while the name of the rest of antiparticles simply starts with the prefix "anti" (e.g. anti-quarks $\bar{q}$, anti-neutrinos $\bar{\nu}$ or anti-leptons $\ell^{+}$).
+
+The interactions between fermions are described in the standard model by three fundamental forces: electromagnetism, strong nuclear force and the weak nuclear force. The gravitational force is currently not included in the SM but the effect of gravity at the quantum level is so small that it is considered negligible. In the SM, each fundamental force is mediated by the exchange of integer spin particles called bosons that follows the Bose-Einstein statistics proposed in 1924 by Sateyndra Bose~\cite{BoseEinsteinStatistics_1} and Albert Einstein~\cite{BoseEinsteinStatistics_2}.
+
+The electromagnetic and the weak nuclear forces are described in the SM by the electroweak theory. The electromagnetic interactions between particles with electric charge are mediated by photons which are massless and chargeless spin one particles. On the other hand, the weak interactions can act on all fermions but the strength of the weak force is roughly $10^{-5}$ weaker than the electromagnetic force. The weak interactions are mediated by three massive vector bosons: the electrically charged $\W^{\pm}$ bosons and the electrically neutral {\PZ} boson. Processes involving neutrinos or the change of quark flavour are only possible through weak interactions. Moreover, the strong nuclear force is responsible for the interactions between colour charged particles (i.e. quarks) described by the theory of Quantum Chromodynamics (QCD). The strong interactions are mediated by spin one bosons called gluons which carry colour and anti-colour charge. Thus, unlike the photon, gluons can interact with themselves confining the quarks in colourless configurations known as hadrons. Hadrons compose of three (anti-)quarks are called baryons while those made of a quark and an anti-quark are called mesons. Exotic hadrons containing four and five quarks have been recently observed by the Belle~\cite{Tetraquark} and LHCb~\cite{Pentaquarks} collaborations, respectively.
+
+The generation of mass of the elementary particles is explained in the SM by the Brout-Englert-Higgs (BEH) mechanism~\cite{HiggsMechanism_1,HiggsMechanism_2}. The weak bosons and the fermions acquire their mass by interating with the Higgs field. The stronger a particle couples to the Higgs field, the more masive it becomes. The interaction with the Higgs field is mediated by a scalar boson, the so-called Higgs boson. The BEH mechanism was experimentally confirmed after the CMS~\cite{HiggsBoson_CMS} and ATLAS~\cite{HiggsBoson_ATLAS} collaborations announced the discovery of the Higgs boson in 2012. The basic properties of leptons, quarks and bosons of the SM are summarized in \tab{tab:SM}.
+
+
+\begin{table}[!h]
+  \begin{center}
+    \renewcommand{\arraystretch}{1.1}
+    \begin{tabular}{ c c c c c c c c }
+      \hline
+     & & Name & Symbol & Mass & Charge & Spin & Interactions \\
+      \hline
+     \multirow{6}{*}{\rotatebox[origin=c]{90}{Quark}} & \multirow{2}{*}{$1^{st}$} & Up      & u & 2.2~MeV    & $2/3$  & $1/2$ & All \\
+            &          & Down    & d & 4.7~MeV    & $-1/3$ & $1/2$ & All \\
+            & \multirow{2}{*}{$2^{nd}$} & Charm   & c & 1.28~\GeV  & $2/3$  & $1/2$ & All \\
+            &          & Strange & s &  96~MeV    & $-1/3$ & $1/2$ & All \\
+            & \multirow{2}{*}{$3^{rd}$} & Top     & t & 173.5~\GeV & $2/3$  & $1/2$ & All \\
+            &          & Bottom  & b &  4.18~\GeV & $-1/3$ & $1/2$ & All \\
+      \hline
+     \multirow{6}{*}{\rotatebox[origin=c]{90}{Lepton}}  & \multirow{2}{*}{$1^{st}$} & Electron          & $e^{-}$      & 511~keV   & -1 & $1/2$ & Electroweak \\
+            &          & Electron neutrino & $\nu_{e}$    & $< 2$~eV    &  0 & $1/2$ & Weak \\
+            & \multirow{2}{*}{$2^{nd}$} & Muon              & $\mu$        & 106~MeV   & -1 & $1/2$ & Electroweak \\
+            &          & Muon neutrino     & $\nu_{\mu}$  & $< 2$~eV    &  0 & $1/2$ & Weak \\
+            & \multirow{2}{*}{$3^{rd}$} & Tau               & $\tau$       & 1.78~\GeV & -1 & $1/2$ & Electroweak \\
+            &          & Tau neutrino      & $\nu_{\tau}$ & $< 2$~eV    &  0 & $1/2$ & Weak \\
+      \hline
+     \multirow{5}{*}{\rotatebox[origin=c]{90}{Boson}}   & & Photon      & $\gamma$    & $< 10^{-18}$~eV  & 0        & 1 & Electromagnetic \\
+            & & Gluon       & g           & 0          & 0        & 1 & Strong          \\
+            & & {\PW} boson & $\PW^{\pm}$ & 80.4~\GeV  & $\pm{1}$ & 1 & Electroweak     \\
+            & & {\PZ} boson & {\PZ}       & 91.2~\GeV  & 0        & 1 & Electroweak     \\
+            & & Higgs boson & H           & 125.1~\GeV & 0        & 0 & BEH mechanism   \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Basic properties of quarks, leptons and bosons from the SM. The table includes the mass, electric charge, spin and type of interactions of each particle. The values are taken from Ref.~\cite{PDG}}
+  \label{tab:SM}
+\end{table}
+
+\subsection{Quantum chromodynamics}\label{sec:QCD}
+
+The development of new experimental techniques, such as the synchrocyclotron and the bubble chamber, led to the discovery of many hadronic resonances during the 1950s and 1960s. In an attempt to organize these new hadrons, Murray Gell-Mann~\cite{EightFoldWay_1} and Yuval Ne'eman~\cite{EightFoldWay_2} proposed in 1961 the Eightfold Way classification. The Eightfold Way scheme managed to sort the hadrons into representations of the SU(3) group leading to the creation of the quark model. The quark model, developed in 1964 by Gell-Mann~\cite{QuarkModel_1} and George Zweig~\cite{QuarkModel_2}, considered the hadrons as composite objects made of valence quarks and anti-quarks. Even though the quark model was succesful at describing the properties of most hadrons known at the time, it had problems explaining the structure of the $\Omega^{-}$ baryon. The $\Omega^{-}$ baryon is made of three strange quarks with parallel spins but such configuration was forbidden by the Pauli exclusion principle. To solve the spin-statistics paradox, Oscar Greenberg~\cite{ColourCharge} proposed that each quark also carried a 3-valued quantum number named the colour charge. The description of the strong interactions using the concept of colour charges was formally developed in the theory of QCD by Harald Fritzsch, Heinrich Leutwyler and Murray Gell-Mann~\cite{QCD} in 1973.
+
+Quantum chromodynamics is a non-abelian quantum field theory with gauge symmetry group SU(3), that describes the strong interactions between colour charged particles. The primary objects of QCD are the quarks which carry one colour charge (e.g. green) and the gluons which carry a colour and an anti-colour charge (e.g. red-antiblue). There are eight different gluons which form an octet representation of SU(3). The lagragian of QCD is:
+
+\begin{equation}
+  L_{QCD} = \sum_{f}\bar{q}_{f,i}\left(i\gamma^{\mu}D_{\mu}^{i,j} - m_{f}\delta^{a,b}\right)q_{f,j} - \frac{1}{4}F^{a}_{\mu,\nu}F_{a}^{\mu,\nu}
+  \label{eq:QCDLagrangian}
+\end{equation}
+
+where $g_{s}$ is the strong gauge coupling constant, and $\gamma^{\mu}$ are the Dirac $\gamma$-matrices. The $q_{f,i}$ represents the Dirac spinor of a quark with flavour $f$, mass $m_{f}$ and colour index $i$ running from $i=1$ to 3. The QCD gauge covariant derivative $D_{\mu}^{i,j}$ and the gluon field strength tensor $F^{a}_{\mu,\nu}$ are given by:
+
+\begin{equation}
+  \begin{split}
+    D_{\mu}^{i,j}   &= \delta^{i,j}\partial_{\mu} - i\frac{g_{s}}{2}\lambda_{a}^{i,j}G^{a}_{\mu} \\
+    F^{a}_{\mu,\nu} &= \partial_{\mu}G_{\nu}^{a}-\partial_{\nu}G_{\mu}^{A}+g_{s}f^{a}_{bc}G^{b}_{\mu}G^{c}_{\nu}
+  \end{split}
+\end{equation}
+
+where $f^{a}_{bc}$ are the SU(3) structure constants, $\lambda_{a}^{i,j}$ are the Gell-Mann matrices, and $G^{a}_{\mu}$ is the vector field of a gluon with index $a$ that runs from $a=1$ to 8.
+
+Expanding the terms in \eq{eq:QCDLagrangian}, one can derive three different types of vertices representing the interaction between quarks and gluons, and the gluon self-interactions as shown in \fig{dia:QCDVertices}.
+
+\begin{figure}[!htbp]
+  \vspace{10mm}
+  \begin{center}
+    \subfloat{
+      \begin{fmffile}{qqG}
+        \begin{fmfgraph*}(100,70)
+          \fmfleft{v1}
+          \fmfright{o1,o2}
+          \fmflabel{$q$}{o1}
+          \fmflabel{$\bar{q}$}{o2}
+          \fmf{fermion}{o2,v2,o1}
+          \fmf{gluon,label=$g$,label.side=right}{v1,v2}
+        \end{fmfgraph*}
+      \end{fmffile}
+    }
+    \hspace*{1cm}
+    \subfloat{
+      \begin{fmffile}{GGG}
+        \begin{fmfgraph*}(100,70)
+          \fmfleft{v1}
+          \fmfright{o1,o2}
+          \fmflabel{$g$}{o1}
+          \fmflabel{$g$}{o2}
+          \fmf{gluon}{o2,v2,o1}
+          \fmf{gluon,label=$g$,label.side=right}{v1,v2}
+        \end{fmfgraph*}
+      \end{fmffile}
+    }
+    \hspace*{1cm}
+    \subfloat{
+      \begin{fmffile}{GGGG}
+        \begin{fmfgraph*}(100,70)
+          \fmfleft{i1,i2}
+          \fmfright{o1,o2}
+          \fmflabel{$g$}{i1}
+          \fmflabel{$g$}{i2}
+          \fmflabel{$g$}{o1}
+          \fmflabel{$g$}{o2}
+          \fmf{gluon}{o2,v,o1}
+          \fmf{gluon}{i2,v,i1}
+        \end{fmfgraph*}
+      \end{fmffile}
+    }
+  \end{center}
+  \caption{Feynman diagrams of the QCD vertices for quark-gluon coupling (left), triple gluon self-coupling (middle) and quadri gluon self-coupling (right).}
+  \label{dia:QCDVertices}
+\end{figure}
+
+\subsubsection{Running coupling constant}
+
+In quantum field theory, physical quantities are calculated by performing a pertubative expansion of the theory in terms of its coupling constant. The first order of the expansion is called the leading order (LO). At higher orders, some of the terms contain loops (infinite integrals) which diverge due to high momentum particles in the loop (ultraviolet divergence). The ultraviolet (UV) divergences can be removed from the perturbation series by renormalizing the Lagrangian.
+
+The renormalization procedure consist of replacing the bare parameters of the Lagrangian by finite renormalized parameters, and then treat the divergences by applying a regularization scheme. There are many regularization schemes but one of the most often used is the Minimal Substraction (MS) scheme based on dimensional regularization. The MS scheme consists on solving the loop integrals in $d$ arbitrary spacetime dimensions introducing a scale $\mu$ in the process~\cite{Renomalization}. In order to keep the physical observables independent of the renormalization scale, the dependence of the renormalized paramaters on the scale $\mu$ is fixed by renormalization group equations (RGE)~\cite{Renomalization}.
+
+In the case of QCD, the strength of the strong interactions is parametrized by the strong coupling constant $\alpha_{s} = 4{\pi}g_{s}^{2}$. The UV divergences in perturbative QCD (pQCD) appears from loop diagrams like those shown in \fig{dia:QCDLoop}.
+
+\begin{figure}[htbp]
+  \vspace{10mm}
+  \begin{center}
+  \begin{fmffile}{feyngraph}
+    \parbox{100pt}{
+    \begin{fmfgraph*}(100,80)
+       \fmfleft{i}
+       \fmfright{o}
+       \fmfv{label=g,l.a=60}{i}
+       \fmfv{label=g,l.a=120}{o}
+       \fmf{gluon,tension=1}{i,v1}
+       \fmf{gluon,tension=1}{v2,o}
+       \fmf{fermion,left,tension=0.4,label=$\text{q}$}{v1,v2,v1}
+    \end{fmfgraph*}}
+    \quad\parbox{100pt}{
+    \begin{fmfgraph*}(100,80)
+       \fmfleft{i}
+       \fmfright{o}
+       \fmfv{label=g,l.a=60}{i}
+       \fmfv{label=g,l.a=120}{o}
+       \fmf{gluon,tension=1}{i,v1}
+       \fmf{gluon,tension=1}{v2,o}
+       \fmf{gluon,left,tension=0.4,label=g}{v2,v1}
+       \fmf{gluon,left,tension=0.4,label=g}{v1,v2}
+    \end{fmfgraph*}}
+    \quad\parbox{100pt}{
+    \begin{fmfgraph*}(100,80)
+       \fmfleft{i}
+       \fmfright{o}
+       \fmftop{m}
+       \fmfv{label=g,l.a=60}{i}
+       \fmfv{label=g,l.a=120}{o}
+       \fmflabel{g}{m}
+       \fmf{gluon,tension=1}{i,v1}
+       \fmf{gluon,tension=1}{v1,o}
+       \fmf{gluon,right,tension=0}{v1,m,v1}
+    \end{fmfgraph*}}
+  \end{fmffile}
+  \end{center}
+  \caption{Feynman diagrams of 1-loop contributions to pQCD.}
+  \label{dia:QCDLoop}
+\end{figure}
+
+The renormalized strong coupling constant $\alpha_{s}\left(\mu^{2}\right)$ satisfies the following RGE~\cite{PDG}:
+
+\begin{equation}
+\mu^{2}\frac{d\alpha_{s}\left(\mu^{2}\right)}{d\mu^{2}} = \beta\left(\alpha_{s}\right) = -\alpha_{s}^{2}\left(\beta_{0} + \beta_{1}\alpha_{s} + \dots\right)
+\label{eq:RGE}
+\end{equation}
+
+where $\beta_{0}=7/\left(4\pi\right)$ and $\beta_{1}=13/\left(8\pi^{2}\right)$ are the 1-loop and the 2-loop coefficients of the $\beta$-function, respectively~\cite{PDG}. In the one-loop approximation, $\alpha_{s}\left(\mu^{2}\right)$ can be expressed as:
+
+\begin{equation}
+\alpha_{s}\left(\mu^{2}\right) = \frac{1}{\beta_{0}\mathrm{ln}\left(\frac{\mu^{2}}{\Lambda_{\mathrm{QCD}}^{2}}\right)}
+\label{eq:QCDCoupling}
+\end{equation}
+
+where $\Lambda_{\mathrm{QCD}}$ is the QCD Landau pole (i.e. the scale at which the coupling becomes infinite). The factorization scale $\mu$ is generally associated to the energy scale $Q$ of a given process. This means that $\alpha_{s}\left(\mu^{2}\right)$ is not really a constant but depends on the energy scale, so it is also known as the QCD running coupling constant. \fig{fig:Alphas} presents the latest results on the measurement of $\alpha_{s}\left(Q^{2}\right)$ as function of the energy scale $Q$~\cite{PDG}.
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.6\textwidth]{Figures/Introduction/StandardModel/Alphas.png}
+ \end{center}
+\caption{Summary of measurements of $\alpha_{s}$ as a function of the energy scale $Q$. Figure taken from the PDG~\cite{PDG}}
+ \label{fig:Alphas}
+\end{figure}
+
+\subsubsection{Asymptotic freedom}
+
+One important consequence of the non-abelian nature of QCD is the asymptotic freedom of colour charged particles discovered in 1973 by David Gross and Frank Wilczek~\cite{AsymptoticFreedom_1}, and also by David Politzer~\cite{AsymptoticFreedom_2}. As can be observe in \fig{fig:Alphas}, the strength of the strong nuclear force gets asymptotically reduced as the energy scale is increased. Perturbative QCD can then be fully applied in the asymptotic free regime since the strong coupling constant is small.
+
+Considering the inverse relation between the wavelength of particles and their momemtum (de Broglie hypothesis~\cite{Broglie}), asymptotic freedom implies that the strong nuclear interactions between quarks gets weaker at larger momemtum or at shorter distances. This phenomenon can be understood qualitatively as derived from the interaction with the QCD vacuum. The presence of virtual quark-antiquark pairs from the vacuum acts as colour dipoles reducing (screening) the strength of the colour charge field. In addition, virtual gluons can couple to other gluons increasing (antiscreening) the net effect of the colour charge seen at larger distances. Thus, there is an interplay between quark-antiquark pair colour screening and gluon colour antiscreening, where the later effect dominates in QCD.
+
+\subsubsection{Colour confinement}
+
+The fact that quarks and gluons have never been observed isolated in normal conditions is due to another phenomenon of QCD called colour confinement. The intensity of the strong nuclear force increases when the energy scale is reduced or the distance is increased as seen in \fig{fig:Alphas}. The large strong interactions between colour charged particles force the quarks and gluons to be confined in hadrons. The divergent behaviour of $\alpha_{s}$ at the Landau pole shown in \eq{eq:QCDCoupling}, is a consequence of the inability of pQCD to describe the low energy regime which becomes non-perturbative. An alternative way to study the low energy regime is to use Lattice QCD calculations.
+
+The strong nuclear force can be described qualitatively as a string. When a quark and anti-quark gets separated, the gluon string that mediates their strong interaction elongates increasing the energy. The string eventually breaks when it becomes more energetically favorable to create a light quark-antiquark pair, splitting the original meson into two mesons as shown in \fig{fig:QCDConfinement}. This leads to a process called hadronization where quarks and gluons produce a cascade of hadrons. The presence of colour charged particles in high energy collisions can be measured experimentally using jets derived by clustering the final state hadrons in narrow cones.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.3\textwidth]{Figures/Introduction/StandardModel/QCDConfinement.png}
+ \end{center}
+ \caption{Sketch of the gluon string breaking between a quark $Q$ and an anti-quark $\bar{Q}$ due to $q\bar{q}$ pair creation. Figure taken from Ref.~\cite{QCDConfinement_Figure}}
+ \label{fig:QCDConfinement}
+\end{figure}
+
+\subsection{Parton distribution functions}\label{sec:PDF}
+
+The production of particles in hadronic collisions depends on the evolution of the partons (i.e. quarks and gluons) inside the hadrons and the parton momentum transfer during the hard scattering. Since the strong coupling constant decreases with increasing momentum scales, partons can be considered asymptotically free within the hadron during collisions involving large momentum transfer. In this case, each parton carries a fraction of the total momemtum of the hadron, represented by the quantity called Bjorken x~\cite{BjorkenX} (labelled simply as x), given by:
+
+\begin{equation}
+p_{parton} = xp_{proton}
+\end{equation}
+
+The quantum properties of the hadrons, such as the electric charge or spin, are derived from the valence quarks. The interaction between valence quarks is mediated by the exchange of gluons. Gluons can also produce virtual quark-antiquark pairs and other gluons through self interactions. The virtual quarks produced inside the hadrons are called sea quarks. The gluons and sea quarks do not contribute to the quantum numbers of the hadrons but they play a key role in the interaction of hadrons with other particles.
+
+A convenient way of studying the evolution of partons within hadrons is through the parton distribution functions (PDFs). The PDF of a hadron represents the probability that a parton carries a given fraction x of the total momemtum of the hadron.
+
+According to the QCD factorization theorem, the cross section of a given hard scattering process in hadronic collisions can be factorized into a partonic cross section times the PDFs of each incoming hadron. The advantage of the factorization theorem is that the partonic cross section can be derived using perturbative QCD and does not depend on the colliding hadrons. On the other hand, the  PDFs can not be currently calculated from first principles due to the non-perturbative nature of QCD, but they can be determined from global fits to experimental data since the PDFs are independent of the initial scattering process (i.e. universal). The hadronic cross section in a given final state can be expressed at LO, using the factorization theorem, as:
+
+\begin{equation}
+\sigma_{h_{1},h_{2}} = \sum_{f_{1},f_{2}=(q,\bar{q},g)}\int_{0}^{1}dx_{1}dx_{2}f_{1}^{h_{1}}\left(x_{1},Q^{2}\right)f_{2}^{h_{2}}\left(x_{2},Q^{2}\right)\hat{\sigma}_{f_{1}f_{2}}
+\label{eq:FactTheorem}
+\end{equation}
+
+where $Q^{2}$ is the momentum scale, $f^{h_{1}}\left(x,Q^{2}\right)$ is the PDF of a given incoming hadron $h_{1}$, and $\hat{\sigma}_{f_{1}f_{2}}$ represents the partonic cross section of the scattering process between partons $f_{1}$ and $f_{2}$.
+
+The $Q^{2}$ scale dependence of the PDFs is described by the parton evolution equations developed by Dokshiftzer, Gribov, Lipatov, Altarelli and Parisi (DGLAP)~\cite{DGLAP_1,DGLAP_2,DGLAP_3}. In the DGLAP formalism, the PDFs can be expressed in terms of kernels $P_{q_{1}q_{2}}$ (called splitting functions), and the evolution equations of the parton densities can be written as:
+
+\begin{equation}
+  \begin{alignedat}{1}
+    \frac{d}{dt}q_{i}\left(x,t\right) &= \frac{\alpha_{s}\left(Q\right)}{2\pi}\left[q_{i}\circledast{P_{qq}} + g_{i}\circledast{P_{qg}}\right] \\
+    \frac{d}{dt}g\left(x,t\right) &= \frac{\alpha_{s}\left(Q\right)}{2\pi}\left[\sum_{i}\left(q_{i}+\bar{q}_{i}\right)\circledast{P_{gq}} + g_{i}\circledast{P_{gg}}\right] \\
+    \left[q\circledast{P}\right] &= \int_{x}^{1}d\epsilon\frac{q\left(\epsilon,t\right)}{\epsilon}\times{P\left(\frac{x}{\epsilon}\right)}
+  \end{alignedat}
+  \label{eq:DGLAP}
+\end{equation}
+
+where $t \propto \mathrm{Log}\left(Q^{2}\right)$, and $P_{q_{1}q_{2}}$ represents the probability of finding a parton $q_{1}$ in another parton $q_{2}$. In other words, the DGLAP evolution equations state that the PDF of a given parton $q$ at an x value is determined from the contribution of all the partons at higher momentum fraction considering their probability of decaying into the parton $q$.
+
+From the definition of the PDFs, one can also formulate a set of structure functions defined as:
+
+\begin{equation}
+F^{p}_{2}\left(x\right) = \sum_{q}e_{q}^{2}f\left(x,Q^{2}\right)x
+\end{equation}
+
+where $e_{q}$ is the electric charge of a given quark flavour $q$. The structure functions were extensively measured in Deep-Inelastic Scattering (DIS) collisions at the Hadron-Elektron-Ringanlage (HERA) accelarator. The DIS process consists on the inelastic scattering of electrons off protons as presented in \fig{dia:DIS}. In the DIS process, the momentum transferred from the electron to the proton is defined as $Q^{2} = -q^{2} = -\left(k - k'\right)^{2}$ and the corresponding Bjorken x fraction is $x = {Q^{2}}\big/{\left(2p{\cdot}q\right)}$.
+
+\begin{figure}[!htbp]
+  \vspace{10mm}
+  \begin{center}
+  \begin{fmffile}{DIS}
+    \begin{fmfgraph*}(160,100)
+      \fmfleft{ip,il}
+      \fmfright{x1,x2,x3,o1,o2,o3,o4,ol}
+      \fmfset{arrow_len}{10}
+      % lepton
+      \fmflabel{$\text{e}^-$}{il}
+      \fmflabel{$\text{e}^-$}{ol}
+      \fmf{fermion,label=$k$, label.side=left}{il,vl}
+      \fmf{fermion,label=$k'$,label.side=left}{vl,ol}
+      \fmf{phantom,tension=0.6}{vl,vp}
+      % proton
+      \fmfv{l=$\text{p}^+$,l.a=-160}{ip} % l.a = label.angle
+      \fmf{phantom,tension=1}{ip,vp,x1}
+      \fmffreeze
+      \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01}
+      \fmfi{fermion,label=$p$,label.side=left}
+                    {vpath (__ip,__vp) scaled 1.01 shifted (-1.4, 6)}
+      \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted ( 1.4,-6)}
+      \fmfblob{25}{vp}
+      % X
+      \fmfv{l=\mybrace{40} $X$,l.a=10}{x2}
+      \fmf{fermion}{vp,x1}
+      \fmf{phantom}{vp,x2} % to help \fmfi
+      \fmfi{fermion}{vpath (__vp,__x2) scaled 0.98 shifted (0,2.2)}
+      \fmffreeze
+      % photon
+      \fmf{photon,label=\vspace{-4pt}\hspace{5pt}{$q$},label.side=left}{vl,v}
+      % parton
+      \fmf{fermion,label=$xp$,label.side=left}{vp,v}
+      \fmf{fermion}{v,o2}
+    \end{fmfgraph*}
+  \end{fmffile}
+  \end{center}
+  \caption{Feynman diagram of deep inelastic scattering of electrons against protons}
+  \label{dia:DIS}
+\end{figure}
+
+The measurements of the $F_{2}$ structure function performed by the ZEUS collaboration~\cite{HERAStrucFunc} at HERA are shown in \fig{fig:HERAStrucFunc}. Even though DIS experiments were not able to probe the gluons directly, the DIS data showed that valence quarks did only carry half of the proton momentum been the other half carried by the gluons.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.4\textwidth]{Figures/Introduction/StandardModel/Structure_Function.png}
+ \end{center}
+\caption{NLO QCD fits to the to the ZEUS $F_{2}$ structure function data from 1996, 1997 and proton fixed-target at HERA. The error bands of the fit represent the total experimental uncertainty from both correlated and uncorrelated sources. Figure taken from Ref.~\cite{HERAStrucFunc}}
+ \label{fig:HERAStrucFunc}
+\end{figure}
+
+Another important process used to constrain PDFs is the production of electroweak bosons such as {\PW} bosons or Drell-Yan (DY). In the DY process, a quark from one hadron and an anti-quark from another hadron annihilate into a virtual photon ($\gamma^{*}$) or {\PZ} boson which then decays to a pair of leptons as shown in \fig{dia:DY}. The measurement of DY production can be used to constrain the quark PDFs in a wide range of momentum fraction x depending on the invariant mass of the dilepton pair. In addition, the measurement of the production of positive and negative charged {\PW} bosons in hadronic collisions is used to disentangle the flavour dependence of the quark PDFs. More details about the {\PW} boson production will be provided in \chp{sec:WBoson}.
+
+\begin{figure}[!htbp]
+  \vspace{10mm}
+  \begin{center}
+\begin{fmffile}{DY}
+  \begin{fmfgraph*}(160,160)
+    \fmfleft{i1,iq,i2,ip,i3}
+    \fmfright{y1,y2,y3,o1,f1,o2,o3,o4,f2,o5,x3,x2,x1}
+    \fmfset{arrow_len}{10}
+    % skeleton
+    \fmf{phantom,tension=0.48}{vq,vp}
+    \fmf{phantom}{ip,vp,x1}
+    \fmf{phantom}{iq,vq,y1}
+    \fmffreeze
+    % parton
+    \fmfv{l=$x_1p_1$,l.a=-90,l.d=22}{vp} % cheat: actually a line label
+    \fmfv{l=$x_2p_2$,l.a=90,l.d=22}{vq} % cheat: actually a line label
+    \fmf{fermion,tension=1.6}{vp,v}
+    \fmf{fermion,tension=1.6}{v,vq}
+    % hard process
+    \fmfshift{20 right}{f1,f2}
+    \fmfv{l=$\bar{f}$}{f1}
+    \fmfv{l=$f$}{f2}
+    \fmf{boson,tension=2,label=$\text{Z}^0/\gamma^*$,label.side=left}{v,vf}
+    \fmf{fermion,tension=2}{f1,vf,f2}
+    % proton 1
+    \fmfv{l=${h}_{A}$,l.a=180,l.d=10}{ip}
+    \fmf{phantom}{ip,vp}
+    \fmfi{fermion,l=$p_1$,l.s=left,l.d=8}
+                  {vpath (__ip,__vp) scaled 1.01 shifted (-2.4, 6)}
+    \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted (-2.4, 0)}
+    \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted (-2.4,-6)}
+    % proton 2
+    \fmfv{l=${h}_{B}$,l.a=180,l.d=10}{iq}
+    \fmf{phantom}{iq,vq}
+    \fmfi{fermion}{vpath (__iq,__vq) scaled 1.01 shifted (-2.4, 6)}
+    \fmfi{fermion}{vpath (__iq,__vq) scaled 1.01 shifted (-2.4, 0)}
+    \fmfi{fermion,l=$p_2$,l.s=right,l.d=8}
+                  {vpath (__iq,__vq) scaled 1.01 shifted (-2.4,-6)}
+    % X 2
+    \fmfshift{25 left}{x1}
+    \fmfshift{20 left}{x2,x3}
+    \fmf{phantom}{vp,x1} % to help \fmfi
+    \fmf{phantom}{vp,x2} % to help \fmfi
+    \fmf{phantom}{vp,x3} % to help \fmfi
+    \fmfi{fermion}{vpath (__vp,__x1) scaled 1.0 shifted ( 0.0, 2.0)}
+    \fmfi{fermion}{vpath (__vp,__x2) scaled 1.0 shifted ( 0.0, 0.0)}
+    \fmfi{fermion}{vpath (__vp,__x3) scaled 1.0 shifted ( 0.0,-2.0)}
+    \fmfblob{25}{vp}
+    % X 2
+    \fmfshift{25 left}{y1}
+    \fmfshift{20 left}{y2,y3}
+    \fmf{phantom}{vq,y1} % to help \fmfi
+    \fmf{phantom}{vq,y2} % to help \fmfi
+    \fmf{phantom}{vq,y3} % to help \fmfi
+    \fmfi{fermion}{vpath (__vq,__y1) scaled 1.0 shifted ( 0.0,-2.0)}
+    \fmfi{fermion}{vpath (__vq,__y2) scaled 1.0 shifted ( 0.0, 0.0)}
+    \fmfi{fermion}{vpath (__vq,__y3) scaled 1.0 shifted ( 0.0, 2.0)}
+    \fmfblob{25}{vq}
+  \end{fmfgraph*}
+\end{fmffile}
+  \end{center}
+  \caption{Feynman diagram of neutral charged Drell-Yan process}
+  \label{dia:DY}
+\end{figure}
+
+\subsection{QCD phase diagram}
+
+The first attempt to describe the temperature dependence of matter at high energies was performed by Rofl Hagedorn in 1965~\cite{Hagedorn1965}. Hagedorn considered matter at high energies as a gas made of hadrons and employed a thermodynamical bootstrap approach to describe the hadron gas. After studying the mass spectrum of all the hadron species measured at the time, Hagedorn realized that the density of hadron species grows exponentially until it diverges at a temperature $T_{H} \approx 158$~MeV, known as the Hagedorn temperature. Years later, with the advent of QCD, it was understood that the Hagedorn temperature described a transition from a hadron gas to a state of matter where quarks and gluons are asymptotically free called the Quark Gluon Plasma (QGP).
+
+The description of the QCD phase transition turned out to be complicated because the critical temperature was close to the QCD scale $\Lambda_{\mathrm{QCD}} \approx 255$~MeV~\cite{LambdaQCD}, where perturbative calculations are no longer reliable. An alternative method to study the non-perturbative regime of QCD consists of solving numerically the QCD field equations on a discrete space-time grid using a method called Lattice QCD. Nowadays, lattice QCD is able to describe the evolution of matter at finite temperatures and low densities. A sketch of the QCD phase diagram in terms of the temperature $T$ and the baryon chemical potential $\mu_{\mathrm{B}}$~\footnote{The baryon chemical potential can be viewed as a measure of the excess of matter over anti-matter.} is shown in \fig{fig:QCDPhaseDiagram}.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.6\textwidth]{Figures/Introduction/StandardModel/QCDPhaseDiagram.png}
+ \end{center}
+\caption{Schematic of the QCD phase diagram for nuclear matter. The solid lines show the phase boundaries and the solid circle represents the critical point. Figure taken from Ref.~\cite{QCDPhaseDiagram}}
+ \label{fig:QCDPhaseDiagram}
+\end{figure}
+
+Normal matter exists in nature at low temperatures. At higher densities, matter undergoes a phase transition to a degenerate gas of fermions known as neutron gas, which is present in dense stellar objects such as white dwarfs or neutron stars. It is theorized that at even higher densities matter could reach a state of colour superconductivity where quarks bind together into Cooper pairs~\cite{ColorSupercondutor}. On the other hand, matter present at the beginning of the universe or produced in \TeV-scale particle collisions has very low baryon chemical potential. At $\mu_{\mathrm{B}}=0$, matter is described at low temperatures as a hadron gas and it becomes a QGP when the temperature exceeds the critical point. The phase transition between the hadron gas and the QGP has been established, using lattice QCD, to be a crossover where the two states coexist~\cite{LatticeQCD,LatticeQCD2}.
+
+
+\section{Relativistic heavy-ion physics}\label{sec:Introduction_HI}
+
+Heavy-ion colliders have become essential tools to explore the fundamental properties of matter. Collisions of nuclei are used to probe the phase transitions of QCD and to recreate the QGP in the laboratory. The QGP is believed to have existed at the beginning of the Universe and to be part of the core of some astrophysical objects such as neutron stars. The study of the QGP allows to test QCD in the most extreme regimes and provides an insight on the evolution of the Universe. Some of the primary research goals of the heavy-ion physic programme is to understand the formation and properties of the QGP, and how does matter interact with the nuclear medium. Nowadays, the experimental study of ultra-relativistic (i.e. at energies above $\sqrtsnn > 10$~\GeV) heavy-ion collisions is performed at the   Brookhaven National Laboratory (BNL) and at the European Organization for Nuclear Research (CERN).
+
+
+\subsection{History of heavy-ion accelerators}
+
+The interest in probing the QCD phase diagram in the laboratory arose in the 1970s after Werner Scheid, Hans M{\"u}ller and Walter Greiner predicted that nuclear matter could be compressed in heavy-ion collisions at nucleus-nucleus energies larger than 100~MeV/nucleon~\cite{MatterShock}. The shock compression mechanism could reach matter densities up to five times higher than the density of atomic nuclei ($\rho_{0}=0.16$~baryons/$\mathrm{fm}^{3}$)~\cite{MatterShock}. Coinciding in time, the Lawrence Berkely Laboratory (LBL) decided to transform their proton synchroton accelerator Bevatron into a heavy-ion experiment called Bevalac. Heavy ions were produced in the Bevalac using the heavy-ion linear accelarator SuperHILAC and then sent to the Bevatron where the ions were further accelerated against a fixed target with energies of up to 2.6 GeV/nucleon~\cite{Bevalac}. The goal at the time was to investigate the equation of state (EoS) of hadronic matter at high densities. The understanding of the relation between the pressure and the energy density of dense matter was a key element needed to describe the dynamics of astrophysical objects such as supernovae and neutron starts~\cite{NeutronStar, DenseMatter}.
+
+The successful creation of compressed nuclear matter at the Bevatron motivated the construction of several heavy-ion accelerators at higher energies. The first one was the Alternating Gradient Synchrotron (AGS) particle accelerator at the Brookhaven National Laboratory (BNL). The AGS became the first facility in 1960 to accelerate protons to an energy of 33~GeV, which allowed to discover the muon neutrino in 1962, to observe the CP violation of the weak interactions in Kaon decays in 1964, and to discover the J/$\psi$ meson in 1974. An electrostatic accelerator called the Tandem Van de Graaf was built in 1970 to provide beams of ions to the AGS. The relativistic heavy-ion programme started at AGS in 1986 and lasted for 12 years during which several experiments were performed (e.g. E802, E858, E866, E896 and E917). AGS accelerated Si beams at 14.6~GeV/nucleon and Au beams at 11.1~GeV/nucleon, and collided them against different types of fixed targets (e.g. Al and Au).
+
+In addition, CERN built the Super Proton Synchroton (SPS) in 1976. To study the QGP, CERN added an Electron-Cyclotron Resonance (ERC) ion source in 1986 which initially accelerated ions of oxygen and sulphur at 200~GeV/nucleon. A subsequent upgrade of the ion injector in 1994 allowed to accelerate Pb ions up to an energy of 158~GeV/nucleon which were collided against fixed targets located in two experimental halls: one in the SPS north area (NA) and the other in the SPS west area (WA). Several fixed target experiments were built at the SPS between 1986 and 2005. After years of analyzing the Pb-Pb and Pb-Au fixed target collision data from SPS, CERN announced in 2000 that the combined results of the experiments NA44, NA45, NA49, NA50, NA52, WA97/NA57 and WA98, provided a first evidence of the creation of a new state of matter consistent with the QGP~\cite{SPSQGP}.
+
+In the meantime, the first nucleus-nuclues collider known as the Relativistic Heavy Ion Collider (RHIC) started operations at the BNL in 2000. Two beams of Au are pre-accelerated at the AGS to an energy of 8.86~GeV/nucleon and then sent to RHIC where the Au beams are collided at $\sqrtsnn = 130$~GeV. Other collision systems explored at RHIC include: p-p, p-Al, p-Au, d-Au, h-Au, Cu-Cu, Cu-Au and U-U. There are four detectors at RHIC called BRAHMS, PHENIX, STAR, and PHOBOS. Currently, only the STAR and PHENIX detectors are still active, while PHOBOS ceased operations in 2005 and BRAHMS in 2006. After four years of meticulously studying the system produced in Au-Au collisions with the four detectors, RHIC finally announced in 2005 the discovery of a strongly coupled QGP. Contrary to the expected gaseous behaviour, the QGP observed at RHIC turned out to resemble more a liquid with very little viscosity~\cite{RHICQGP}.
+
+Currently, the largest heavy-ion collider is the Large Hadron Collider (LHC) at CERN built in 2008. The SPS is used as injector to the LHC accelerating the Pb beams to energies of 1.38~\TeV. The first nucleus-nucleus collisions at LHC took place in 2010 using Pb beams at 2.76~\TeV. Since then, the LHC has collided different configurations involving ions, including p-Pb at 2.76~\TeV (2013), Pb-Pb at 5.02~TeV (2015), p-Pb at 8.16~TeV (2016), Xe-Xe at 5.44~\TeV (2017), and at the end of 2018 LHC is planning to provide a larger set of Pb-Pb collisions at 5.02~\TeV. There are four detectors at the LHC called ALICE, CMS, ATLAS and LHCb. The four experiments are nowadays participating in the heavy-ion programme at LHC. Due to the large beam energies, the LHC is an ideal collider to study the QGP at very high temperatures, where one expects smaller QGP formation times and larger hot medium densities, compared to RHIC.
+
+
+\subsection{Geometry of nucleus-nucleus collisions}
+
+The number of particles produced in a nucleus-nucleus collision depends on the geometry of the collision. Since nuclei are extended objects made of nucleons (i.e. protons and neutrons), the number of nucleon-nucleon (NN) interactions increases the more head-on or central is the collision. The nucleons that participate in the collision are called participants while those that do not participate are called spectators. The overlap region of the collision is parameterized by the impact parameter $\vec{b}$ which is the transverse distance between the centers of the two colliding nuclei as shown in \fig{fig:CollisionGeometry}.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{Figures/Introduction/HeavyIons/CollisionGeometry.jpg}
+ \end{center}
+ \caption{Illustration of two nucleus with impact parameter b before (left) and after (right) colliding. Figure taken from Ref.~\cite{QCDPhaseDiagram}}
+ \label{fig:CollisionGeometry}
+\end{figure}
+
+The formation of the QGP in nucleus-nucleus collisions depends on the number of colliding nucleons. To study the dynamics of the nuclear medium, the heavy-ion collisions are classified based on their centrality. The centrality $c$ is defined as the fraction of the total nucleus-nucleus inelastic cross section $\sigma^{inel}_{AB}$ determined within the area defined by the impact parameter b, and it is  expressed as $c = {\pi}b^{2}/\sigma^{inel}_{AB}$.
+
+The collision centrality can be related to the number of participants $N_{part}$ and the number of binary NN collisions $N_{coll}$ using a Glauber model. The Glauber model, developed in the 1950s by Roy Glauber, describes the collision between two nuclei as a superposition of NN interactions~\cite{GlauberModel}.
+
+The are two ways of implementing the Glauber model, the optical and the Monte Carlo approach. In the optical approach, the physical observables are computed using the optical limit which assumes a continuous nucleon density distribution. On the other hand, in the Monte Carlo approach, the two nuclei are simulated by distributing the nucleons according to their nuclear density profile, and then the nucleus-nucleus collisions are modelled, at random impact parameters, by computing the individual NN collisions~\cite{GlauberModel}.
+
+An example of a heavy-ion collision described by the optical Glauber model geometry is shown in \fig{fig:GlauberModel}. It represents the collision between a nucleus A with A nucleons and a nucleus B with B nucleons.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.7\textwidth]{Figures/Introduction/HeavyIons/GlauberModel.png}
+ \end{center}
+ \caption{Schematic representation of the optical Glauber model geometry.}
+ \label{fig:GlauberModel}
+\end{figure}
+
+The tube located at a distance $\vec{s}$ from the center of the nucleus A overlaps the tube located at a distance $\vec{b} - \vec{s}$ from the center of the nucleus B. In this case, the nuclear overlap function $T_{AB}\left(b\right)$ is defined as:
+
+\begin{equation}
+  T_{AB}\left(b\right) = {\int}{d^{2}s}T_{A}\left(\vec{s}\right)T_{B}\left(\vec{b}-\vec{s}\right)
+\end{equation}
+
+where $T_{A}$ and $T_{B}$ are the nuclear thickness functions of the nucleus A and B, respectively.
+
+The nuclear thickness function is given by $T\left(\vec{r}\right) = {\int}{\rho}\left(\vec{r},z\right)dz$, where $\rho$ is the nuclear density distribution of a given nucleus which is generally parameterized with a Wood-Saxon density profile:
+
+\begin{equation}
+  \rho\left(r\right) = \rho_{0}\frac{1+w\left(r/r_{0}\right)}{1+\exp{\left(\frac{r-r_{0}}{a}\right)}}
+\end{equation}
+
+where  $r$ is the distance to the center of the nucleus, $a$ represents the width of the edge region of the nucleus called the skin depth, $w$ measures the deviation from a spherical shape, and $\rho_{0}$ is a normalization factor such that the integral of the density is equal to the number of nucleons in the nucleus. Once the profile of the nucleus is parameterized, the average number of binary NN collisions $<N_{coll}>$ for a given impact paramater b is defined as:
+
+\begin{equation}
+<N_{coll}\left(b\right)> = {AB}T_{AB}\left(b\right)\sigma^{inel}_{nn}
+\end{equation}
+
+where $\sigma^{inel}_{nn}$ is the inelastic NN cross section. Hence, the Glauber model provides a quantitative description of the geometry of the nuclear collision and can be used to estimate the variables ($N_{part}$, $N_{coll}$ and $T_{AB}$) for a given centrality class.
+
+Experimentally, the impact parameter of the collision can not be determined directly. However, the distribution of the number of soft particles scales with $N_{part}$ while the number of particles with large momemtum transfer scales with $N_{coll}$. As a result, one can estimate the centrality by fitting the distribution of charged particles produced in the collision using the functions of $N_{part}$ and $N_{col}$ derived from the Glauber model. In addition, the collision centrality can be infered from the number of spectators determined from the measurement of the transverse energy in the forward region.
+
+
+\subsection{Evolution of heavy-ion collisions}
+
+The evolution of a nucleus-nucleus collision undergoes several steps, starting from the collision of the nuclei to the final production of hadrons. \fig{fig:QGPEvolution} illustrates the different processes that occur during a heavy-ion collision associated to the production of the QGP.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=1.0\textwidth]{Figures/Introduction/HeavyIons/QGPEvolution.png}
+ \end{center}
+ \caption{Schematic sketch of the evolution of a relativistic heavy ion collision. The wavy lines represent photons while the arrows correspond to jets. Figure taken from Ref.~\cite{QCDPhaseDiagram} }
+ \label{fig:QGPEvolution}
+\end{figure}
+
+\begin{enumerate}
+
+\item Initial stage: At very high energies, the two nuclei are Lorentz contracted along the axis of motion while approaching each other at almost the speed of light. As a consequence, the nucleons of each nuclei are also contracted increasing the number of gluons until it reaches the gluon saturation scale. The dynamics of the nucleus can be described using the Glauber model or by an effective theory called the Color Glass Condesate (CGC). In addition, when the two nuclei collide, the partons inside the geometrical overlap region of the two nuclei undergo parton-parton interactions with large momemtum transfers. \\
+
+\item QGP formation and thermalization: The parton-parton interactions quickly start producing new particles increasing the density of the system until a phase transition is reached forming the QGP. After some time, the system reaches thermal equilibrium. \\
+
+\item Hydrodynamical expansion: After reaching the thermal equilibrium, the system evolves as a perfect fluid. It first expands longitudinaly along the beam direction and then it expands in all directions until the QGP reaches the critical temperature. \\
+
+\item Hadronization: The medium undergoes a phase transition into a hadronic gas where the partons recombine into hadrons. In this phase, the system keeps expanding via hadron-hadron interactions until the average path length of the hadrons is as large as the size of the system. \\
+
+\item Freeze-out: The hadron gas experience first a chemical freeze-out when the inelastic collisions between hadrons cease, fixing the composition of the particles. Subsequently, the system reaches the kinetic freeze-out when the elastic scattering between the hadrons also stop, fixing the kinematic distributions of the particles. Subsequently, the particles escape the medium and are reconstructed in  the detector.
+
+\end{enumerate}
+
+\subsection{Experimental probes of the QGP}
+
+The QGP can not be directly measured experimentally, since once it is created it only exists for a very short amount of time. Nonetheless, the QGP can be studied indirectly by measuring how the particles and the system produced in the collision is modified by the presence of the QGP. There are many experimental signatures that has been used to asses the different properties of the QGP, such as the enhancement of the strange quark production, suppression of the quarkonia yields, attenuation of the energy of jets, anisotropies in the azymuthal distribution of particles, among others. The production mechanism of each experimental probe depends on the momentum scale of the process. Signatures produced in processes involving large momentum transfer are called hard probes while those produced at low momemtum scales are called soft probes.
+
+The majority of the particles produced in heavy-ions collisions are soft and constitute the bulk of the system. Soft probes are used to study the thermal and hydrodynamical evolution of the medium. The production yields of soft particles scales with the number of nucleons that participate in the collision. The strange hadron yields and the elliptic flow are two examples of soft probes. On the other hand, hard probes are produced from the parton-parton hard scattering during the initial stage of the collision. Hard probes are ideal tools to study the structure of the system produced in the collision  since they live through the full evolution of the medium, and their production cross section can be factorized into a partonic cross section described by pQCD and the nPDFs of the nuclei (see \eq{eq:FactTheorem}). The number of hard particles produced in the medium  scales with the number of binary NN collisions. Some important hard probes used to study the nuclear medium includes the electroweak bosons, quarkonium and jets. The following subsections present a brief description on some of the soft and hard probes of the QGP.
+
+
+\subsubsection{Elliptic flow}
+
+When the QGP is formed, it undergoes a collective expansion due to the large pressure gradient produced by the multiple partonic interactions during the heavy-ion collision. This collective expasion is known as flow. The magnitude of the flow tend to grow with the number of parton-parton interactions and it depends on the initial conditions of the collision. If the nucleus-nucleus collision is completely central ($b = 0$) then the particles develope a radial flow, but if the collision is non-central ($b \neq 0$) then the spacial anisotropy of the overlap region leads to an anisotropic flow as shown in \fig{fig:ReactionPlane}.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.6\textwidth]{Figures/Introduction/HeavyIons/ReactionPlane.png}
+ \end{center}
+\caption{Sketch of the deformed medium and the elliptic flow produced in non-central heavy-ion collisions. Figure taken from Ref.~\cite{ReactionPlaneFigure}}
+ \label{fig:ReactionPlane}
+\end{figure}
+
+Experimentally, the anisotropic flow can be determined from the Fourier decomposition of the particle azimuthal distribution with respect to the reaction plane $\psi_{RP}$~\cite{EllipticFlowReview}:
+
+\begin{equation}
+  \frac{d^{3}N}{d^{3}\vec{p}} = \frac{1}{2\pi}\frac{d^{2}N}{{\pt}{d\pt}{dy}}\left(1 + 2\sum^{\inf}_{n=1}{v_{n}\mathrm{cos}\left[n\left(\phi-\psi_{RP}\right)\right]}\right)
+\end{equation}
+
+where the Fourier coefficient $v_{2}$ measures the strength of the elliptic flow and the reaction plane is derived from the direction of the beam ($z$-axis) and the impact parameter ($x$-axis) as presented in \fig{fig:ReactionPlane}.
+
+An alternative way to derive the flow coefficients is by computing the Fourier decomposition of the two-particle azimuthal distribution defined as~\cite{EllipticFlowReview}:
+
+\begin{equation}
+  v_{n}\left\{2\right\}^{2} = c_{n}\left\{2\right\} = \left<\mathrm{cos}\left[n\left(\phi_{1} - \phi_{2}\right)\right]\right>
+\end{equation}
+
+where $c_{n}\left\{2\right\}$ is called the two-particle cumulant and the brackets represent the average over all particles and events. The advantage of using particle correlations is that the Fourier coefficients do not depend on the reaction plane, but non-flow contributions (e.g. resonance decays) can affect the measurements. Higher orders of particle correlations, such as four-particle correlations, can reduce the impact of the non-flow effects.
+
+The elliptic flow of the medium is sensitive to the equation of states of the QGP~\cite{EllipticFlowReview} and the bulk viscosity~\cite{EllipticFlowViscosity}. Furthermore, relativistic hydrodynamic calculations~\cite{EllipticFlowReview_2} predicts that the elliptic flow of hadrons can approximately be expressed as $v_{2} \propto \left(\pt - {\beta}m_{T}\right)$, where $\beta$ is the average flow velocity and $m_{T}$ is the transverse mass of the hadron. As a consequence, the elliptic flow is expected to show a mass ordering where the more massive hadrons would have lower $v_{2}$ values compared to the lighter hadrons.
+
+The low {\pt}-dependence of the elliptic flow of strange hadrons measured at RHIC in Au-Au collisions at $\sqrtsnn = 200$~\GeV is presented in \fig{fig:RHICEllipticFlow}. The measurement of the elliptic flow of $\pi^{\pm}$ mesons, $K^{0}_{s}$ mesons, antiprotons and $\Lambda$ baryons (with masses of 140, 495, 940 and 1,115 MeV, respectively), shows the expected mass ordering pattern as a function of the hadron \pt. Moreover, the good agreement between the RHIC results and the predictions using relativistic hydrodynamics assuming non-viscous flow supported the conclusion that the QGP behaves as an ideal fluid.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.9\textwidth]{Figures/Introduction/HeavyIons/RHICEllipticFlow.png}
+ \end{center}
+\caption{Elliptic flow distribution of as a function of transverse momemtum for $\pi^{\pm}$ mesons, $K^{0}_{s}$ mesons, antiprotons and $\Lambda$ baryons measured by STAR collaboration in Au-Au collisions at $\sqrtsnn = 200$~\GeV. The results are compared with relativistic hydrodynamic calculations. Figure taken from Ref.~\cite{RHICEllipticFlow}}
+ \label{fig:RHICEllipticFlow}
+\end{figure}
+
+
+\subsubsection{Strangeness enhancement}
+
+Strange quarks belongs to the second generation of quarks and are roughly 20 (40) times more massive than the down (up) quarks. The number of strange quarks involved in a decay can be quantified through the quantum number called strangeness which can take values of +1, -1 and 0, for strange quarks, strange anti-quarks, and the other quarks, respectively. Strangeness is conserved in strong and electromagnetic interactions, while it is not conserved in weak decays. In hadronic collisions, strange quark-antiquark pairs ($s\bar{s}$) are produced in parton-parton interactions via gluon fusion ($gg \rightarrow s\bar{s}$) or quark annihilation ($q\bar{q} \rightarrow s\bar{s}$), and through gluon splitting ($g \rightarrow s\bar{s}$) during the evolution of the medium. The production of strange hadrons in proton-proton collisions is suppressed relative to hadrons made of light quarks (i.e. pions), due to the higher mass of the strange quark.
+
+In heavy-ion collisions, where the QGP is formed, it was proposed by Johann Rafelski and Rolf Hagedorn~\cite{StrangenessEnhancement_1} in 1980 that the enhancement of strangeness could serve as a signature of the QGP. Due to the large gluon density present in the hot medium, the gluon fusion becomes the dominant production mode of strange quark pairs in the QGP as shown in \fig{fig:StrangenessEnhancement}. When the temperature of the QGP decreases and the partons hadronize, the production of hadrons containing multi-strange (anti-)quarks is enhanced relative to the production of pions. Moreover, at high collision energies, the strange quarks can also bind to charm and bottom quarks during hadronization, producing many exotic hadrons (e.g. strange $\mathrm{D}_{s}$ or $\mathrm{B}_{s}$ mesons) that would otherwise be rarely seen without the presence of the QGP. As a consequence, one would expect an overall increase of strange quark pair production compared to pions, and also an enhancement of the production of multi-strange (anti-)hadrons in central heavy-ion collisions compared to proton-proton collisions~\cite{StrangenessEnhancement_3}. The strangeness enhancement in the QGP can be described using a thermal model based on a grand canonical ensemble approach~\cite{StrangenessEnhancement_2}.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.6\textwidth]{Figures/Introduction/HeavyIons/StrangenessEnhancement.png}
+ \end{center}
+\caption{Sketch of the production of strange hadrons via gluon fusion in the QGP. Figure taken from Ref.~\cite{StrangenessEnhancementFigure}}
+ \label{fig:StrangenessEnhancement}
+\end{figure}
+
+The enhancement of strange hadrons has been observed in SPS and RHIC~\cite{StrangenessEnhancementExp_2}. Both experiments measured an increasing enhancement of the strangeness content of the hadrons. The ratios of the production yields at mid-rapidity of $\mathrm{K}^{+}/\pi^{+}$ and $\Lambda/\pi^{-}$ mesons for central nuclues-nucleus collisions, shown in \fig{fig:StrangenessEnhancementExp_1}, reach a maximum relative strangeness enhancement at $\sqrtsnn \approx 8$~\GeV, which has been interpreted as the energy during the transition to the QGP~\cite{StrangenessEnhancementExp_2}.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.5\textwidth]{Figures/Introduction/HeavyIons/StrangenessEnhancementExp.png}
+ \end{center}
+\caption{Energy distribution of the relative production ratios $\mathrm{K}^{+}/\pi^{+}$ and $\Lambda/\pi^{-}$ at mid-rapidity measured at AGS (E802, E866, E895, E896) and SPS (NA44, NA49, NA57) in central Pb-Pb collisions, and at RHIC (STAR, PHENIX) in central Au-Au collisions. The  solid line is  the result  of a statistical  model calculation.  The  dotted line shows the $\mathrm{K}^{+}/\pi^{+}$ ratio including the additional effect of higher mass resonances.  The dashed lines show the energy dependence of the temperature (upper panel) and baryonic density (lower panel). Figure taken from Ref.~\cite{StrangenessEnhancementExp_1}}
+ \label{fig:StrangenessEnhancementExp_1}
+\end{figure}
+
+Recently, the ALICE collaboration published in~\cite{StrangenessEnhancementExp_3} the observation of enhanced production of multi-strange hadrons in proton-proton collisions at $\sqrts = 7$~\TeV with high charged-particle multiplicities. The results at LHC show that the enhancement of the strangeness production increases as a function of charged-particle multiplicity from high-multiplicity p-p to p-Pb to Pb-Pb collisions. Therefore, further studies of the  mechanism of strangeness production at high multiplicities are necessary to understand the evolution of small systems.
+
+
+\subsubsection{Jet quenching}
+
+Energetic partons are produced in the hard scattering at the beginning of the collision. The scattered partons fragments into other colour charged particles which then creates an ensemble of hadrons during the hadronization process. The baryons and mesons produced at the end of the collision tend to move along the same direction as the original fragmented parton, forming a localized spray of particles called jet. The jets can be reconstructed by clustering hadrons and other particles around a cone using a jet sequential recombination algorithm (e.g. anti-$k_{t}$~\cite{AntikT}).
+
+In heavy-ion collisions, the hard partons lose energy when they traverse the hot medium either by multiple scattering with the medium constituents or by medium-induced gluon radiation, been the later the dominant mode of parton energy loss in the QGP. As a consequence, the energy of the jets is attenuated and the jets are considered quenched by the medium. The phenomenon of jet quenching in the QGP was first proposed in 1982 by James Bjorken. Bjorken suggested in~\cite{BjorkenJetQuenching} that the observation of events with two jets, where one of the jets escape the QGP without loosing energy while the other jet is fully quenched as shown in \fig{fig:JetQuenching}, could be used as a probe to determine the presence of the QGP.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.5\textwidth]{Figures/Introduction/HeavyIons/JetQuenching.png}
+ \end{center}
+\caption{Sketch of the production mechanism of two jets in proton-proton (top) and heavy-ions (bottom) collisons. Figure taken from Ref.~\cite{FigureJetQuenching}}
+ \label{fig:JetQuenching}
+\end{figure}
+
+The first direct observation of jet quenching was determined at the LHC after measuring an enhanced dijet asymmetry in Pb-Pb collisions compared to proton-proton collisions. The dijet asymmetry is quantified by measuring the jet energy imbalance between the two highest transverse energy jets with an azimuthal angle separation of ${\Delta}{\phi} = |\phi_{1} - \phi_{2}| > {\pi}/{2}$. The jet energy imbalance $A_{J}$ is derived as:
+
+\begin{equation}
+  A_{J} = \frac{E_{T1} - E_{T2}}{E_{T1} + E_{T2}}
+\end{equation}
+
+where $E_{T1}$ is the transverse energy of the most energetic jet among the pair of jets. \fig{fig:ATLASDijetAsym} presents the results, published by the ATLAS collaboration, of the dijet asymmetry distribution and the azimuthal angle between the two jets in different bins of centrality. The dijet asymmetry measured in Pb-Pb collisions at $\sqrtsnn = 2.76$~\TeV are compared to the measurements from p-p collisions at $\sqrts=7$~\TeV and the simulated results derived using events from the Heavy Ion Jet INteraction Generator (HIJING) superimposed with PYTHIA events. The LHC results show a significant dijet energy imbalance in Pb-Pb collisions which increases with the centrality of the collision. This dijet asymmetry is not seen in p-p collisions evidencing the strong jet energy loss present in the QGP.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=1.0\textwidth]{Figures/Introduction/HeavyIons/ATLASDijetAsym.png}
+ \end{center}
+ \caption{Dijet asymmetry measured by the ATLAS collaboration in lead-lead collisions at $\sqrtsnn = 2.76$~\TeV (points) and proton-proton collisions at $\sqrts=7$~\TeV (open circles). The top panel shows the dijet asymmetry distributions and unquenched HIJING with superimposed PYTHIA dijets (solid yellow histograms), as a function of collision centrality. The bottom panel shows the distribution of the azimuthal angle between the two jets ${\Delta}{\phi}$, for data and HIJING+PYTHIA, also as a function of centrality. Figure taken from Ref.~\cite{ATLASDijetAsym} }
+ \label{fig:ATLASDijetAsym}
+\end{figure}
+
+
+\subsubsection{Quarkonium production}
+
+Quarkonium ($Q\bar{Q}$) is a meson composed of a heavy quark and its own anti-quark. Quarkonium can be classified as charmonium or bottomonium if it is made of charm quarks or bottom quarks, respectively. The ground state of charmonium is called \JPsi meson while the one for bottomonium is called \UpsOneS meson. The properties of quarkonia are non-perturbative but since the mass of the heavy quarks is comparable to the mass of the quarkonia, the quarks move inside the quarkonia much slower than the speed of light. As a result, the properties of quarkonia can be computed using an effective non-relativistic model. For instance, one way to describe the binding of the quarks is by using a Cornell potential~\cite{QuarkoniumPotential} given by:
+
+\begin{equation}
+  V_{\QQbar}\left(r\right) = -\frac{a}{r} + br
+\end{equation}
+
+where $r$ is the binding radius of the quarkonium, $a$ is the coulombic interaction coupling, and $b$ is the string tension. The binding radius increases for higher excited states of charmonium (e.g. \PsiOneS) and bottomonium (e.g. \UpsTwoS and \UpsThreeS) compared to their corresponding ground states (i.e. $r_{\UpsOneS} < r_{\UpsTwoS} < r_{\UpsThreeS}$).
+
+One of the first signatures suggested to probe the QGP was the suppression of \JPsi meson production. In 1986, Tetsuo Matsui and Helmut Satz~\cite{JpsiSuppression} proposed that the \JPsi meson binding potential gets screened in the QGP due to the interactions with the free colour charged constituents of the hot medium. The Debye colour screening potential increases with the temperature of the medium until the binding potential can no longer hold the quarks together, and the quarkonium "melts". The binding potential of quarkonium states gets weaker for larger binding radius. As a result, the higher excited states of quarkonium are expected to be more dissociated at a given temperature compared to the ground state, leading to a sequential suppression of quarkonia.
+
+The sequential suppression of bottomonia states has been observed at the LHC. \fig{fig:CMSUpsilonSuppression} shows the invariant mass distribution of dimuons measured by the CMS collaboration in Pb-Pb collisions at $\sqrtsnn = 5.02$~\TeV. The result is compared to the invariant mass distribution obtained by adding the bottomonium mass peaks extracted from p-p collisions at $\sqrts = 5.02$~\TeV on top of the Pb-Pb background and normalized to the \UpsOneS mass peak in Pb-Pb. The comparison shows a clear suppression pattern where the \UpsThreeS is completely melted while part of the \UpsTwoS mass peak still survives.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.6\textwidth]{Figures/Introduction/HeavyIons/UpsilonSuppression.png}
+ \end{center}
+ \caption{Dimuon invariant mass distribution measured by the CMS collaboration in Pb-Pb collisions at $\sqrtsnn = 5.02$~\TeV. The total fit (solid blue line), the background component (dot-dashed blue line) and the individual \UpsOneS, \UpsTwoS and \UpsThreeS mass peaks (dotted gray lines) are shown. The dashed red line represents the p-p signal shapes added on top of the Pb-Pb background and normalized to the \UpsOneS mass peak in Pb-Pb. Figure taken from Ref.~\cite{CMSUpsilonSuppression} }
+ \label{fig:CMSUpsilonSuppression}
+\end{figure}
+
+The first evidence of \JPsi meson suppression was observed in Pb-Pb collisions at 158~\GeV/nucleon by the NA50 collaboration at SPS~\cite{SPSJpsiSuppression_1}. The results at SPS showed that the \JPsi meson cross section measured in peripheral collisions was consistent with the expectations from nuclear absorption while in central collisions it was more suppressed~\cite{SPSJpsiSuppression_2}. However, the measurement of the \JPsi meson production in Au-Au collisions at $\sqrtsnn = 200$~\GeV at RHIC showed a similar level of suppression compared to SPS, contrary to the higher expected suppression due to the higher beam energies.
+
+To understand the measurements of \JPsi meson production at SPS and RHIC, it was proposed that the \JPsi meson production could also be enhanced at RHIC energies. According to~\cite{JpsiRegeneration}, the \JPsi mesons could be regenerated in the most central collisions from the statistical hadronization of uncorrelated charm quark pairs produced in the hard scattering. The number of directly produced $c\bar{c}$ pairs in central nucleus-nucleus collisions is expected to be small at SPS energies, but it can reach values of more than 10 and 100 charm quark pairs at RHIC and LHC energies, respectively~\cite{UncorrelatedCharms}. The statistically regenerated \JPsi mesons are mainly produced at low \pt since the directly produced charm quarks reach thermal equilibrium before hadronizing~\cite{JpsiRegeneration}.
+
+In order to quantify how the hot nuclear medium modifies the production of quarkonia, one can measure the nuclear modification factor $R_{AA}$ defined as:
+
+\begin{equation}
+  R_{AA} = \frac{N^{AA}}{\left<N_{coll}\right>N^{pp}}
+\end{equation}
+
+where $N^{AA}$ is the yield of particles measured in nucleus-nucleus collisions, $N^{pp}$ is the same yield measured in proton-proton collisions, and $\left<N_{coll}\right>$ is the average number of binary nucleon-nucleon collisions. Proton-proton collisions are used as a reference since the average energy density of the medium is not enough to produce the QGP.
+
+The measurements of the \JPsi meson production has also been performed at the LHC. The results of the \JPsi meson nuclear modification factor measured by the ALICE collaboration in the $0\%-20\%$ most central Pb-Pb collisions at $\sqrtsnn = 2.76$~\TeV are compared in \fig{fig:ALICEJpsiRegeneration} to the results measured by the PHENIX collaboration in the $0\%-20\%$ most central Au-Au collisions at $\sqrtsnn = 200$~\GeV. The \JPsi $R_{AA}$ measured at the LHC is larger than the one measured at RHIC at low \JPsi meson \pt, consistent with the trend predicted by the statistical regeneration model of charmonia.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.6\textwidth]{Figures/Introduction/HeavyIons/JpsiRegeneration.png}
+ \end{center}
+ \caption{Nuclear modification factor of \JPsi meson as a function of transverse momentum measured by the ALICE collaboration in the $0\%-20\%$ most central Pb-Pb collisions at $\sqrtsnn = 2.76$~\TeV compared to results from the PHENIX collaboration measured in the $0\%-20\%$ most central Au-Au collisions at $\sqrtsnn = 200$~\GeV. Figure taken from Ref.~\cite{ALICEJpsiRegeneration} }
+ \label{fig:ALICEJpsiRegeneration}
+\end{figure}
+
+
+\subsubsection{Electroweak boson production}
+
+Electroweak particles, such as {\PW} bosons and {\PZ} bosons, are produced in the parton-parton hard scattering and they do not interact strongly with the nuclear medium produced in the heavy-ion  collisions. As a result, electroweak bosons are good probes of the initial stage of the proton-nucleus (p-A) and nucleus-nucleus (A-A) collisions. The dominant production mode of electroweak bosons in heavy-ion collisions is via the annihilation of a light quark and anti-quark. The large momemtum scales involved in the production of weak bosons allows to derive precise calculations of their partonic cross sections using pQCD.
+
+The production yields of electroweak bosons in proton-nucleus collisions are affected by the mix of protons and neutrons in the colliding nucleus (isospin effect), and the depletion (shadowing) or enhancement (antishadowing) of the PDFs in the nucleus. Thus, the measurement of the electroweak boson production in p-A can be used to set constrains to the global fits of the nuclear PDFs. In nucleus-nucleus collisions, the measurement of the nuclear modification factor of {\PZ} bosons at the LHC in Pb-Pb collisions at $\sqrtsnn = 2.56$~\TeV, presented in \fig{fig:CMSZBosonPbPb}, shows that the production of weak bosons is not modified by the hot nuclear medium and only scales with $N_{coll}$, which could be used as an indirect way to determine the centrality of the collision.
+
+\begin{figure}[!htbp]
+ \begin{center}
+  \includegraphics[width=0.6\textwidth]{Figures/Introduction/HeavyIons/CMSZBosonPbPb.png}
+ \end{center}
+ \caption{Nuclear modification factor $R_{AA}$ of $\PZ \rightarrow e^{+}e^{-}$ (blue squares) and $\PZ \rightarrow \mu^{+}\mu^{-}$ (red circles) events as a function of the number of participants measured by the CMS collaboration in Pb-Pb collisions at $\sqrtsnn = 2.56$~\TeV. The open points represent the centrality-integrated $R_{AA}$ and the vertical lines (boxes) correspond to statistical (systematic) uncertainties. The grey bar at $R_{AA} = 1$ represents the uncertainty of the luminosity determined in proton-proton collisions. Figure taken from Ref.~\cite{CMSZBosonPbPb} }
+ \label{fig:CMSZBosonPbPb}
+\end{figure}
+
 
 % END OF SECTION
