@@ -8,8 +8,9 @@
 
 % Physics Particles and Decays
 \newcommand{\PW}{\ensuremath{\text{W}}}
-\newcommand{\PWp}{\ensuremath{\text{W}^+}}
-\newcommand{\PWm}{\ensuremath{\text{W}^-}}
+\newcommand{\PWp}{\ensuremath{\text{W}^{+}}}
+\newcommand{\PWm}{\ensuremath{\text{W}^{-}}}
+\newcommand{\PWpm}{\ensuremath{\text{W}^{\pm}}}
 \newcommand{\PZ}{\ensuremath{\text{Z}}\xspace}
 \newcommand{\PGm}{\ensuremath{\mu}\xspace} % muon
 \newcommand{\PGmm}{\ensuremath{\mu^-}\xspace} % muon
@@ -34,19 +35,20 @@
 %%
 \newcommand{\mumu}{\ensuremath{\PGmp\PGmm}\xspace}
 \newcommand{\tautau}{\ensuremath{\PGt\PAGt}\xspace}
-\newcommand{\W}{\ensuremath{\PW}\xspace}
+\newcommand{\Wb}{\ensuremath{\PW}\xspace}
 \newcommand{\Wp}{\ensuremath{\PWp}\xspace}
 \newcommand{\Wm}{\ensuremath{\PWm}\xspace}
+\newcommand{\Wpm}{\ensuremath{\PWpm}\xspace}
 \newcommand{\DY}{\ensuremath{\PZ/\gamma*}\xspace} % Drell-Yan
 \newcommand{\DYToMuMu}{\ensuremath{\DY\to\mumu}\xspace}
 \newcommand{\Z}{\ensuremath{\PZ}\xspace}
 \newcommand{\ZToMuMu}{\ensuremath{\Z\to\mumu}\xspace}
 \newcommand{\DYToTauTau}{\ensuremath{\DY\to\tautau}\xspace}
 \newcommand{\ZToTauTau}{\ensuremath{\Z\to\tautau}\xspace}
-\newcommand{\WToMuNu}{\ensuremath{\W\to\PGm\PGnGm}\xspace}
+\newcommand{\WToMuNu}{\ensuremath{\Wb\to\PGm\PGnGm}\xspace}
 \newcommand{\WToMuNuPl}{\ensuremath{\PWp\to\PGmp\PGnGm}\xspace}
 \newcommand{\WToMuNuMi}{\ensuremath{\PWm\to\PGmm\PAGnGm}\xspace}
-\newcommand{\WToTauNu}{\ensuremath{\W\to\PGt\PGnGt}\xspace}
+\newcommand{\WToTauNu}{\ensuremath{\Wb\to\PGt\PGnGt}\xspace}
 \newcommand{\WToTauNuPl}{\ensuremath{\PWp\to\PAGt\PGnGt}\xspace}
 \newcommand{\WToTauNuMi}{\ensuremath{\PWm\to\PGt\PAGnGt}\xspace}
 \newcommand{\ttbar}{\ensuremath{\text{t}\overline{\text{t}}}\xspace} % t-tbar
@@ -66,14 +68,17 @@
 \newcommand{\pn}{{\ensuremath{{\Pp}n}}\xspace}
 \newcommand{\pPb}{\ensuremath{\Pp\text{Pb}}\xspace}
 \newcommand{\Pbp}{\ensuremath{\text{Pb}\Pp}\xspace}
-\newcommand{\RunpPb}{\ensuremath{\Pp-\Pb}\xspace}
-\newcommand{\RunPbp}{\ensuremath{\Pb-\Pp}\xspace}
-\newcommand{\pA}{\ensuremath{\Pp-\text{A}}\xspace}
+\newcommand{\RunpPb}{\ensuremath{\Pp\text{-}\Pb}\xspace}
+\newcommand{\RunPbp}{\ensuremath{\Pb\text{-}\Pp}\xspace}
+\newcommand{\RunPbPb}{\ensuremath{\Pb\text{-}\Pb}\xspace}
+\newcommand{\Runpp}{\ensuremath{\Pp\text{-}\Pp}\xspace}
+\newcommand{\RunXeXe}{\ensuremath{\mathrm{Xe}\text{-}\mathrm{Xe}}\xspace}
+\newcommand{\RunpA}{\ensuremath{\Pp\text{-}\text{A}}\xspace}
 
 % Physics Units
-\newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
-\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
-\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+%\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+%\newcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
+%\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
 \newcommand{\GeVc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
 \newcommand{\GeVcc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
 \newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^\text{$-$1}}}\xspace}
@@ -82,6 +87,7 @@
 \newcommand{\etaLAB}{\ensuremath{\eta_{\mathrm{lab}}}\xspace}
 \newcommand{\etaCM}{\ensuremath{\eta_{\mathrm{CM}}}\xspace}
 \newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\Et}{\ensuremath{E_{\mathrm{T}}}\xspace}
 \newcommand{\Em}{\ensuremath{E\hspace{-0.6em}/}\xspace}
 \newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
 \newcommand{\MET}{\ETm}
@@ -95,7 +101,7 @@
 \newcommand{\sqrts}{\ensuremath{\sqrt{\smash[b]{s}}}\xspace}
 \newcommand{\sqrtsnn}{\ensuremath{\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}}\xspace}
 \newcommand{\snn}{\ensuremath{\smash[b]{s_{_{\mathrm{NN}}}}}\xspace}
-\newcommand{\Lumi}{\ensuremath{\mathcal{L}}\xspace}%both upper and lower
+\newcommand{\Lumi}{\ensuremath{\mathrm{L}}\xspace}%both upper and lower % FIX WITH MATHCAL
 
 % Software Programs
 \newcommand{\CMSSW} {{\textsc{cmssw}}\xspace}

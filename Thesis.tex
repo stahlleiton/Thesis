@@ -1,13 +1,19 @@
 \documentclass{ThesisStyle}
 \selectlanguage{english}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amssymb,amscd,mathrsfs}
 \usepackage{xspace}
+\newcommand\hmmax{2}
+\usepackage[binary-units=true]{siunitx}
 \usepackage{lineno}
 \usepackage{graphicx}
 \usepackage{feynmp-auto}
 \usepackage{scalerel}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\tikzset{>=latex} % for LaTeX arrow head
 
 \newcommand{\mybrace}[1]{\scaleleftright[\dimexpr6pt+#1\dimexpr0.11pt]{.}{\rule[\dimexpr5pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{-1pt}}
+\DeclareSIUnit{\Bit}{b}
 
 \begin{document}
 
@@ -79,7 +85,7 @@
 %%%%%%%%%%% BIBLIOGRAPHY
 \backmatter
 \bibliographystyle{kp}
-\bibliography{Bibliography/Introduction,Bibliography/WBoson_Analysis,Bibliography/WBoson_Theory}
+\bibliography{Bibliography/Introduction,Bibliography/WBoson_Analysis,Bibliography/WBoson_Theory,Bibliography/Experiment}
 \clearemptydoublepage
 
 
