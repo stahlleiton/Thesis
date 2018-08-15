@@ -1,10 +1,3 @@
-%%%%%%%%%%%%%% W ANALYSIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Analysis Observables
-\newcommand{\ChgAsym}{{\cal C}\xspace}
-\newcommand{\RFB}{\ensuremath{\text{R}_\text{FB}}\xspace}
-\newcommand{\RFBp}{\ensuremath{\text{R}_\text{FB}^+}\xspace}
-\newcommand{\RFBm}{\ensuremath{\text{R}_\text{FB}^-}\xspace}
 
 % Physics Particles and Decays
 \newcommand{\PW}{\ensuremath{\text{W}}}
@@ -12,26 +5,46 @@
 \newcommand{\PWm}{\ensuremath{\text{W}^{-}}}
 \newcommand{\PWpm}{\ensuremath{\text{W}^{\pm}}}
 \newcommand{\PZ}{\ensuremath{\text{Z}}\xspace}
+\newcommand{\PGl}{\ensuremath{\ell}\xspace} % generic lepton
+\newcommand{\PGlm}{\ensuremath{\ell^-}\xspace} % generic lepton
+\newcommand{\PGlp}{\ensuremath{\ell^+}\xspace} % generic lepton
+\newcommand{\PGlpm}{\ensuremath{\ell^\pm}\xspace} % generic lepton
 \newcommand{\PGm}{\ensuremath{\mu}\xspace} % muon
 \newcommand{\PGmm}{\ensuremath{\mu^-}\xspace} % muon
 \newcommand{\PGmp}{\ensuremath{\mu^+}\xspace} % muon
 \newcommand{\PGmpm}{\ensuremath{\mu^\pm}\xspace} % muon
+\newcommand{\PGe}{\ensuremath{e}\xspace} % electron
+\newcommand{\PGem}{\ensuremath{e^-}\xspace} % electron
+\newcommand{\PGep}{\ensuremath{e^+}\xspace} % electron
+\newcommand{\PGepm}{\ensuremath{e^\pm}\xspace} % electron
 \newcommand{\PGn}{\ensuremath{\nu}\xspace} % generic neutrino
 \newcommand{\PAGn}{\ensuremath{\overline{\nu}}\xspace} % generic neutrino
-\newcommand{\PGnl}{\ensuremath{\nu_\text{l}}\xspace} % lepton neutrino
-\newcommand{\PAGnl}{\ensuremath{\overline{\nu}_\text{l}}\xspace} % anti-lepton neutrino
+\newcommand{\PGnl}{\ensuremath{\nu_\PGl}\xspace} % lepton neutrino
+\newcommand{\PAGnl}{\ensuremath{\overline{\nu}_{\PGl}}\xspace} % anti-lepton neutrino
+\newcommand{\PGnGe}{\ensuremath{\nu_\PGe}\xspace} % electron neutrino
+\newcommand{\PAGnGe}{\ensuremath{\overline{\nu}_\PGe}\xspace} % anti-electron neutrino
 \newcommand{\PGnGm}{\ensuremath{\nu_\PGm}\xspace} % muon neutrino
-\newcommand{\PAGnGm}{\ensuremath{\overline{\nu}_\PGm}\xspace} % anti-muon neutrinoPsi
+\newcommand{\PAGnGm}{\ensuremath{\overline{\nu}_\PGm}\xspace} % anti-muon neutrino
 \newcommand{\PGnGt}{\ensuremath{\nu_\PGt}\xspace} % tau neutrino
 \newcommand{\PAGnGt}{\ensuremath{\overline{\nu}_\PGt}\xspace} % anti-tau neutrino
 \newcommand{\PGt}{\ensuremath{\tau}\xspace} % tau
+\newcommand{\PGtm}{\ensuremath{\tau^-}\xspace} % tau
 \newcommand{\PAGt}{\ensuremath{\overline{\tau}}\xspace} % anti-tau
-\newcommand{\PQt}{\ensuremath{\text{t}}\xspace} % t
-\newcommand{\PQb}{\ensuremath{\text{b}}\xspace} % b
+\newcommand{\cPg}{\ensuremath{\text{g}}} % g for generic gluon
+\newcommand{\cPq}{\ensuremath{\text{q}}} % q for generic quark
 \newcommand{\cPqu}{\ensuremath{\text{u}}} % u for u quark
 \newcommand{\cPqd}{\ensuremath{\text{d}}} % d for d quark
+\newcommand{\cPqs}{\ensuremath{\text{s}}} % s for s quark
+\newcommand{\cPqc}{\ensuremath{\text{c}}} % c for c quark
+\newcommand{\cPqb}{\ensuremath{\text{b}}} % b for b quark
+\newcommand{\cPqt}{\ensuremath{\text{t}}} % b for b quark
+\newcommand{\cPaq}{\ensuremath{\overline{\text{q}}}} % q for q quark
 \newcommand{\cPaqu}{\ensuremath{\overline{\text{u}}}} % u for u quark
 \newcommand{\cPaqd}{\ensuremath{\overline{\text{d}}}} % d for d quark
+\newcommand{\cPaqs}{\ensuremath{\overline{\text{s}}}} % s for s quark
+\newcommand{\cPaqc}{\ensuremath{\overline{\text{c}}}} % c for c quark
+\newcommand{\cPaqb}{\ensuremath{\overline{\text{b}}}} % b for b quark
+\newcommand{\cPaqt}{\ensuremath{\overline{\text{t}}}} % b for b quark
 %%
 \newcommand{\mumu}{\ensuremath{\PGmp\PGmm}\xspace}
 \newcommand{\tautau}{\ensuremath{\PGt\PAGt}\xspace}
@@ -40,69 +53,165 @@
 \newcommand{\Wm}{\ensuremath{\PWm}\xspace}
 \newcommand{\Wpm}{\ensuremath{\PWpm}\xspace}
 \newcommand{\DY}{\ensuremath{\PZ/\gamma*}\xspace} % Drell-Yan
+\newcommand{\DYToLepLep}{\ensuremath{\DY\to\PGlp\PGlm}\xspace}
 \newcommand{\DYToMuMu}{\ensuremath{\DY\to\mumu}\xspace}
 \newcommand{\Z}{\ensuremath{\PZ}\xspace}
 \newcommand{\ZToMuMu}{\ensuremath{\Z\to\mumu}\xspace}
 \newcommand{\DYToTauTau}{\ensuremath{\DY\to\tautau}\xspace}
 \newcommand{\ZToTauTau}{\ensuremath{\Z\to\tautau}\xspace}
+\newcommand{\WToLepNu}{\ensuremath{\Wb\to\PGl\PGnl}\xspace}
 \newcommand{\WToMuNu}{\ensuremath{\Wb\to\PGm\PGnGm}\xspace}
 \newcommand{\WToMuNuPl}{\ensuremath{\PWp\to\PGmp\PGnGm}\xspace}
 \newcommand{\WToMuNuMi}{\ensuremath{\PWm\to\PGmm\PAGnGm}\xspace}
+\newcommand{\WToMuNupm}{\ensuremath{\Wpm\to\PGmpm\PGnGm}\xspace}
+\newcommand{\WToTauToMuNuNu}{\ensuremath{\Wb\to\PGt\to\PGm\PGnGm\PGnGt}\xspace}
 \newcommand{\WToTauNu}{\ensuremath{\Wb\to\PGt\PGnGt}\xspace}
 \newcommand{\WToTauNuPl}{\ensuremath{\PWp\to\PAGt\PGnGt}\xspace}
 \newcommand{\WToTauNuMi}{\ensuremath{\PWm\to\PGt\PAGnGt}\xspace}
-\newcommand{\ttbar}{\ensuremath{\text{t}\overline{\text{t}}}\xspace} % t-tbar
+\newcommand{\DYToTau}{\ensuremath{\Z\PGt}\xspace}
+\newcommand{\DYToMu}{\ensuremath{\Z\mu}\xspace}
+\newcommand{\ZToTau}{\ensuremath{\Z\PGt}\xspace}
+\newcommand{\WToMu}{\ensuremath{\Wb\PGm}\xspace}
+\newcommand{\WToTau}{\ensuremath{\Wb\PGt}\xspace}
+\newcommand{\ttbar}{\ensuremath{\cPqt\cPaqt}\xspace} % t-tbar
+%
 \newcommand{\QQbar}{\ensuremath{{\text{Q}\overline{\text{Q}}}}\xspace}
+\newcommand{\qqbar}{\ensuremath{\cPq\cPaq}\xspace}
+\newcommand{\ccbar}{\ensuremath{\cPqc\cPaqc}\xspace}
 \newcommand{\JPsi}{\ensuremath{\text{J}\hspace{-.08em}/\hspace{-.14em}\psi}\xspace} % J/Psi (no mass)
-\newcommand{\PsiOneS}{\ensuremath{\psi\left(2\text{S}\right)}\xspace}
+\newcommand{\JPsiToMuMu}{\ensuremath{\JPsi\to\mumu}\xspace}
+\newcommand{\BToJPsiToMuMu}{\ensuremath{\B\to\JPsi\to\mumu}\xspace}
+\newcommand{\PsiP}{\ensuremath{\psi\left(2\text{S}\right)}\xspace}
+\newcommand{\PsiPToMuMu}{\ensuremath{\PsiP\to\mumu}\xspace}
+\newcommand{\BToPsiPToMuMu}{\ensuremath{\B\to\PsiP\to\mumu}\xspace}
 \newcommand{\UpsOneS}{\ensuremath{\Upsilon\left(1\text{S}\right)}\xspace}
 \newcommand{\UpsTwoS}{\ensuremath{\Upsilon\left(2\text{S}\right)}\xspace}
 \newcommand{\UpsThreeS}{\ensuremath{\Upsilon\left(3\text{S}\right)}\xspace}
 \newcommand{\B}{\ensuremath{\text{B}}\xspace}
 \newcommand{\D}{\ensuremath{\text{D}}\xspace}
+\newcommand{\PK}{\ensuremath{\text{K}}\xspace}
+\newcommand{\bkg}{\ensuremath{\text{bkg}}\xspace}
+
+% Analysis Observables
+\newcommand{\ChgAsym}{\ensuremath{\euscr{A}_{\PGm}}\xspace}
+\newcommand{\ChgAsymF}{\ensuremath{(N_{\Pgm}^{+} - N_{\Pgm}^{-})/(N_{\Pgm}^{+} + N_{\Pgm}^{-})}\xspace}
+\newcommand{\RFB}{\ensuremath{R_\text{FB}}\xspace}
+\newcommand{\RFBp}{\ensuremath{R^{+}_\text{FB}}\xspace}
+\newcommand{\RFBm}{\ensuremath{R^{-}_\text{FB}}\xspace}
+\newcommand{\RFBpm}{\ensuremath{R^{\pm}_\text{FB}}\xspace}
+\newcommand{\doubleRatio}{\ensuremath{(N_{\psiP}/ \allowbreak N_{\JPsi})_{\PbPb} / \allowbreak (N_{\psiP}/ \allowbreak N_{\JPsi})_{\pp}}\xspace}
 
 % Collision Types
+\newcommand{\PAp}{\ensuremath{\bar{\text{p}}}}
 \newcommand{\Pp}{\ensuremath{\text{p}}}
+\newcommand{\Pn}{\ensuremath{\text{n}}}
 \newcommand{\Pb}{\ensuremath{\text{Pb}}\xspace}
-\newcommand{\pp}{{\ensuremath{\Pp\Pp}}\xspace}
-\newcommand{\pn}{{\ensuremath{{\Pp}n}}\xspace}
-\newcommand{\pPb}{\ensuremath{\Pp\text{Pb}}\xspace}
-\newcommand{\Pbp}{\ensuremath{\text{Pb}\Pp}\xspace}
+\newcommand{\pPA}{\ensuremath{\Pp\text{A}}\xspace}
+\newcommand{\pp}{\ensuremath{\Pp\Pp}\xspace}
+\newcommand{\pn}{\ensuremath{\Pp\Pn}\xspace}
+\newcommand{\pPb}{\ensuremath{\Pp\Pb}\xspace}
+\newcommand{\Pbp}{\ensuremath{\Pb\Pp}\xspace}
+\newcommand{\PbPb}{\ensuremath{\Pb\Pb}\xspace}
 \newcommand{\RunpPb}{\ensuremath{\Pp\text{-}\Pb}\xspace}
 \newcommand{\RunPbp}{\ensuremath{\Pb\text{-}\Pp}\xspace}
 \newcommand{\RunPbPb}{\ensuremath{\Pb\text{-}\Pb}\xspace}
 \newcommand{\Runpp}{\ensuremath{\Pp\text{-}\Pp}\xspace}
-\newcommand{\RunXeXe}{\ensuremath{\mathrm{Xe}\text{-}\mathrm{Xe}}\xspace}
+\newcommand{\RunXeXe}{\ensuremath{\text{Xe}\text{-}\text{Xe}}\xspace}
 \newcommand{\RunpA}{\ensuremath{\Pp\text{-}\text{A}}\xspace}
+\newcommand{\Runppbar}{\ensuremath{\Pp\text{-}\overline{\Pp}}\xspace}
 
 % Physics Units
-%\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
-%\newcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
-%\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+\newcommand{\Gbs}{\ensuremath{\text{Gb}/\text{s}}\xspace}
 \newcommand{\GeVc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
 \newcommand{\GeVcc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
-\newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^\text{$-$1}}}\xspace}
+\newcommand{\pbinv}{\mbox{\ensuremath{\,\text{pb}^\text{$-$1}}}\xspace}
+\newcommand{\nbinv}{\mbox{\ensuremath{\,\text{nb}^\text{$-$1}}}\xspace}
+\newcommand{\mbinv}{\mbox{\ensuremath{\,\text{mb}^\text{$-$1}}}\xspace}
+\newcommand{\mubinv}{\mbox{\ensuremath{\,\mu\text{b}^\text{$-$1}}}\xspace}
 
 % Physics Symbols ...
-\newcommand{\etaLAB}{\ensuremath{\eta_{\mathrm{lab}}}\xspace}
-\newcommand{\etaCM}{\ensuremath{\eta_{\mathrm{CM}}}\xspace}
-\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
-\newcommand{\Et}{\ensuremath{E_{\mathrm{T}}}\xspace}
+\newcommand{\iso}{\ensuremath{I^{\mu}}\xspace}
+\newcommand{\etaLAB}{\ensuremath{\eta_{\text{lab}}}\xspace}
+\newcommand{\etaCM}{\ensuremath{\eta_{\text{CM}}}\xspace}
+\newcommand{\etaMuREF}{\ensuremath{\eta^{\mu}_{\textrm{ref}}}\xspace}
+\newcommand{\etaMuLAB}{\ensuremath{\eta^{\mu}_{\textrm{lab}}}\xspace}
+\newcommand{\etaMuCM}{\ensuremath{\eta^{\mu}_{\textrm{CM}}}\xspace}
+\newcommand{\rap}{\ensuremath{y}\xspace}
+\newcommand{\p}{\ensuremath{p}\xspace}
+\newcommand{\ut}{\ensuremath{u_{\text{T}}}\xspace}
+\newcommand{\qt}{\ensuremath{q_{\text{T}}}\xspace}
+\newcommand{\qtZ}{\ensuremath{q^{\Z}_{\text{T}}}\xspace}
+\newcommand{\qtW}{\ensuremath{q^{\Wb}_{\text{T}}}\xspace}
+\newcommand{\ptMu}{\ensuremath{p^{\mu}_{\text{T}}}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\text{T}}}\xspace}
+\newcommand{\Et}{\ensuremath{E_{\text{T}}}\xspace}
 \newcommand{\Em}{\ensuremath{E\hspace{-0.6em}/}\xspace}
-\newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\ETm}{\ensuremath{E_{\text{T}}^{\text{miss}}}\xspace}
 \newcommand{\MET}{\ETm}
 \newcommand{\ETmiss}{\ETm}
 \newcommand{\ptmiss}{\ensuremath{\pt^\text{miss}}\xspace}
-\newcommand{\ETslash}{\ensuremath{E_{\mathrm{T}}\hspace{-1.1em}/\kern0.45em}\xspace}
-\newcommand{\VETslash}{\ensuremath{{\vec E}_{\mathrm{T}}\hspace{-1.1em}/\kern0.45em}\xspace}
-\newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
-\newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
-\newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
+\newcommand{\ETslash}{\ensuremath{E_{\text{T}}\hspace{-1.1em}/\kern0.8em}\xspace}
+\newcommand{\VETslash}{\ensuremath{{\vec E}_{\text{T}}\hspace{-1.1em}/\kern0.8em}\xspace}
+\newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\text{T}}^{\text{miss}}}\xspace}
+\newcommand{\utper}{\ensuremath{{u}_{\perp}}\xspace}
+\newcommand{\utpar}{\ensuremath{{u}_{\parallel}}\xspace}
+\newcommand{\utvec}{\ensuremath{{\vec u}_{\text{T}}}\xspace}
+\newcommand{\qtvec}{\ensuremath{{\vec q}_{\text{T}}}\xspace}
+\newcommand{\qtZvec}{\ensuremath{{\vec q}^{\Z}_{\text{T}}}\xspace}
+\newcommand{\qtWvec}{\ensuremath{{\vec q}^{\W}_{\text{T}}}\xspace}
+\newcommand{\ptMuvec}{\ensuremath{{\vec p}^{\mu}_{\text{T}}}\xspace}
+\newcommand{\ptvec}{\ensuremath{{\vec p}_{\text{T}}}\xspace}
+\newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\text{T}}^{\kern1pt\text{miss}}}\xspace}
+\newcommand{\pvec}{\ensuremath{\vec p}\xspace}
+%
 \newcommand{\sqrts}{\ensuremath{\sqrt{\smash[b]{s}}}\xspace}
-\newcommand{\sqrtsnn}{\ensuremath{\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}}\xspace}
-\newcommand{\snn}{\ensuremath{\smash[b]{s_{_{\mathrm{NN}}}}}\xspace}
-\newcommand{\Lumi}{\ensuremath{\mathrm{L}}\xspace}%both upper and lower % FIX WITH MATHCAL
-
+\newcommand{\sqrtsnn}{\ensuremath{\sqrt{\smash[b]{s_{_{\text{NN}}}}}}\xspace}
+\newcommand{\snn}{\ensuremath{\smash[b]{s_{_{\text{NN}}}}}\xspace}
+\newcommand{\Lumi}{\ensuremath{\euscr{L}}\xspace}%both upper and lower % FIX WITH MATHCAL
+\newcommand{\Punzi}{\ensuremath{\euscr{P}}\xspace}%both upper and lower % FIX WITH MATHCAL
+%
+\newcommand{\ctau}{\ensuremath{\ell_{\JPsi}}\xspace}
+\newcommand{\ctautrue}{\ensuremath{\ell_{\JPsi}^\prime}\xspace}
+\newcommand{\sigmactau}{\ensuremath{\sigma_{\ell}}\xspace}
+\newcommand{\sigmactautrue}{\ensuremath{\sigma_{\ell}^\prime}\xspace}
+%
+\newcommand{\npart}{\ensuremath{N_{\text{part}}}\xspace}
+\newcommand{\ncoll}{\ensuremath{N_{\text{coll}}}\xspace}
+\newcommand{\nJPsi}{\ensuremath{N_{\JPsi}}\xspace}
+\newcommand{\nbkg}{\ensuremath{N_{\bkg}}\xspace}
+\newcommand{\bJPsi}{\ensuremath{b_{\JPsi}}\xspace}
+\newcommand{\AAA}{\ensuremath{\text{AA}}\xspace}
+\newcommand{\raa}{\ensuremath{R_{\AAA}}\xspace}
+\newcommand{\taa}{\ensuremath{T_{\AAA}}\xspace}
+\newcommand{\nmb}{\ensuremath{N_\text{MB}}\xspace}
+%
+\newcommand{\cov}{\ensuremath{\text{cov}}\xspace}
+\newcommand{\corr}{\ensuremath{\text{corr}}\xspace}
+\newcommand{\reco}{\ensuremath{\text{reco}}\xspace}
+\newcommand{\gen}{\ensuremath{\text{gen}}\xspace}
+\newcommand{\MC}{\ensuremath{\text{MC}}\xspace}
+\newcommand{\data}{\ensuremath{\text{data}}\xspace}
+\newcommand{\tnp}{\ensuremath{\text{TnP}}\xspace}
+\newcommand{\offline}{\ensuremath{\text{offline}}\xspace}
+\newcommand{\res}{\ensuremath{\text{res}}\xspace}
+\newcommand{\mMuMu}{\ensuremath{m_{\mumu}}\xspace}
+\newcommand{\mJPsi}{\ensuremath{m_{\JPsi}}\xspace}
+\newcommand{\nnJPsi}{\ensuremath{n_{\JPsi}}\xspace}
+\newcommand{\aJPsi}{\ensuremath{\alpha_{\JPsi}}\xspace}
+\newcommand{\fJPsi}{\ensuremath{f_{\JPsi}}\xspace}
+\newcommand{\sRes}{\ensuremath{s_{\res}}\xspace}
+\newcommand{\fRes}{\ensuremath{f_{\res}}\xspace}
+\newcommand{\CB}{\ensuremath{\text{CB}}\xspace}
+\newcommand{\Gauss}{\ensuremath{\text{Gauss}}\xspace}
+\newcommand{\sPlot}{\ensuremath{\vphantom{p}_{s}\euscr{Plot}}\xspace}
+\newcommand{\sWeights}{\ensuremath{\vphantom{p}_{s}\euscr{Weights}}\xspace}
+\newcommand{\sW}{\ensuremath{\vphantom{p}_{s}\euscr{W}}\xspace}
+\newcommand{\PDF}{\ensuremath{\text{PDF}}\xspace}
+\newcommand{\VV}{\ensuremath{\text{V}}\xspace}
+\newcommand{\BR}{\ensuremath{\text{BR}}\xspace}
+\newcommand{\TnP}{\ensuremath{\text{T$\&$P}}\xspace}
+\newcommand{\QCD}{\ensuremath{\text{QCD}}\xspace}
+%
 % Software Programs
 \newcommand{\CMSSW} {{\textsc{cmssw}}\xspace}
 \newcommand{\EVTGEN} {{\textsc{evtgen}}\xspace}
@@ -118,15 +227,18 @@
 \newcommand{\TAUOLA} {\textsc{tauola}\xspace}
 \newcommand{\POWHEGBOX} {{\textsc{powheg}}-{\textsc{box}}\xspace}
 \newcommand{\EPOS} {{\textsc{epos}}\xspace}
+\newcommand{\EPOSLHC} {{\textsc{epos} \textsc{lhc}}\xspace}
 \newcommand{\PYQUEN} {{\textsc{pyquen}}\xspace}
 
 % Operators
-\newcommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
+\newcommand{\dd}[1]{\mathop{}\!\text{d}#1}
+\newcommand{\abs}[1]{\ensuremath{\left\lvert #1 \right\rvert}}
 \newcommand{\eexp}[1]{\ensuremath{{\text e}^{#1}}\xspace}
 
 % References to Equations, Figures, Tables, Sections or Chapters
 \newcommand{\eq}[1]{Eq.~\eqref{#1}\xspace}
-\newcommand{\fig}[1]{Fig.~\ref{#1}\xspace}
+\newcommand{\fig}[1]{Figure~\ref{#1}\xspace}
 \newcommand{\tab}[1]{Table~\ref{#1}\xspace}
 \newcommand{\sect}[1]{Section~\ref{#1}\xspace}
 \newcommand{\chp}[1]{Chapter~\ref{#1}\xspace}
+\newcommand{\app}[1]{Appendix~\ref{#1}\xspace}

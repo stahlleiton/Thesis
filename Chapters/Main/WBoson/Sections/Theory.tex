@@ -1,238 +1,170 @@
-\section{Theory}\label{sec:WBoson_Theory}
+\section{Introduction}\label{sec:WBoson_Introduction}
+
+This section provides a short introduction to the \Wb-boson analysis. It starts with a brief historical overview of the weak theory (\sect{sec:WBoson_Introduction_History}) and continues with a short description of the modern theory of electroweak interactions (\sect{sec:WBoson_Introduction_EWTheory}). The process of interest in this analysis, $\pPb\rightarrow\WToMuNu$, is detailed in \sect{sec:WBoson_Introduction_Production}. \sect{sec:WBoson_Introduction_nPDFs} introduces the nuclear PDFs and describes the most recent nuclear PDF sets. Finally, \sect{sec:WBoson_Introduction_Results} present some of the latest results on weak boson production in heavy-ion collisions at the LHC.
 
 
-\subsection{History of weak theory}
+\subsection{A brief history of the weak theory}\label{sec:WBoson_Introduction_History}
 
-In the early 20th century, quantum mechanics was the standard framework of atomic physics but certain processes such as the $\beta$ decay, discovered by Ernest Rutherford in 1899~\cite{RutherfordBetaDecay}, were not fully understood yet. At the time, the $\beta$ decay was characterized by the process $A_{i}\rightarrow{A_{f}+e^{-}}$, where an initial nucleus $A_{i}$ decays into another nucleus $A_{f}$ emitting an electron during the process. In order to conserve energy, the electron is required to have a fixed kinetic energy, but James Chadwick observed in 1914 that the $\beta$ rays produced a continuos energy spectrum~\cite{BetaDecay_1,BetaDecay_2} in disagreement with was expected. As a way to solve the problem of the continuous $\beta$ decay spectrum, Wolgang Pauli proposed in 1930 the existence of a new particle~\cite{Neutrino_1,Neutrino_2}. Pauli named his particle initially the neutron but later renamed it to the neutrino after the discovery of a new electrically neutral particle inside the ${}_{7}^{14}\mathrm{Ni}$ nucleus by Chadwick in 1932~\cite{Neutron}. Pauli described the neutrino as a neutral fermion with mass close to zero and spin $1/2$ capable of penetrating matter deeper than photons~\cite{Neutrino_1}.
+In the early 20th century, quantum mechanics was the standard framework of atomic physics but certain processes such as the $\beta$ decay, discovered by Ernest Rutherford in 1899~\cite{RutherfordBetaDecay}, were not fully understood yet. At the time, the $\beta$ decay was characterized by the process $A_{i}\rightarrow{A_{f}+e^{-}}$, where an initial nucleus $A_{i}$ decays into another nucleus $A_{f}$ emitting an electron during the process. In order to conserve energy, the electron is required to have a fixed kinetic energy, but James Chadwick observed in 1914 that the $\beta$ rays produced a continuous energy spectrum~\cite{BetaDecay_1,BetaDecay_2} in disagreement with was expected. Another puzzle was the apparently wrong statistics of ${}_{7}^{14}\text{Ni}$ ($A = 14$, $Z = 7$), which was thought at the time to be composed of 14 protons and 7 electrons (behaving as a fermion), but was experimentally proven to have spin 1. As a way to solve the problem of the continuous $\beta$ decay spectrum and the statistics problem of nitrogen, Wolgang Pauli proposed in 1930 the existence of a new particle~\cite{Neutrino_1,Neutrino_2}. Pauli named his particle initially the neutron, but was later renamed to neutrino by Enrico Fermi after the discovery of a new heavy neutral particle by Chadwick in 1932~\cite{Neutron}, that end up solving the ${}_{7}^{14}\text{Ni}$ statistics problem by explaining the nitrogen nucleus as made of 7 protons and 7 neutrons (even number of fermions). Pauli described the neutrino as a neutral fermion with mass close to zero and spin $1/2$ capable of penetrating matter deeper than photons~\cite{Neutrino_1}.
 
-Enrico Fermi, after attending the 7th Solvay conference where the discovery of the neutron as well as Pauli's neutrino were presented, proposed a new theory to explain the $\beta$ decay~\cite{FermiWeakTheory_1}. Fermi's theory defined the $\beta$ decay as a process in which the neutron decays to a proton, emitting an electron and a neutrino. Fermi formulated his theory using an analogous approach as in Quantum Electrodynamics (QED) by proposing the following lagrangian for $\beta$ decay~\cite{FermiWeakTheory_2}:
+Enrico Fermi, after attending the 7th Solvay conference, where the discovery of the neutron and the neutrino hypothesis were presented, proposed a new theory to explain the $\beta$ decay~\cite{FermiWeakTheory_1}. Fermi's theory defined the $\beta$ decay as a process in which the neutron decays to a proton, emitting an electron and a neutrino. Fermi formulated his theory using an analogous approach as in Quantum Electrodynamics (QED), by proposing the following Lagrangian for $\beta$ decay~\cite{FermiWeakTheory_2}:
 
 \begin{equation}
 L_{\beta}=G_{F}\left(\bar{u}_{p}\gamma_{\mu}u_{n}\right)\left(\bar{u}_{e}\gamma^{\mu}u_{\nu}\right)
 \end{equation}
 
-where $u$ is the Dirac spinor of each particle, $\gamma_{\mu}$ is the Dirac matrix and $G_{F}$ is the Fermi coupling constant. Fermi's theory of weak interations assumed the same conservation rules as QED, including the symmetry under reflection in space~\cite{FermiWeakTheory_2}. A system that is invariant under reflections conserve a quantity called parity which includes an intrinsic component called spin and a spatial component depending on the angular momentum of the particle.
+where $u$ is the Dirac spinor of each particle, $\gamma_{\mu}$ is the Dirac matrix and $G_{F}$ is the Fermi coupling constant. Fermi's theory of weak interactions assumed the same conservation rules as QED, including the symmetry under reflection in space~\cite{FermiWeakTheory_2}. A system that is invariant under reflections conserve a quantity called parity.
 
-In the upcoming years, the physicists Tsung Dao Lee and Chen Ning Yang started to doubt the conservation of weak parity after not finding any experimental evidence so far~\cite{LeeYang}. In an attempt to test the conservation of parity in weak interactions, Lee and Yang proposed in 1956 to study the $\beta$ decays of Cobalt (${}^{60}$Co) and measure the projection of the momemtum of electrons along the spin axis of the Cobalt nucleus~\cite{LeeYang}. If the decay process conserves parity then electrons would be produced in all directions. The experiment to test the conservation of weak parity was realized by Chien-Shiung Wu in 1957. The results of Wu's research showed that electrons were preferentially produced in the opposite direction to the Cobalt spin~\cite{WuParityViolation}, which meant that parity was not conserved in weak interactions.
+In the upcoming years, the physicists Tsung Dao Lee and Chen Ning Yang started to suspect that the weak interactions could violate parity conservation, after not finding any experimental evidence of its conservation so far~\cite{LeeYang}. In an attempt to test the conservation of parity in weak interactions, Lee and Yang proposed in 1956 to study the $\beta$ decays of Cobalt (${}^{60}$Co) and measure the projection of the momentum of electrons along the spin axis of the Cobalt nucleus~\cite{LeeYang}. If the decay process conserves parity then electrons would be produced in both directions: parallel and anti-parallel to the magnetic field. The experiment to test the conservation of parity was realized by Chien-Shiung Wu in 1957. The results of Wu's research showed that electrons were preferentially produced in the opposite direction to the Cobalt spin~\cite{WuParityViolation}, which meant that parity was not conserved in weak interactions, and even maximally violated.
 
-Apart from parity, one can also associate a helicity to particles. The particle's helicity is considered right-handed if the direction of the particle's momemtum and spin are the same, and left-handed otherwise. In 1958, Goldhaber, Grodzins and Sunyar measured the neutrino helicity at Brookhaven National Laboratory (BNL) and discovered that neutrinos were always left-handed and antineutrinos were right-handed~\cite{NeutrinoHelicity}. As a consequence of the discovery of parity violation and the neutrino helicity, Robert Marshak and George Sudarshan modified Fermi's weak theory and introduced an axial vector term, giving rise to the V-A (vector-axial) theory of weak interactions~\cite{VATheory}. Even though parity (P) and charge conjugation (C) (transforms particles into their antiparticles) were violated separately, it was assumed that the combined CP operation was still conserved by the weak force.
+Apart from parity, one can also associate a helicity to particles. The particle's helicity is considered right-handed if the projection of the spin on the particle momentum is aligned, and left-handed otherwise. In 1958, Goldhaber, Grodzins and Sunyar measured the neutrino helicity at Brookhaven National Laboratory (BNL) and discovered that neutrinos were always left-handed and anti-neutrinos were right-handed~\cite{NeutrinoHelicity}. As a consequence of the discovery of parity violation and the neutrino helicity, Robert Marshak and George Sudarshan modified Fermi's weak theory and introduced an axial vector term, giving rise to the V-A (vector-axial) theory of weak interactions~\cite{VATheory}. Even though parity (P) and charge conjugation (C) (transforms particles into their anti-particles) were violated separately, it was then assumed that the combined CP operation was still conserved by the weak interaction.
 
-The assumption of the conservation of CP did not last long. An experiment performed at BNL by James Christenson, James Cronin, Val Fitch and Rene Turlay~\cite{KMeson} in 1964 concluded that the long-lived $K_{L}$ meson (CP=-1) was able to decay to two pions (CP=+1) violating CP in the process. To explain the CP violation in weak theory, Makoto Kobayashi and Toshihide Maskawa~\cite{CKMMatrix} extended the formulation of the Cabibbo matrix to include three generation of quarks and a CP-violating phase term. The Cabibbo matrix was originally computed by Nicola Cabibbo~\cite{CabibboMatrix} including four quarks to explain the different amplitudes observed between the up, down and strange quark transitions. The development of the Cabibbo, Kobayashi and Maskawa (CKM) matrix led to the prediction of the bottom and top quarks, discovered later in 1977~\cite{BottomQuarkDiscovery} and 1995~\cite{TopQuarkDiscovery}, respectively.
+The assumption of the conservation of CP did not last long. An experiment performed at BNL by James Christenson, James Cronin, Val Fitch and Ren{\'e} Turlay~\cite{KMeson} in 1964 concluded that a small proportion of long-lived $K_{L}$ meson ($\text{CP}=-1$) was able to decay to two pions ($\text{CP}=+1$) violating CP in the process. To explain the CP violation in weak theory, Makoto Kobayashi and Toshihide Maskawa~\cite{CKMMatrix} extended in 1973 the formulation of the Cabibbo angle to include three generation of quarks and a CP-violating phase term. The Cabibbo angle was originally computed by Nicola Cabibbo~\cite{CabibboMatrix} to explain the different amplitudes observed between the up, down and strange quark transitions. The charm quark was not yet discovered but was strongly hypothesized, through the Glashow-Iliopoulos-Maiani (GIM) mechanism~\cite{GIM}. The Cabibbo, Kobayashi and Maskawa (CKM) matrix supposed the existence of the charm, bottom and top quarks, discovered later in 1977~\cite{JPsiDiscovery,JPsiDiscovery_2}, 1977~\cite{BottomQuarkDiscovery} and 1995~\cite{TopQuarkDiscovery}, respectively.
 
-Following Paul Dirac's formulation of QED~\cite{DiracQED}, Sheldon Glashow~\cite{Glashow:1959wxa}, Steven Weinberg~\cite{Weinberg:1967tq} and Abdus Salam~\cite{Salam:1968rm} managed in 1968 to build a gauge-invariant unified theory of the electromagnetic and weak interactions, for which they were awarded the Nobel Prize in Physics in 1979~\cite{Nobel1979}. In order to make the electroweak theory symmetric under local phase transformations, it required the presence of four spin-1 massless bosons: two electricaly charged particles called $W^{\pm}$ bosons and two neutral particles corresponding to the Z boson and photon. But since weak interactions are short range, the weak force has to be mediated by massive bosons. The addition of mass to the bosons was realized after introducing the spontaneous local breaking of the underlying SU(2) symmetry through the Higgs mechanism~\cite{HiggsMechanism_1,HiggsMechanism_2}. In the following years, Gerardus't Hooft and Martinus Veltman managed to renormalize the electroweak theory~\cite{Renormalization_1,Renormalization_2}, allowing to calculate more precisely the theoretical masses of the weak bosons.
+Following Paul Dirac's formulation of QED~\cite{DiracQED}, Sheldon Glashow~\cite{Glashow:1959wxa}, Steven Weinberg~\cite{Weinberg:1967tq} and Abdus Salam~\cite{Salam:1968rm} managed in 1968 to build a gauge-invariant unified theory of the electromagnetic and weak interactions. In order to make the electroweak theory symmetric under local phase transformations, it required the presence of four spin-1 massless bosons: two charged particles called $W^{\pm}$ bosons and two neutral particles corresponding to the Z boson and photon. But since the weak interactions are short range, it has to be mediated by massive bosons. The addition of mass to the bosons was realized after introducing the spontaneous local breaking of the underlying SU(2) symmetry through the Higgs mechanism~\cite{HiggsMechanism_1,HiggsMechanism_2}. In the following years, Gerardus t'Hooft and Martinus Veltman managed to renormalise the electroweak theory~\cite{Renormalization_1,Renormalization_2}, allowing to calculate more precisely the theoretical masses of the weak bosons.
 
-The experimental study of weak bosons would require the development of new particle acceleration technologies. In 1976, Carlo Rubbia, Peter McIntyre and David Cline suggested to transform CERN's circular proton accelarator called Super Proton Synchroton (SPS) into a proton-antiproton collider (Sp$\bar{\mathrm{p}}$S)~\cite{SppS}. The upgrade to Sp$\bar{\mathrm{p}}$S was made possible thanks to the stochastic cooling technology invented by Simon Van der Meer~\cite{StochasticCooling} in 1972, which allowed to cool down and collect antiprotons. Several experiments, named Underground Area (UA), were built to study the proton-antiproton collisions at the Sp$\bar{\mathrm{p}}$S. The UA1 and UA2 collaborations discovered the W boson~\cite{W_UA1,W_UA2} in 1983 after reporting the observation of electrons with large transverse energy and the presence of missing energy in p$\bar{\mathrm{p}}$ collisions at $\sqrt{s} = \SI{540}{\GeV}$. And few months later, both collaborations also reported the discovery of the Z boson in the dilepton decay channel~\cite{Z_UA1,Z_UA2}. These outstanding discoveries convinced the Swedish Academy of Science to award in 1984 the Nobel Prize in Physics to Rubbia and Van der Meer for their contributions to the Sp$\bar{\mathrm{p}}$S program~\cite{Nobel1984}.
+The Z boson was then missing, but a single event was found in the Gargammelle experiment~\cite{Gargamelle}, exhibiting a flavour-changing neutral current that could only be mediated by a virtual Z boson ($\nu_{\mu} + e^{-} \rightarrow \nu_{\mu} + e^{-}$). The experimental study of weak bosons required the development of new particle acceleration technologies. In 1976, Carlo Rubbia, Peter McIntyre and David Cline suggested to transform CERN's circular proton accelerator, the SPS, into a proton-antiproton collider (Sp{\PAp}S)~\cite{SppS}. The upgrade to Sp{\PAp}S was made possible thanks to the stochastic cooling technology invented by Simon Van der Meer~\cite{StochasticCooling} in 1972, which allowed to cool down and collect anti-protons. Several experiments were built in the Underground Area (UA) to study the proton-antiproton collisions at the Sp{\PAp}S. The UA1 and UA2 collaborations observed on-shell W bosons~\cite{W_UA1,W_UA2} in 1983, via reporting the observation of electrons with large transverse energy and the presence of missing momentum in p{\PAp} collisions at $\sqrts = \SI{540}{\GeV}$. And few months later, both collaborations also reported the observation of on-shell Z bosons in the dilepton decay channel~\cite{Z_UA1,Z_UA2}. 
 
-After the major success of the Sp$\bar{\mathrm{p}}$S project, CERN constructed in 1983 a new lepton circular collider called the Large Electron-Positron (LEP) collider~\cite{LEP}. LEP was designed to accelerate electrons and positrons to an energy of half the {\PZ} boson mass (\SI{45}{\GeV}) in order to perform precision measurements of the {\PZ} boson lineshape. Furthermore, a precise measurements of the {\PW} mass~\cite{WMass_D0} was later performed by the experiments in the Fermi National Accelarator Laboratory (FNAL). The FNAL analyzed data collected between 1983 and 2011 from the Tevatron~\cite{Tevatron}, a proton-antiproton synchrotron collider that operated at energies up to \SI{1}{\TeV}.
+After the major success of the Sp{\PAp}S project, CERN constructed in 1983 a new lepton circular collider called the Large Electron-Positron (LEP) collider~\cite{LEP}. LEP was designed to accelerate electrons and positrons to an energy of half the \Z-boson mass (\SI{45}{\GeV}), in order to perform precision measurements of the \Z-boson line-shape. Precise measurements of the \Wb-boson mass~\cite{WMass_D0} were later performed by the experiments in the Fermi National Accelarator Laboratory (FNAL). The FNAL experiments analysed data collected between 1983 and 2011 from the Tevatron~\cite{Tevatron}, a proton-antiproton synchrotron collider that operated at energies up to $\sqrts = \SI{1.96}{\TeV}$.
 
-The succesful programs of LEP and Tevatron produced the most precise measurements of the properties of the electroweak theory, but there was still a missing piece to complete the picture, the Higgs boson. The discovery of the Higgs boson was finally achieved in 2012 by the CMS~\cite{HiggsBoson_CMS} and ATLAS~\cite{HiggsBoson_ATLAS} collaborations at the Large Hadron Collider (LHC).
+The successful programs of LEP and Tevatron produced the most precise measurements of the properties of the electroweak theory, but there was still a missing piece to complete the picture, the Higgs boson. The discovery of the Higgs boson was finally achieved in 2012 by the CMS~\cite{HiggsBoson_CMS} and ATLAS~\cite{HiggsBoson_ATLAS} collaborations at the Large Hadron Collider (LHC).
 
 
-\subsection{Electroweak theory}
+\subsection{The modern electroweak theory}\label{sec:WBoson_Introduction_EWTheory}
 
-The interactions between elementary particles mediated by the weak and electromagnetic forces are described in the Standard Model using the electroweak theory developed by Glashow, Weinberg and Salam~\cite{Glashow:1959wxa,Weinberg:1967tq,Salam:1968rm}. The unification of these two fundamental forces of nature is accomplished mathematically using a non-abelian $SU(2) \times U(1)_{Y}$ gauge theory. The electroweak theory requires four massless gauge bosons: three bosons with weak isospin (called $W_{1}$, $W_{2}$ and $W_{3})$ from $SU(2)$ and one boson (named $B$) with weak hypercharge from $U(1)_{Y}$.
+The interactions between elementary particles mediated by the weak and electromagnetic forces are described in the Standard Model using the electroweak theory developed by Glashow, Weinberg and Salam~\cite{Glashow:1959wxa,Weinberg:1967tq,Salam:1968rm}. The unification of these two fundamental forces of nature is accomplished mathematically using a non-abelian $\text{SU}(2) \times \text{U}(1)_{Y}$ gauge theory. The electroweak theory requires four massless gauge bosons: three bosons with weak isospin (called $W_{1}$, $W_{2}$ and $W_{3})$ from $\text{SU}(2)$ and one boson (named $B$) with weak hypercharge from $\text{U}(1)_{Y}$.
 
-Since weak bosons have mass, a full description of the electroweak interactions requires the inclusion of massive vector bosons. The problem is that one can not naively add a mass term of the form $m^{2}W^{\mu}W_{\mu}$ into the electroweak lagrangian since this would break gauge invariance making the theory divergent. Thus, this issue is instead solved by spontaneously breaking the $SU(2) \times U(1)_{Y}$ electroweak symmetry into a $U(1)_{EM}$ symmetry using the Higgs mechanism~\cite{HiggsMechanism_1,HiggsMechanism_2}. The overall idea is that the electroweak gauge bosons couple to a scalar field called the Higgs field which is present in all space. When the Higgs field induces a spontaneous breaking of the gauge symmetry, the Higgs field is splitted into one dynamic part corresponding to the Higgs boson, and another constant part called the vacuum expectation value (VEV). The symmetry breaking of $SU(2) \times U(1)_{Y}$ to $U(1)_{em}$ generates three massless Goldstone bosons. The goldstone bosons are then absorbed by the electroweak gauge bosons producing the \Wp, \Wm and \Z bosons with masses proportional to the VEV, while the photon remains massless. The \Wpm, \Z and $\gamma$ bosons are correlated with the $W_{1}, W_{2}, W_{3}$ and $B$ gauge bosons in the following way:
+Since weak bosons have mass, a full description of the electroweak interactions requires the inclusion of massive vector bosons. The problem is that one can not naively add a mass term of the form $m^{2}W^{\mu}W_{\mu}$ into the electroweak Lagrangian since this would break gauge invariance making the theory divergent. Thus, this issue is instead solved by spontaneously breaking the $\text{SU}(2) \times \text{U}(1)_{Y}$ electroweak symmetry into a $\text{U}(1)_{\text{EM}}$ symmetry using the Higgs mechanism~\cite{HiggsMechanism_1,HiggsMechanism_2}. The overall idea is that the electroweak gauge bosons couple to a scalar field called the Higgs field which is present in all space. When this field induces a spontaneous breaking of the gauge symmetry, it is split into one dynamic part corresponding to the Higgs boson, and another constant part called the vacuum expectation value (VEV). The symmetry breaking of $\text{SU}(2) \times \text{U}(1)_{Y}$ to $\text{U}(1)_{\text{EM}}$ generates three massless Goldstone bosons. The Goldstone bosons are then absorbed by the electroweak gauge bosons producing the \Wp, \Wm and \Z bosons with masses proportional to the VEV, while the photon remains massless. The \Wpm, \Z and $\gamma$ bosons are correlated with the $W_{1}, W_{2}, W_{3}$ and $B$ gauge bosons in the following way:
 
 \begin{equation}
   \begin{split}
-    W^{\pm} & = \frac{1}{\sqrt{2}}\left(W_{1} \pm W_{2}\right) \\
-    \begin{pmatrix} Z \\ \gamma \end{pmatrix} & = \begin{pmatrix} \mathrm{cos}{\theta_{W}} & \mathrm{sin}{\theta_{W}} \\ -\mathrm{sin}{\theta_{W}} & \mathrm{cos}{\theta_{W}} \end{pmatrix} \begin{pmatrix} B \\ W_{3} \end{pmatrix}
+    \Wpm & = \frac{1}{\sqrt{2}}\left(W_{1} \pm W_{2}\right) \\
+    \begin{pmatrix} \Z \\ \gamma \end{pmatrix} & = \begin{pmatrix} \cos{\theta_{W}} & \sin{\theta_{W}} \\ -\sin{\theta_{W}} & \cos{\theta_{W}} \end{pmatrix} \begin{pmatrix} B \\ W_{3} \end{pmatrix}
   \end{split}
   \label{eq:ElectroWeakBosons}
 \end{equation}
 
-where $\theta_{W}$ represents the weak mixing angle. In addition, the quarks acquire mass through the Yukawa interaction with the Higgs field. Since the quark weak eigenstates are not the same as their mass eigenstates, weak interactions can induce a transition from a up-like quark ($u, c, t$) to a down-like quark ($d, s, b$). The strength of the quark flavour mixing in weak deacays is parameterized by the CKM matrix $\mathrm{V}_\mathrm{CMK}$ via:
+where $\theta_{W}$ represents the weak mixing angle. In addition, quarks and leptons acquire mass through the Yukawa interaction with the Higgs field. Since the quark weak eigenstates are not the same as their mass eigenstates, weak interactions can induce a transition from a up-like quark (\cPqu, \cPqc, \cPqt) to a down-like quark (\cPqd, \cPqs, \cPqb). The strength of the quark-flavour mixing in weak decays is parametrised by the CKM matrix $\text{V}_\text{CMK}$ via:
 
 \begin{equation}
-\begin{pmatrix} d' \\ s' \\ b' \end{pmatrix} = \begin{pmatrix} \mathrm{V}_{ud} & \mathrm{V}_{us} & \mathrm{V}_{ub} \\ \mathrm{V}_{cd} & \mathrm{V}_{cs} & \mathrm{V}_{cb} \\ \mathrm{V}_{td} & \mathrm{V}_{ts} & \mathrm{V}_{tb} \\ \end{pmatrix}\begin{pmatrix} d \\ s \\ b \end{pmatrix}
+\begin{pmatrix} \cPqd' \\ \cPqs' \\ \cPqb' \end{pmatrix} = \begin{pmatrix} \VV_{\cPqu\cPqd} & \VV_{\cPqu\cPqs} & \VV_{\cPqu\cPqb} \\ \VV_{\cPqc\cPqd} & \VV_{\cPqc\cPqs} & \VV_{\cPqc\cPqb} \\ \VV_{\cPqt\cPqd} & \VV_{\cPqt\cPqs} & \VV_{\cPqt\cPqb} \\ \end{pmatrix}\begin{pmatrix} \cPqd \\ \cPqs \\ \cPqb \end{pmatrix}
 \end{equation}
 
-where ($d'$, $s'$, $b'$) are the down-like quark weak eigenstates and ($d$, $s$, $b$) are the corresponding mass eigenstates. The latest values of the CKM matrix elements are~\cite{PDG}:
+where ($\cPqd'$, $\cPqs'$, $\cPqb'$) are the down-like quark weak eigenstates and (\cPqd, \cPqs, \cPqb) are the corresponding mass eigenstates. The latest values of the magnitude of the CKM matrix elements are~\cite{PDG}:
 
 \begin{equation}
-\mathrm{V}^\mathrm{CKM} = \begin{pmatrix} 0.97417 & 0.2248 & 0.00409 \\ 0.220 & 0.995 & 0.0405 \\ 0.0082 & 0.04 & 1.009 \\ \end{pmatrix}
+\begin{pmatrix} \abs{\VV_{\cPqu\cPqd}} & \abs{\VV_{\cPqu\cPqs}} & \abs{\VV_{\cPqu\cPqb}} \\ \abs{\VV_{\cPqc\cPqd}} & \abs{\VV_{\cPqc\cPqs}} & \abs{\VV_{\cPqc\cPqb}} \\ \abs{\VV_{\cPqt\cPqd}} & \abs{\VV_{\cPqt\cPqs}} & \abs{\VV_{\cPqt\cPqb}} \\ \end{pmatrix}  = \begin{pmatrix} 0.97417 & 0.2248 & 0.00409 \\ 0.220 & 0.995 & 0.0405 \\ 0.0082 & 0.04 & 1.009 \\ \end{pmatrix}
 \end{equation}
 
-The lagrangian of the electroweak theory includes several components that describes the interactions between the fermions, electroweak bosons and the Higgs boson. In the case of the {\PZ} boson, the term of the lagrangian that represents the interactions between fermions and neutral charged electroweak bosons is:
+The Lagrangian of the electroweak theory includes several components that describe the interactions between the fermions, electroweak bosons and the Higgs boson. In the case of the {\PZ} boson, the term of the Lagrangian that represents the interactions between fermions and neutral-charged electroweak bosons is:
 
 \begin{equation}
   \begin{split}
-    L_{NC} &= {\alpha_{em}{\theta_{W}}}\sum_{fermions}\bar{f}\gamma^{\mu}A_{\mu}f + \frac{g}{\mathrm{cos}{\theta_{W}}}\sum_{fermions}\bar{f}\gamma^{\mu}\frac{\left(g^{f}_{v}-g^{f}_{a}\gamma^{5}\right)}{2}Z_{\mu}f
+    L_{\text{NC}} &= {\alpha_{em}{\theta_{W}}}\sum_{\text{fermions}}\bar{f}\gamma^{\mu}A_{\mu}f + \frac{g}{\cos{\theta_{W}}}\sum_{\text{fermions}}\bar{f}\gamma^{\mu}\frac{\left(g^{f}_{v}-g^{f}_{a}\gamma^{5}\right)}{2}Z_{\mu}f
   \end{split}
   \label{eq:NeutralCurrent}
 \end{equation}
 
-where $g$ is the coupling constant of $SU(2)_{L}$, $f$ is the Dirac spinors of fermions, $A_{\mu}$ is the electromagnetic field, and $g^{f}_{v}$ ($g^{f}_{a}$) is the fermion vector (axial) weak coupling constants. \eq{eq:NeutralCurrent} specify that the {\PZ} bosons and photons conserve flavour always decaying into a fermion and its corresponding antifermion. Even though photons do not distinguish the helicity of particles, the {\PZ} boson couplings are different for left- and right-handed fermions.
+where $g$ is the coupling constant of $\text{SU}(2)_{L}$, $f$ is the Dirac spinors of fermions, $A_{\mu}$ is the electromagnetic field, and $g^{f}_{v}$ ($g^{f}_{a}$) is the fermion vector (axial) weak coupling constants. \eq{eq:NeutralCurrent} specify that the {\PZ} bosons and photons conserve flavour, always decaying into a fermion and its corresponding anti-fermion. While photons do not distinguish the helicity of particles, the \Z-boson couplings are different for left- and right-handed fermions.
 
-Furthermore, the component of the lagrangian that represents the interaction between the {\PW} bosons and the fermions is given by:
+Furthermore, the component of the Lagrangian that represents the interaction between \Wb  bosons and fermions is given by:
 
 \begin{equation}
   \begin{split}
-    L_{CC} &= \frac{g}{2\sqrt{2}}\left(\left(\bar{u}, \bar{c}, \bar{t}\right)_{R}W^{+}_{\mu}\gamma^{\mu}\mathrm{V}^{\mathrm{CKM}}\begin{pmatrix} d_{L} \\ s_{L} \\ b_{L} \\ \end{pmatrix} + \left(\bar{\nu}_{e}, \bar{\nu}_{\mu}, \bar{\nu}_{\tau}\right)_{R}W^{+}_{\mu}\gamma{\mu}\begin{pmatrix} e^{-}_{L} \\ \mu^{-}_{L} \\ \tau^{-}_{L} \\ \end{pmatrix}\right)
+    L_{\text{CC}} &= \frac{g}{2\sqrt{2}}\left(\left(\bar{u}, \bar{c}, \bar{t}\right)_{R}W^{+}_{\mu}\gamma^{\mu}\VV^{\text{CKM}}\begin{pmatrix} d_{L} \\ s_{L} \\ b_{L} \\ \end{pmatrix} + \left(\bar{\nu}_{e}, \bar{\nu}_{\mu}, \bar{\nu}_{\tau}\right)_{R}W^{+}_{\mu}\gamma{\mu}\begin{pmatrix} e^{-}_{L} \\ \mu^{-}_{L} \\ \tau^{-}_{L} \\ \end{pmatrix}\right)
   \end{split}
 \end{equation}
 
-where $f_{L}$ correspond to left-handed fermions and $\bar{f}_{R}$ represents right-handed antifermions. Thus, {\PW} bosons only couple to right-handed antifermions and left-handed fermions organized in pairs of lepton-neutrino or quark-antiquark, where the electric charge of the of particles differ by one unit. Since the top quark mass (\SI{178}{\GeV}) is larger than the {\PW} boson mass (\SI{80}{\GeV}), the {\PW} boson can not decay to a top quark. \fig{dia:WDecays} shows the possible decays of {\PW} bosons to fermions. The measured values of the mass, width and couplings of weak vector bosons are summarized in \tab{tab:ElectroweakParameters}.
+where $f_{L}$ correspond to left-handed fermions and $\bar{f}_{R}$ represents right-handed anti-fermions. Thus, {\PW} bosons only couple to right-handed anti-fermions and left-handed fermions organized in pairs of lepton-neutrino or quark-antiquark, where the electric charge of the of particles differ by one unit. Since the top-quark mass (\SI{178}{\GeV}) is larger than the \Wb-boson mass (\SI{80}{\GeV}), the \Wb boson can not decay to a virtual top quark. \fig{dia:WDecays} shows the possible decays of weak bosons to fermions. The measured values of the mass, width and couplings of weak vector bosons are summarized in \tab{tab:ElectroweakParameters}.
 
 \begin{figure}[htbp]
   \vspace{10mm}
-  \begin{center}
-    \subfloat{
-      \begin{fmffile}{WPlus}
-        \begin{fmfgraph*}(120,70)
-          \fmfleft{v1}
-          \fmfright{o1,o2}
-          \fmflabel{${\nu}_{e}, {\nu}_{\mu}, {\nu}_{\tau}, d', s'$}{o1}
-          \fmflabel{$e^{+}, \mu^{+}, \tau^{+}, \bar{u}, \bar{c}$}{o2}
-          \fmf{fermion}{o2,v2,o1}
-          \fmf{boson,label=$\text{W}^{+}$,label.side=right}{v1,v2}
-        \end{fmfgraph*}
-      \end{fmffile}
-    }
-    \hspace*{2cm}
-    \subfloat{
-      \begin{fmffile}{WMinus}
-        \begin{fmfgraph*}(120,70)
-          \fmfleft{v1}
-          \fmfright{o2,o1}
-          \fmflabel{$e^{-}, \mu^{-}, \tau^{-}, u, c$}{o1}
-          \fmflabel{$\bar{\nu}_{e}, \bar{\nu}_{\mu}, \bar{\nu}_{\tau}, \bar{d}', \bar{s}'$}{o2}
-          \fmf{fermion}{o2,v2,o1}
-          \fmf{boson,label=$\text{W}^{-}$,label.side=right}{v1,v2}
-        \end{fmfgraph*}
-      \end{fmffile}
-    }
-  \end{center}
-  \caption{Feynman diagram of the decay modes of \Wp (left) and \Wm (right) bosons to fermions.}
+  \centering
+  \subfloat{
+    \begin{fmffile}{WPlus}
+      \begin{fmfgraph*}(90,70)
+        \fmfleft{v1}
+        \fmfright{o1,o2}
+        \fmflabel{$\PGnl, \cPqd', \cPqs'$}{o1}
+        \fmflabel{$\PGlp, \cPaqu, \cPaqc$}{o2}
+        \fmf{fermion}{o2,v2,o1}
+        \fmf{boson,label=$\text{W}^{+}$,label.side=right}{v1,v2}
+      \end{fmfgraph*}
+    \end{fmffile}
+  }
+  \hspace*{1cm}
+  \subfloat{
+    \begin{fmffile}{WMinus}
+      \begin{fmfgraph*}(90,70)
+        \fmfleft{v1}
+        \fmfright{o2,o1}
+        \fmflabel{$\PGlm, \cPqu, \cPqc$}{o1}
+        \fmflabel{$\PAGnl, \cPaqd', \cPaqs'$}{o2}
+        \fmf{fermion}{o2,v2,o1}
+        \fmf{boson,label=$\text{W}^{-}$,label.side=right}{v1,v2}
+      \end{fmfgraph*}
+    \end{fmffile}
+  }
+  \hspace*{1cm}
+  \subfloat{
+    \begin{fmffile}{ZBoson}
+      \begin{fmfgraph*}(90,70)
+        \fmfleft{v1}
+        \fmfright{o2,o1}
+        \fmflabel{$\PGlm, \nu_{\ell}, \cPq$}{o1}
+        \fmflabel{$\PGlp, \PAGnl, \cPaq$}{o2}
+        \fmf{fermion}{o2,v2,o1}
+        \fmf{boson,label=$\text{Z}$,label.side=right}{v1,v2}
+      \end{fmfgraph*}
+    \end{fmffile}
+  }
+  \vspace{4mm}
+  \caption{Feynman diagram of the decay modes of \Wp (left), \Wm (middle) and \Z (right) bosons to fermions.}
   \label{dia:WDecays}
 \end{figure}
 
 \begin{table}[htbp]
-  \begin{center}
-    \begin{tabular}{ c c c }
-    Variable & Description & Value \\ \hline
-    $M_{\PW}$ & {\PW} boson mass & \SI{80.385 \pm 0.015}{\GeV} \\
-    $\Gamma_{\PW}$ & {\PW} boson width & \SI{2.085 \pm 0.042}{\GeV} \\
-    $\mathrm{BR}\left(\PW\rightarrow{\ell\nu}\right)$ & Branching fraction of {\PW} boson semileptonic decays & $\left(10.86 \pm 0.09\right)\%$ \\
-    $\mathrm{BR}\left(\PW\rightarrow{q\bar{q}'}\right)$ & Branching fraction of {\PW} boson hadronic decays & $\left(67.41 \pm 0.27\right)\%$ \\
-    \hline
-    $M_{\PZ}$ & {\PZ} boson mass & \SI{91.1876 \pm 0.0021}{\GeV} \\
-    $\Gamma_{\PZ}$ & {\PZ} boson width & \SI{2.4952 \pm 0.0023}{\GeV} \\
-    $\mathrm{BR}\left(\PZ\rightarrow{\ell^{+}\ell^{-}}\right)$ & Branching fraction of {\PZ} boson charged-lepton decays & $\left(3.3658 \pm 0.0023\right)\%$ \\
-    $\mathrm{BR}\left(\PZ\rightarrow{\nu\bar{\nu}}\right)$ & Branching fraction of {\PZ} boson neutrino decays & $\left(20.00 \pm 0.06\right)\%$ \\
-    $\mathrm{BR}\left(\PZ\rightarrow{q\bar{q}}\right)$ & Branching fraction of {\PZ} boson hadronic decays & $\left(69.91 \pm 0.06\right)\%$
-    \end{tabular}
-  \end{center}
-  \label{tab:ElectroweakParameters}
+  \centering
+  \begin{tabular}{ c c c }
+   Variable & Description & Value \\ \hline
+   $M_{\PW}$ & {\PW} boson mass & $80.385 \pm \SI{0.015}{\GeV}$ \\
+   $\Gamma_{\PW}$ & {\PW} boson width & $2.085 \pm \SI{0.042}{\GeV}$ \\
+   $\BR\left(\PW\rightarrow{\ell\nu}\right)$ & Branching fraction of {\PW} boson semileptonic decays & $\left(10.86 \pm 0.09\right)\%$ \\
+   $\BR\left(\PW\rightarrow{q\bar{q}'}\right)$ & Branching fraction of {\PW} boson hadronic decays & $\left(67.41 \pm 0.27\right)\%$ \\
+   \hline
+   $M_{\PZ}$ & {\PZ} boson mass & $91.1876 \pm \SI{0.0021}{\GeV}$ \\
+   $\Gamma_{\PZ}$ & {\PZ} boson width & $2.4952 \pm \SI{0.0023}{\GeV}$ \\
+   $\BR\left(\PZ\rightarrow{\ell^{+}\ell^{-}}\right)$ & Fraction of {\PZ} boson charged-lepton decays & $\left(3.3658 \pm 0.0023\right)\%$ \\
+   $\BR\left(\PZ\rightarrow{\nu\bar{\nu}}\right)$ & Fraction of {\PZ} boson neutrino decays & $\left(20.00 \pm 0.06\right)\%$ \\
+   $\BR\left(\PZ\rightarrow{q\bar{q}}\right)$ & Fraction of {\PZ} boson hadronic decays & $\left(69.91 \pm 0.06\right)\%$
+  \end{tabular}
   \caption{Experimental values of the mass, width and branching fractions of weak bosons extracted from the PDG~\cite{PDG}.}
+  \label{tab:ElectroweakParameters}
 \end{table}
 
 
-\subsection{Nuclear PDF}
+\subsection{Production of W bosons in p-Pb and decay into muons}\label{sec:WBoson_Introduction_Production}
 
-Beams of Pb ions composed of 82 protons and 126 neutrons are used at the LHC. In proton-lead collisions, the PDF of the nucleons (i.e. neutrons and protons) is modified by the presence of the nuclear enviroment of the Pb ion. The neutron PDF can be derived from the proton PDF using isospin symmetry (i.e. by exchanging the up and down quark PDFs), while assuming the same gluon PDF as in the proton. If no nuclear modifications are expected, protons and neutrons should then behave as free particles inside the nucleus, and one could simply sum the PDFs of the protons and neutrons scaled accordingly. In this case, the ratio of the PDF of protons bounded in the nucleus (nuclear PDF) over the free-proton PDF should be one.
+In this thesis, the inclusive production of \Wb bosons is measured in \RunpPb collisions through the muonic decay channel, which is represented by the process $\pPb\to{\Wb + x}\to{\PGm + \PGnGm + x}$. Since the mass of the \Wb boson is large ($M_{\Wb} = \SI{80.385}{\GeV}$), the \Wb bosons are formed during the initial hard  scatterings between the partons from the incoming proton and those from the nucleons bound in the \Pb ion.
 
-To determine the nuclear modifications, the heavy ion measurements were first compared to results using deuterium. The European Muon Collaboration (EMC) measured the structure function of DIS in iron and deuterium targets between 1977 and 1988, and observed a depletion of the iron PDFs relative to the deuterium PDFs at $x>0.2$ (EMC region)~\cite{EMCStrucFunc_1} and at $x<0.01$ (shadowing region)~\cite{EMCStrucFunc_2}. Subsequent results found an enhancement at the intermediate region $0.01 < x < 0.2$ (antishadowing region)~\cite{NMCStrucFunc}. Since current heavy ion data is more limited than data from proton collisions, the global fits of the nuclear PDFs are less accurate than the proton PDFs.
-
-
-\subsection{PDF global fits}
-
-The parton distribution functions can not be currently determined from first principles due to the nonperturbative behaviour of the strong interactions. Nevertheless, their depencence on x can be derived by fitting observables (e.g. structure functions or asymmetries) to experimental data from different processes since PDFs do not depend on the initial hard scattering. The $Q^{2}$ dependence of the PDFs is determined using the DGLAP evolution equations. The most common processes used to constrain the PDFs correspond to Drell-Yan, DIS, vector boson and jet production, which have been measured by various experiments including data from HERA, SLAC and LHC.
-
-There are several proton PDFs currently available. One of the most commonly used proton PDF in high energy physics nowadays is the one provided by the Collaboration of Theorists and Experimentalist (CTEQ). The most recent CTEQ PDF corresponds to CT14 published in 2016~\cite{CT14}. The global fits of CT14 PDFs include data of vector bosons and jets from LHC pp collisions at \SI{7}{\TeV} and \SI{8}{\TeV}, charm quark DIS production from HERA, and electron charge asymmetry from Tevatron. The x-dependence of the CT14 PDF is parameterized at low $Q^{2}$ scale by~\cite{CT14}:
+The cross section for the inclusive production of \Wb bosons in \RunpPb collisions can be expressed, assuming that the QCD factorisation holds for a nucleus, as:
 
 \begin{equation}
-xf_{a}\left(x, Q^{2}\right) = x^{c_{1}}\left(1-x\right)^{c_{2}}{P_{a}\left(x\right)}
+ \sigma\left[\pPb \to \Wb + X\right]  = \sum_{a,i,j}\int\dd{x}_{\Pp}\dd{\Pb}_{2}f_{i}^{\Pp}\left(x_{\Pp},Q^{2}\right){\cdot}f^{a/\Pb}_{j}\left(x_{\Pb},Q^{2}\right)\hat{\sigma}\left[i+j \to \Wb + X\right]
+\label{eq:WBosonXSec}
 \end{equation}
 
-where $P_{a}$ is a polynominal with different parameters for each parton. In the case of the up and down valence quarks, $P_{a}$ is expressed as a Bernstein polynomial of fourth-order in $\sqrt{x}$. The $P_{a}$ distribution of gluon and the light sea quark PDFs is given instead by a Bernstein polynomial in $y=\left(2\sqrt{x}-x\right)$ of second-order and fourth-order, respectively. There is not enough data to constrain the strange quark and antiquark PDFs so they are assumed to be equal. In total, the CT14 PDFs are described by 26 fitting parameters including: 8 parameters for the valence quarks, 5 parameters for the gluon and 13 parameters for the sea quarks~\cite{CT14}.
-
-The first global fit to describe leading-order nuclear effects was the EKS98 nPDF~\cite{EKS98}. The pion data collected by RHIC was later included in EPS08~\cite{EPS08}, EPS09~\cite{EPS09}, DSSZ~\cite{DSSZ} and nCTEQ15~\cite{nCTEQ15} nPDFs which provided constrains to the gluon nPDF. We will focus on the latest nuclear PDF calculations which are the EPPS16~\cite{EPPS16} and the nCTEQ15~\cite{nCTEQ15} NLO nPDFs.
-
-The EPPS16 nPDFs~\cite{EPPS16} are derived from a global analysis of nuclear data sets published in 2017 by the group of Eskola, Paakkinen, Paukkunen and Salgado (EPPS). The EPPS16 nPDF calculations updates their previous EPS09~\cite{EPS09} global fits. EPPS16 includes five additional parameters compared to EPS09 to account for possible flavour dependence of the quark nuclear modifications. The EPPS16 global fits includes the same data sets as EPS09 (charged-lepton-nucleus DIS data from SLAC, DY dilepton production from EMC proton-nucleus collisions and inclusive pion production from RHIC deuteron-nucleus collisions), as well as the CHORUS neutrino-nucleus DIS data, low-mass DY production from RHIC pion-nucleus collisions, and the results using dijet and electroweak boson production in LHC \pPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$. The addition of the new LHC, RHIC and CHORUS data into the global fit is not in tension with the previous EPS09 data sets, reassuring the validity of the universality of the nPDFs. Moreover, the inclusion of the CMS measurements of dijet production in \pPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$ highly constrained the gluon nPDF. On the other hand, the LHC measurements of the electroweak boson production in \pPb data was not able to further constrain the quark nPDF due to the limited statistical precision. The nuclear PDFs are parameterized in EPPS16 as:
+where $f^{a/\Pb}$ are the PDFs of a nucleon $a$ bound in the \Pb ion, $f^{\Pp}$ are the PDFs of the incoming proton and $\hat{\sigma}$ is the partonic cross section. The partonic cross section is evaluated using pQCD by expanding it in terms of $\alpha_{s}$, as given by:
 
 \begin{equation}
-  f_{i}^{p/A}\left(x,Q^{2}\right) = R_{i}^{A}\left(x,Q^{2}\right)f_{i}^{p}\left(x,Q^{2}\right)
+ \hat{\sigma} = \sum_{i}\left( \alpha^{i}_{s}{\cdot}\hat{\sigma}^{i} \right) = \hat{\sigma}^{\text{LO}} +  \alpha_{s}\hat{\sigma}^{\text{NLO}} + ...
 \end{equation}
 
-where $f_{i}^{p/A}$ represents the PDF of a proton bounded in a nucleus A, $f_{i}^{p}$ is the free proton PDF and $R_{i}^{A}$ is the corresponding nuclear modification. The EPPS16 nuclear modifications are derived using the NLO CT14 PDF as the free proton baseline. %
-%The EPPS16 function used to fit the $R_{i}^{A}\left(x,Q^{2}\right)$ is shown in \fig{fig:EPPS15_RiA}. %
-The parameters of $R_{i}^{A}$ are determined in three regions: the shadowing region $x\rightarrow0$, the antishadowing maximum point $x_{a}$ and the EMC minimum point $x_{e}$. The dependence on the atomic mass A is parameterized along the three x regions in the following way:
-
-\begin{equation}
-  R^{A}_{i}\left(x,Q^{2}_{0}\right) = R^{A_{\mathrm{ref}}}_{i}\left(x,Q^{2}_{0}\right)\left(\frac{A}{A_{\mathrm{ref}}}\right)^{\gamma_{i}\left[R_{i}^{A_{\mathrm{ref}}}\left(x,Q^{2}_{0}\right) - 1\right]}
-\end{equation}
-
-where $Q_{0}$ is the parameterization scale fixed at the charm pole mass (\SI{1.3}{\GeV}), $\gamma_{i}$ is a positive parameter and $A_{\mathrm{ref}}=12$. The $Q^{2}$ dependence above $Q^{2}_{0}$ is determined by solving the DGLAP parton evolution equations. The strong coupling constant evaluated at the {\PZ} boson mass is set to $\alpha_{s}\left(M_{Z}\right)=0.118$. The EPPS16 nuclear modifications are paremeterized in total by 20 parameters.
-
-The nCTEQ15 nuclear PDF published by Kovarik et al. in 2016 was derived using the CTEQ framework at next-to-leading order. The nCTEQ15 nPDF global fits make use of charged-lepton DIS data, DY dilepton production and RHIC inclusive pion production. In contrast with EPPS16 where the nuclear modification factor $R_{i}^{p/A}$ is fitted, the nCTEQ15 global analysis parametrizes  the nuclear PDF $f_{i}^{p/A}$ directly (i.e. no free proton PDF is used as baseline). The nCTEQ nPDFs are parameterized as:
-
-\begin{equation}
-  \begin{alignedat}{1}
-    xf_{i}^{p/A}\left(x,Q_{0}\right) &= c_{0}x^{c_{1}}\left(1-x\right)^{c_{2}}e^{c_{3}x}\left(1+e^{x_{4}}x\right)^{c_{5}} \\
-    \frac{\bar{d}\left(x,Q_{0}\right)}{\bar{u}\left(x,Q_{0}\right)} &= c_{0}x^{c_{1}}\left(1-x\right)^{c_{2}} + \left(1+c_{3}x\right)\left(1-x\right)^{c_{4}} \\
-    s^{p/A}\left(x,Q_{0}\right) &= \bar{s}^{p/A}\left(x,Q_{0}\right) = \frac{\kappa\left(A\right)}{2}\left(\bar{u}^{p/A}\left(x,Q_{0}\right) + \bar{d}^{p/A}\left(x,Q_{0}\right)\right)
-  \end{alignedat}
-\end{equation}
-
-where $f_{i}^{p/A}$ is defined for $i = \left(u_{v} , d_{v} , g , \bar{u}+\bar{d} , s+\bar{s} , s-\bar{s}\right)$, $\kappa\left(A\right)=\left(c^{s+\bar{s}}_{0,0} + c^{s+\bar{s}}_{0,1}\left(1-A^{-c^{s+\bar{s}}_{0,2}}\right)\right)$ and the parameterization scale $Q_{0} = \SI{1.3}{\GeV}$. The A-dependence of the nCTEQ15 nPDF is parameterized directly in the coeficients using $c_{k}\left(A\right) = c_{k,0} + c_{k,1}\left(1-A^{-c_{k,2}}\right)$, where $k=1,...,5$.
-
-The nCTEQ15 global fits to the data sets are performed by minimazing the $\chi^{2}$. The nCTEQ15 fits are performed using 16 free parameters separated in: 7 gluon, 4 up valence quark, 3 down valence quark and 2 $\left(d+u\right)$ antiquark parameters. Also, nCTEQ15 treat the light valence quark densities independently but it assume no flavour dependence of the light antiquark nuclear modifications. The nCTEQ15 calculations avoid fitting the low $Q^{2}$ and high x region $x>0.7$ since this region is very difficult to model theoretically due to the presence of target mass corrections, large x resummation, nuclear off-shell effects and Fermi motion effects which steeply rise the parton densities when approaching $x=1$.
-
-The PDF uncertainties are determined using the Hessian matrix approach. The main idea of the Hessian method is that the distribution of the $\chi^{2}\left(\{a_{i}\}\right)$ around its minimum $\chi^{2}\left(\{a^{0}_{i}\}\right)$ can be approximately parameterized by a quadratic function of the $n$ fitting parameters $\{a_{i}\}$ as $\chi^{2}\left(\{a_{i}\}\right)\approx{\chi^{2}\left(\{a^{0}_{i}\}\right)}\sum_{i,j}y_{i}H_{i,j}y_{j}$ where $y_{i}=a_{i}-a_{i}^{0}$ and $H_{i,j}=\left(1/2\right)\left(d^{2}\chi^{2}/dy_{i}dy_{j}\right)_{a_{i}=a_{i}^{0}}$ is the Hessian matrix that encodes the impact of variations around each parameter. Since $H_{i,j}$ is a symmetric matrix, it has n orthogonal eigenvectors. The eigenvectors of $H_{i,j}$ are used to define a new basis $\{z_{k}\}$ which  transform $H$ into a diagonal matrix. In order to compute the PDF uncertainties, the EPPS16 and nCTEQ15 calculations provide the PDF central set $S_{0}$ and the PDF error sets $S^{\pm}_{k}$ defined in the $\{z_{k}\}$ coordinates. Each $S^{\pm}_{k}$ is determined by evaluating the PDF on $\{z^{\pm}_{k}\}$ defined by varying upward/downward the parameter $\{z_{k}\}$ along the k-th eigenvector direction as:
-
-\begin{equation}
-  S^{\pm}_{k} = f\left(z^{0}_{k} \pm \sqrt{\frac{\Delta{\chi^{2}}}{\lambda_{k}}}\right)
-\end{equation}
-
-where $\lambda_{k}$ is the k-th eigenvalue of $H$ and $\Delta{\chi^{2}}$ is the tolerance criterion defined at $90\%$ confidence limit. In nCTEQ15 the tolerance is set to $\Delta{\chi^{2}}=35$ while in EPPS16 it is set to $\Delta{\chi^{2}}=??$. Using the PDF error sets, the PDF uncertainties can then be definied as:
-
-\begin{equation}
-  \Delta{O} = \sqrt{\sum_{i}\left[{\vphantom{P}^{\mathrm{max}}_{\mathrm{min}}}\left\{O\left(S_{i}^{+}\right) - O\left(S_{i}^{0}\right), O\left(S_{i}^{-}\right) - O\left(S_{i}^{0}\right), 0\right\}\right]^{2}}
-\end{equation}
-
-To derive the correlation between two observables $X$ and $Y$, one can use the cosine of the correlation angle define as:
-
-\begin{equation}
-  \mathrm{cos}{\phi\left[X,Y\right]} = \frac{\sum_{i_{\mathrm{PDF}}}\left(X^{+}_{i_{\mathrm{PDF}}} - X^{-}_{i_{\mathrm{PDF}}}\right)}{\left(Y^{+}_{i_{\mathrm{PDF}}} - Y^{-}_{i_{\mathrm{PDF}}}\right)}{\sqrt{\sum_{j_{\mathrm{PDF}}}\left(X^{+}_{j_{\mathrm{PDF}}} - X^{-}_{j_{\mathrm{PDF}}}\right)^{2}}\sqrt{\sum_{k_{\mathrm{PDF}}}\left(Y^{+}_{k_{\mathrm{PDF}}} - Y^{-}_{k_{\mathrm{PDF}}}\right)^{2}}}
-\end{equation}
-
-where the observables are calculated over the upward/downward PDF error sets in each eigenvector direction (16 for nCTEQ15 and 20 for EPPS16). The main differences between the EPS09, EPPS16 and nCTEQ15 nuclear PDFs are summarized in \tab{tab:nPDFInfo}.
-
-\begin{table}[htbp]
-  \begin{center}
-    \begin{tabular}{ c | c c c }
-    nPDF & EPS09 & EPPS16 & nCTEQ15 \\ \hline
-    Order & NLO & NLO & NLO \\
-    Fit & nucler modification & nuclear modification & nuclear PDF \\
-    Baseline PDF & CT14 & CTEQ6 & \\
-    Free parameters & 15 & 20 & 17 \\
-    Data points & 929 & 1811 & 708 \\
-    EMC DY dileptons in p-A & Yes & Yes & Yes \\
-    RHIC pions in d-A & Yes & Yes & Yes \\
-    SLAC $l^{\pm}$-A DIS & Yes & Yes & Yes \\
-    CHORUS $\nu$-A DIS & No & Yes & No \\
-    RHIC DY in $\pi$-A & No & Yes & No \\
-    LHC dijets in \pPb & No & Yes & No \\
-    LHC weak bosons in \pPb & No & Yes & No
-    \end{tabular}
-  \end{center}
-  \label{tab:nPDFInfo}
-  \caption{Summary of the information of EPS09, EPPS16 and nCTEQ15 nuclear PDFs.}
-\end{table}
-
-%The current nPDF calculations that are less constrained include the flavour dependence of valence quark nuclear modifications, sea quark PDFs at $x<10^{-2}$ and the strange quark nuclear PDFs. Therefore,  using the recent LHC \pPb data at 8.16~\TeV, one could further constrain the valence and sea quark nuclear PDFs by measuring the low-mass DY dilepton production and the {\PW} boson production. The strange quark nuclear PDF can be constrained from the measurement of the production of {\PW} bosons in association with charm quarks in \pPb collisions. In this thesis we present the measurements of the inclusive {\PW} boson production in \pPb collisions at 8.16~\TeV.
-
-
-
-\subsection{Production of W bosons at LHC}
-
-The production of {\PW} bosons in hadronic collisions is accomplished through the process of quark-antiquark annihilation. The measurement of {\PW} boson production in \pPb collisions at $\sqrtsnn = \SI{8.16}{\TeV}$ is performed in the semimuonic decay channel. At leading order (LO), the {\PW} boson hadroproduction to final state leptons is described by the Feynman diagram shown in \fig{dia:WProd}.
+In practice, the  expansion of the partonic cross section is truncated at a given order (e.g. NLO). At leading order, the production of \Wb bosons in  proton-nucleon collisions is accomplished through the process of quark-antiquark annihilation ($\cPq + \cPaq \to \Wb$), as shown in \fig{dia:WProdLO}. On the other hand, the NLO cross section includes contributions from the processes shown in \fig{dia:WProdNLO}.
 
 \begin{figure}[htbp]
   \vspace{10mm}
-  \begin{center}
+  \centering
   \begin{fmffile}{WProd}
   \begin{fmfgraph*}(160,160)
     \fmfleft{i1,iq,i2,ip,i3}
@@ -244,30 +176,26 @@ The production of {\PW} bosons in hadronic collisions is accomplished through th
     \fmf{phantom}{iq,vq,y1}
     \fmffreeze
     % parton
-    \fmfv{l=$x_1p_1$,l.a=-90,l.d=22}{vp} % cheat: actually a line label
-    \fmfv{l=$x_2p_2$,l.a=90,l.d=22}{vq} % cheat: actually a line label
+    \fmfv{l=\cPq,l.a=-90,l.d=22}{vp} % cheat: actually a line label
+    \fmfv{l=\cPaq,l.a=90,l.d=22}{vq} % cheat: actually a line label
     \fmf{fermion,tension=1.6}{vp,v}
     \fmf{fermion,tension=1.6}{v,vq}
     % hard process
     \fmfshift{20 right}{f1,f2}
     \fmfv{l=$\bar{\nu}_{\ell}$}{f1}
     \fmfv{l=$\ell^{\pm}$}{f2}
-    \fmf{boson,tension=2,label=$\text{W}^{\pm}$,label.side=left}{v,vf}
+    \fmf{boson,tension=2,label=$\Wpm$,label.side=left}{v,vf}
     \fmf{fermion,tension=2}{f1,vf,f2}
     % proton 1
     \fmfv{l=p,l.a=180,l.d=10}{ip}
     \fmf{phantom}{ip,vp}
-    \fmfi{fermion,l=$p_1$,l.s=left,l.d=8}
-                  {vpath (__ip,__vp) scaled 1.01 shifted (-2.4, 6)}
-    \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted (-2.4, 0)}
-    \fmfi{fermion}{vpath (__ip,__vp) scaled 1.01 shifted (-2.4,-6)}
+    \fmfi{fermion,l.s=left,l.d=8}
+                  {vpath (__ip,__vp) scaled 1.01 shifted (-2.4, 0)}
     % proton 2
-    \fmfv{l=Pb,l.a=180,l.d=10}{iq}
+    \fmfv{l=$a$,l.a=180,l.d=10}{iq}
     \fmf{phantom}{iq,vq}
-    \fmfi{fermion}{vpath (__iq,__vq) scaled 1.01 shifted (-2.4, 6)}
-    \fmfi{fermion}{vpath (__iq,__vq) scaled 1.01 shifted (-2.4, 0)}
-    \fmfi{fermion,l=$p_2$,l.s=right,l.d=8}
-                  {vpath (__iq,__vq) scaled 1.01 shifted (-2.4,-6)}
+    \fmfi{fermion,l.s=right,l.d=8}
+                  {vpath (__iq,__vq) scaled 1.01 shifted (-2.4, 0)}
     % X 2
     \fmfshift{25 left}{x1}
     \fmfshift{20 left}{x2,x3}
@@ -290,61 +218,340 @@ The production of {\PW} bosons in hadronic collisions is accomplished through th
     \fmfblob{25}{vq}
   \end{fmfgraph*}
   \end{fmffile}
-  \end{center}
-  \caption{Feynman diagram of LO {\PW} boson production to final state leptons in \pPb collisions}
-  \label{dia:WProd}
+  \caption{Leading order Feynman diagram of {\PW} boson production to final state leptons, from a collision between an incoming proton (p) and a bound nucleon ($a$) in a \Pb nucleus.}
+  \label{dia:WProdLO}
 \end{figure}
 
+\begin{figure}[htbp]
+  \vspace{5mm}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+  \subfloat{\large
+\begin{fmffile}{WProdNLO1}
+  \begin{fmfgraph*}(120,90)
+    \fmfstraight
+    \fmfleft{i2,i1}
+    \fmfright{o1,l2,l1}
+    % skeleton
+    \fmf{phantom,tension=1.8}{i1,v1}
+    \fmf{phantom,tension=1.0}{v1,l1}
+    \fmf{phantom,tension=1.8}{v1,v2}
+    \fmf{phantom,tension=1.8}{i2,v2}
+    \fmf{phantom,tension=1.0}{v2,o1}
+    \fmffreeze
+    % W + jets
+    \fmfshift{5 right}{l1,l2}
+    \fmfshift{20 left}{o1}
+    % quarks
+    \fmflabel{$q$}{i1}
+    \fmflabel{$\overline{q}$}{i2}
+    \fmf{fermion}{i1,v1,v2,i2}
+    % W boson
+    \fmf{boson,tension=1.2,label=\Wpm,label.side=left}{v1,z}
+    \fmf{gluon,label=g}{v2,o1}
+    % leptons
+    \fmflabel{$\ell^\pm$}{l1}
+    \fmflabel{$\nu_\ell$}{l2}
+    \fmf{fermion}{l1,z,l2}
+  \end{fmfgraph*}
+\end{fmffile}
+  }
+  \end{minipage}%%
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+  \subfloat{
+\large
+\begin{fmffile}{WProdNLO2}
+  \begin{fmfgraph*}(120,70)
+    \fmfleft{i2,i1}
+    \fmfright{o2,o1}
+    \fmftop{t}
+    \fmf{phantom}{i1,v1,i2}
+    \fmf{phantom}{o1,v2,o2}
+    \fmf{phantom}{v1,v2}
+    \fmffreeze
+    \fmf{fermion}{i1,g}
+    \fmf{plain,tension=2.8}{g,v1}
+    \fmf{fermion}{v1,i2}
+    \fmf{gluon,label=g,tension=0}{t,g}
+    \fmf{boson,label=$\text{W}^\pm$,label.side=right}{v1,v2}
+    \fmf{fermion}{o2,v2,o1}
+    \fmflabel{$q$}{i1}
+    \fmflabel{$\overline{q}$}{i2}
+    \fmflabel{$\ell^\pm$}{o1}
+    \fmflabel{$\overline{\nu}_\ell$}{o2}
+  \end{fmfgraph*}
+\end{fmffile}
+  }
+  \end{minipage} 
+  \begin{minipage}[b]{0.5\linewidth}
+  \vspace{20mm}
+    \centering
+  \subfloat{\large
+\begin{fmffile}{WProdNLO3}
+  \begin{fmfgraph*}(120,90)
+    \fmfstraight
+    \fmfleft{i2,i1}
+    \fmfright{o1,l2,l1}
+    % skeleton
+    \fmf{phantom,tension=1.8}{i1,v1}
+    \fmf{phantom,tension=1.0}{v1,l1}
+    \fmf{phantom,tension=1.8}{v1,v2}
+    \fmf{phantom,tension=1.8}{i2,v2}
+    \fmf{phantom,tension=1.0}{v2,o1}
+    \fmffreeze
+    % W + jets
+    \fmfshift{5 right}{l1,l2}
+    \fmfshift{20 left}{o1}
+    % quarks
+    \fmflabel{$q$}{i1}
+    \fmflabel{$\overline{q}$}{i2}
+    \fmf{fermion}{i1,v1,v2,i2}
+    % W boson
+    \fmf{boson,tension=1.2,label=\Wpm,label.side=left}{v1,z}
+    \fmf{photon,label=$\gamma$}{v2,o1}
+    % leptons
+    \fmflabel{$\ell^\pm$}{l1}
+    \fmflabel{$\nu_\ell$}{l2}
+    \fmf{fermion}{l1,z,l2}
+  \end{fmfgraph*}
+\end{fmffile}
+  }
+  \end{minipage} 
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+  \subfloat{
+\large
+\begin{fmffile}{WProdNLO4}
+  \begin{fmfgraph*}(120,70)
+    \fmfleft{i2,i1}
+    \fmfright{o2,o1}
+    \fmftop{t}
+    \fmf{phantom}{i1,v1,i2}
+    \fmf{phantom}{o1,v2,o2}
+    \fmf{phantom}{v1,v2}
+    \fmffreeze
+    \fmf{fermion}{i1,g}
+    \fmf{plain,tension=2.8}{g,v1}
+    \fmf{fermion}{v1,i2}
+    \fmf{photon,label=$\gamma$,tension=0}{t,g}
+    \fmf{boson,label=$\text{W}^\pm$,label.side=right}{v1,v2}
+    \fmf{fermion}{o2,v2,o1}
+    \fmflabel{$q$}{i1}
+    \fmflabel{$\overline{q}$}{i2}
+    \fmflabel{$\ell^\pm$}{o1}
+    \fmflabel{$\overline{\nu}_\ell$}{o2}
+  \end{fmfgraph*}
+\end{fmffile}
+  }
+  \end{minipage}
+  \vspace{4mm}
+  \caption{Next-to-leading order Feynman diagrams of \Wb boson partonic production to final state leptons.}
+  \label{dia:WProdNLO}
+\end{figure}
 
-In this thesis, the cross section of the {\PW} boson production is measured in \pPb collisions as a function of muon pseudorapidity ($\eta$) considering muons with \pt larger than 25~\GeVc. The  theoretical cross section can be derived using electroweak theory and the factorization theorem shown in \eq{eq:FactTheorem}. The {\PW} boson hadroproduction cross section has been calculated in Ref.~\cite{WProdScaling}, and the corresponding \pPb LO differential cross section as a function of muon $\eta$, considering $\Gamma_{\PW}<<M_{\PW}$, is:
+The total partonic cross section at LO for $\pPb\to\WToMuNu$ can be computed using electroweak theory and is given by~\cite{PDG}:
 
 \begin{equation}
-  \begin{split}
-    \frac{d\sigma^{\PW^{\pm}}}{d\eta}\left(\snn\right) &\approx
-    \frac{\pi^{2}}{6{M^{5}_{\PW}}{\Gamma_{W}}}
-    \left(\frac{\alpha_{em}}{\mathrm{sin}^{2}\left(\theta_{\PW}\right)}\right)^{2}
-    \int_{25}^{\inf}d\pt
-    \frac{\pt^{3}}{\sqrt{1-4\pt^{2}/M_{\PW}^{2}}}
-    \sum_{i,j}
-    \delta\left(e_{q_{i}}+e_{\bar{q}_{j}}, \pm{1}\right)
-    {\left|V^{\mathrm{CKM}}_{ij}\right|^{2}} \\
-    \left\{ \vphantom{x_{2}^{\pm}q_{j}^{\mathrm{Pb}}} \right. &\left.
-    x_{\mathrm{p}}^{\pm}q_{i}^{\mathrm{p}}\left(x_{\mathrm{p}}^{+},Q^{2}\right) \cdot x_{\mathrm{Pb}}^{\mp}\bar{q}_{j}^{\mathrm{Pb}}\left(x_{\mathrm{Pb}}^{+},Q^{2}\right) + 
-    x_{\mathrm{p}}^{\pm}\bar{q}_{i}^{\mathrm{p}}\left(x_{\mathrm{p}}^{-},Q^{2}\right) \cdot x_{\mathrm{Pb}}^{\mp}q_{j}^{\mathrm{Pb}}\left(x_{\mathrm{Pb}}^{-},Q^{2}\right) + {} \right. \\ &\left.
-    x_{\mathrm{p}}^{\mp}q_{i}^{\mathrm{p}}\left(x_{\mathrm{p}}^{-},Q^{2}\right) \cdot x_{\mathrm{Pb}}^{\pm}\bar{q}_{j}^{\mathrm{Pb}}\left(x_{\mathrm{Pb}}^{-},Q^{2}\right) + 
-    x_{\mathrm{p}}^{\mp}\bar{q}_{i}^{\mathrm{p}}\left(x_{\mathrm{p}}^{+},Q^{2}\right) \cdot x_{\mathrm{Pb}}^{\pm}q_{j}^{\mathrm{Pb}}\left(x_{\mathrm{Pb}}^{+},Q^{2}\right)
-    \right\}
-  \end{split}
-  \label{eq:WProd}
+  \hat{\sigma}^{\text{LO}}\left[ij\rightarrow\WToMuNu\right]\left(Q^{2}\right) = \frac{\abs{\text{V}^\text{CMK}_{ij}}^{2}}{N_{c}}\frac{8G_{F}^{2}M_{\Wb}^{4}}{16\sqrt{2}\pi}\left({\frac{Q^{2}}{\left(Q^{2} - M^{2}_{\Wb}\right)^{2} + Q^{2}\Gamma_{\Wb}^{2}}}\right)
 \end{equation}
 
-where $\alpha_{em}$ is the fine-structure constant, $q^{\mathrm{p}}$ is the free-proton quark PDF, $q_{i}^{\mathrm{Pb}}$ is the Pb nuclear quark PDF, and $Q\approx{M_{\PW}}$ is the momentum scale. The sum in \eq{eq:WProd} is performed over all quark flavours and the parton momemtum fraction variables $x_{\mathrm{p}}$ and $x_{\mathrm{Pb}}$ are defined as~\cite{WProdScaling}:
+where $M_{\Wb}$ is the mass of the \Wb boson, $\Gamma_{\Wb}$ is the width of the \Wb boson, $N_{c} = 3$ is the number of colour charges of quarks, and $\abs{\text{V}^\text{CMK}_{ij}}$ is the magnitude of the CKM matrix element associated to the interaction between the quarks i and j.
+
+In \pPb collisions, the \Wb bosons are mainly produced from interactions between the valence quarks and sea anti-quarks of the proton and nucleons. The dominant production modes of \Wp bosons correspond to up quark and down anti-quark annihilation ($\cPqu\cPaqd\to\Wp$) while for \Wm bosons correspond to down quark and up anti-quark annihilation ($\cPqd\cPaqu\to\Wm$). The next relevant contributions come from $\cPqc\cPaqs$ and $\cPqs\cPaqc$, while the other quark-antiquark contributions are suppressed according to the off-diagonal CKM matrix elements. Thus, the inclusive \Wb boson cross section measured in \RunpPb data is mostly sensitive to the proton and nuclear PDFs of light quarks and anti-quarks.
+
+In addition, the direction of the outgoing muons and anti-muons is different with respect to the scattered quarks. In weak interactions, the \Wp boson couples to left-handed neutrinos while the \Wm boson couples to right-handed anti-neutrinos. As a consequence, in order to conserve helicity, the anti-muons are preferentially produced in the same direction as the \Wp boson while muons are preferentially produced in the opposite direction, as shown in \fig{fig:WBosonXSec}.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.8\textwidth]{Figures/WBoson/Theory/WBosonXSec.png}
+ \caption{Schematic diagram of the production of \Wm (left) and \Wp (right) bosons to muonic decays. The black arrows represent the particle direction of motion whereas the blue arrows correspond to its spin. The spin of the \Wpm boson  points in the direction of the anti-quark.}
+ \label{fig:WBosonXSec}
+\end{figure}
+
+At LO, the rapiditity of \Wb bosons ($y_{\Wb}$) is related to the Bjorken-x of the proton and \Pb nucleon via:
 
 \begin{equation}
-  \begin{alignedat}{2}
-    x_{\mathrm{p}}^{\pm} &= \frac{M_{\PW}}{\sqrtsnn} e^{\eta} &&\left[\frac{1 \mp \sqrt{1 - 4\pt^{2}/M_{\PW}^{2}}}{2\pt/M_{\PW}}\right] \\
-    x_{\mathrm{Pb}}^{\pm} &= \frac{M_{\PW}}{\sqrtsnn} e^{-\eta} &&\left[\frac{1 \pm \sqrt{1 - 4\pt^{2}/M_{\PW}^{2}}}{2\pt/M_{\PW}}\right]
+  x_{\Pp} = \frac{M_{\Wb}}{\sqrtsnn}e^{y_{\Wb}} \quad , \quad x_{\Pb} = \frac{M_{\Wb}}{\sqrtsnn}e^{-y_{\Wb}}
+\end{equation}
+
+And since the \Wb-boson rapidity is correlated to the muon $\eta$, then the pseudorapidity distribution of muons arising from \Wb-boson decays in \RunpPb collisions is sensitive to different $x$ regions of the light quark nuclear PDF that are described in the next section.
+
+
+\subsection{Nuclear PDFs}\label{sec:WBoson_Introduction_nPDFs}
+
+The parton distribution functions can not be determined from first principles due to the non-perturbative behaviour of the strong interactions. Nevertheless, their dependence on $x$ can be derived by fitting observables (e.g. structure functions or asymmetries) to experimental data from different processes since PDFs do not depend on the initial hard scattering. The $Q^{2}$ dependence of the PDFs is determined using the DGLAP evolution equations. The most common processes used to constrain the PDFs correspond to DY, DIS, vector boson and jet production, which have been measured by various experiments, including data from HERA, SLAC and LHC.
+
+There are several proton PDF global fits currently available. In this thesis we use the NLO CT14 PDF sets published in 2016~\cite{CT14} by the collaboration of theorists and experimentalist on QCD (CTEQ). The global fits of CT14 PDFs include data of vector bosons and jets from LHC \Runpp collisions at \SI{7}{\TeV} and \SI{8}{\TeV}, charm quark DIS production from HERA, and electron charge asymmetry from Tevatron. The $x$-dependence of the CT14 PDF is parametrised at low $Q^{2}$ by~\cite{CT14}:
+
+\begin{equation}
+ xf_{a}\left(x, Q^{2}\right) = x^{c_{1}}\left(1-x\right)^{c_{2}}{P_{a}\left(x\right)}
+\end{equation}
+
+where $f_{a}$ is the PDF of a parton $a$, $c_{i}$ are parameters and $P_{a}$ is a polynomial function. In total, the CT14 proton PDFs are described by 26 parameters including: 8 parameters for the valence quarks, 5 parameters for the gluon and 13 parameters for the sea quarks~\cite{CT14}.
+
+\fig{fig:CT14} presents the CT14 proton PDF results at $Q = \SI{10}{\GeV}$ and $Q = \SI{10}{\GeV}$. One can observed that the light valence quarks carry most of the momentum of the proton while the gluons and sea quarks are mainly distributed at low $x$. When the energy is increased, the distribution of partons gets significantly enhanced at low $x$, predominantly dominated by gluons.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.9\textwidth]{Figures/WBoson/Theory/CT14NNLO.png}
+ \caption{Results of the CT14 proton PDFs at NNLO derived at $Q = \SI{10}{\GeV}$ (left) and $Q = \SI{10}{\GeV}$ (right). Figure taken from Ref.~\cite{CT14}.}
+ \label{fig:CT14}
+\end{figure}
+
+In heavy-ion collisions, the PDFs of the protons and neutrons bound in the nucleus are modified by the presence of the nuclear medium environment. The PDFs of nuclei were initially analysed in charged-lepton DIS experiments using nuclear targets by measuring the nuclear structure function per nucleon ($F^{A}_{2}$) for a heavy-ion target (A) relative to the one for deuterium ($F^{D}_{2}$)\footnote{Deuterium is approximately considered to be composed of a free proton and a free neutron.} ($R^{A}_{F_{2}} = F^{\text{A}}_{2}/F^{\text{D}}_{2}$). 
+
+The European Muon Collaboration (EMC) measured at CERN the structure function of muon DIS from iron and deuterium targets, and published in 1983 the first observation of a depletion of the DIS cross section from iron relative to the one from deuterium in the high $x$-region $0.3 < x < 0.65$~\cite{EMCStrucFunc_1}, which was named the EMC region. Afterwards, further DIS measurements at CERN and SLAC found a suppression of the nuclear structure function compared to deuterium in the low-$x$ region $x < 0.1$ and an enhancement in the intermediate $x$-region $0.1 < x < 0.3$, which are referred as the shadowing and anti-shadowing regions~\cite{EMCStrucFunc_2}. Moreover, the measurements at SLAC using data at higher $x$ observed an increase of $R^{A}_{F_{2}}$ while approaching $x = 1$, which was expected from the motion of nucleons inside the nuclei, called Fermi motion. \fig{fig:NuclearPDFs} presents an illustration of the different regions of nuclear modifications found experimentally.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.45\textwidth]{Figures/WBoson/Theory/NuclearPDF.png}
+ \caption{Illustration of the different nuclear PDF effects. Figure taken from Ref.~\cite{NuclearPDFIllus}.}
+ \label{fig:NuclearPDFs}
+\end{figure}
+
+In the case of heavy-ion collisions, the different nuclear modifications can be qualitatively described as follows:
+
+\begin{itemize}
+ \item \textbf{Shadowing}: corresponds to the suppression seen in $x \lesssim 0.1$, and it arises from the multiple interactions between the scattered partons and the ones from the different nucleons. The multiple parton scatterings shifts the momentum transfer $x$ of the partons towards higher values, effectively reducing the parton densities at low x.
+ \item \textbf{Anti-shadowing}: corresponds to an enhancement in $0.1 \lesssim x \lesssim 0.3$, and it can be understood as a consequence of the multiple parton scatterings that occur in the nucleus.
+ \item \textbf{EMC effect}: corresponds to the suppression in $0.3 \lesssim x \lesssim 0.7$. Some models have been proposed to explain this phenomenon which consider modifications of the nucleon structure due to the nuclear medium and also due to short-range correlations between nucleons.
+ \item \textbf{Fermi-motion effect}: corresponds to a enhancement in $x > 0.7$, and it is due to the motion of nucleons inside the nucleus.
+\end{itemize}
+
+The first global fit to describe leading-order nuclear effects was the EKS98 nPDF~\cite{EKS98}, which employed the nuclear DIS data measured at CERN and Fermilab, and the DY dimuon data from Fermilab proton-nucleus collisions. The pion data collected by RHIC was later included in subsequent global nPDF fits, such as EPS08~\cite{EPS08}, EPS09~\cite{EPS09} and DSSZ~\cite{DSSZ}, which provided constrains to the gluon nPDF.
+
+The nPDFs or the nuclear modification are defined for protons bound in a nucleus. The bound neutron nPDFs are derived from the bound proton PDFs using isospin symmetry (i.e. by exchanging the up and down quark PDFs). The full nPDFs for a nucleus of $Z$ protons and $A-Z$ neutrons can be derived using the bound proton nPDFs $f^{p/A}$ and the bound neutron nPDFs $f^{n/A}$, according to:
+
+\begin{equation}
+ f^{A} = \frac{Z}{A}f^{p/Pb} + \frac{A-Z}{A}f^{n/Pb}
+\end{equation}
+
+From now on, we will focus on the latest nuclear PDF sets: the EPPS16 and nCTE15 nPDFs, which are used in this thesis.
+
+\paragraph{EPPS16 nPDF.} The EPPS16 nuclear PDFs were published in 2017 by Eskola, Paakkinen, Paukkunen and Salgado (EPPS)~\cite{EPPS16}. The EPPS16 nPDF calculations updates their previous EPS09 global fits~\cite{EPS09}.
+
+The EPPS16 global fits includes the same data sets as EPS09 (charged-lepton-nucleus DIS data from SLAC, DY dilepton production from EMC proton-nucleus collisions, and inclusive pion production from RHIC deuteron-nucleus collisions), as well as the CHORUS neutrino-nucleus DIS data, low-mass DY production from RHIC pion-nucleus collisions, and the results using dijet and electroweak boson production in LHC \pPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$. The addition of the new LHC, RHIC and CHORUS data into the global fit is not in tension with the previous EPS09 data sets, reassuring the validity of the universality of the nuclear PDFs. Moreover, the inclusion of the CMS measurements of dijet production in \pPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$ highly constrained the gluon nPDF. On the other hand, the LHC measurements of the electroweak boson production in \pPb data did not significantly constrain the nPDF fits, mostly due to the limited statistical precision, but the the results of the \Wb-boson production from the CMS collaboration suggested possible differences in the  modifications of the quark nPDFs. The measurements of the electroweak boson production in heavy-ion collisions at LHC will be presented in the next subsection.
+
+The EPPS16 includes five additional parameters compared to EPS09, to account for possible flavour dependence of the quark nuclear modifications seen at LHC. The nuclear PDFs are parametrised in EPPS16 as:
+
+\begin{equation}
+  f_{i}^{p/A}\left(x,Q^{2}\right) = R_{i}^{A}\left(x,Q^{2}\right)f_{i}^{p}\left(x,Q^{2}\right)
+\end{equation}
+
+where $f_{i}^{p/A}$ represents the bound proton nPDF of parton $i$ in a nucleus A, $f_{i}^{p}$ is the free proton PDF of parton $i$ and $R_{i}^{A}$ is the corresponding nuclear correction factor. The EPPS16 nuclear modifications are derived using the NLO CT14 PDF as the free proton baseline. The parameters of $R_{i}^{A}$ are determined in three regions: the shadowing region $x\rightarrow0$, the anti-shadowing maximum point $x_{a}$ and the EMC minimum point $x_{e}$ (see \fig{fig:NuclearPDFs}). The dependence on the number of nucleons A is parametrised along the three x regions in the following way:
+
+\begin{equation}
+  R^{A}_{i}\left(x,Q^{2}_{0}\right) = R^{A_{\text{ref}}}_{i}\left(x,Q^{2}_{0}\right)\left(\frac{A}{A_{\text{ref}}}\right)^{\gamma_{i}\left[R_{i}^{A_{\text{ref}}}\left(x,Q^{2}_{0}\right) - 1\right]}
+\end{equation}
+
+where $Q_{0}$ is a parametrisation scale fixed at the charm pole mass (\SI{1.3}{\GeV}), $\gamma_{i}$ is a positive parameter and $A_{\text{ref}}=12$. The $Q^{2}$ dependence above $Q^{2}_{0}$ is determined by solving the DGLAP parton evolution equations. The EPPS16 nuclear modifications are parametrised in total by 20 parameters.
+
+The EPPS16 nuclear correction factors for \Pb ions $R^{\Pb}$ extracted from the global PDF fit are shown in \fig{fig:EPPS16PDFs}. The EPPS16 results are compared against a baseline derived by performing the EPPS16 fits on the reduced dataset used in EPS09. The inclusion of these CHORUS, RHIC p-A and LHC data improves the uncertainties of the gluon $R^{A}$ at high $x$ and the strange-quark $R^{\Pb}$ at low $x$.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Figures/WBoson/Theory/EPPS16.png}
+ \caption{Results of the EPPS16 nuclear correction factor $R^{A}$ for Pb ions at $Q^{2} = \SI{10}{\square\GeV}$. The black curve represents the central fit while the blue bands shows the total uncertainty of the PDF fit. The results are compared against a baseline made by performing the EPPS16 fits on the same datasets used for EPS09. Figure taken from Ref.~\cite{EPPS16}.}
+ \label{fig:EPPS16PDFs}
+\end{figure}
+
+\paragraph{nCTEQ15 nPDF.} The nCTEQ15 nuclear PDFs, published by Kovarik et al. in 2016~\cite{nCTEQ15}, were derived using the CTEQ framework. The nCTEQ15 nPDF global fits make use of the charged-lepton DIS data, DY dilepton data and RHIC inclusive pion data. In contrast with EPPS16, where the nuclear modification factor $R_{i}^{p/A}$ is fitted, the nCTEQ15 global analysis parametrises the nuclear PDF $f_{i}^{p/A}$ directly (i.e. no free proton PDF is used as baseline). The nCTEQ nPDFs are parametrised as:
+
+\begin{equation}
+  \begin{alignedat}{1}
+    xf_{a}^{p/A}\left(x,Q^{2}_{0}\right) &= c_{0}x^{c_{1}}\left(1-x\right)^{c_{2}}e^{c_{3}x}\left(1+e^{x_{4}}x\right)^{c_{5}} \\ 
+   \frac{\cPaqd\left(x,Q^{2}_{0}\right)}{\cPaqu\left(x,Q^{2}_{0}\right)} &= c_{0}x^{c_{1}}\left(1-x\right)^{c_{2}} + \left(1+c_{3}x\right)\left(1-x\right)^{c_{4}}
   \end{alignedat}
-  \label{eq:WProdBjorkenX}
 \end{equation}
 
-The cross sections of negative and positive charged leptons, shown in \eq{eq:WProd}, are different due to parity violation and helicity conservation of weak decays. Since $\PW^{+}$ bosons couple to right-handed leptons while $\PW^{-}$ couples to left-handed leptons, leptons are produced in the same direction as the {\PW} boson while antileptons are generated in the opposite direction. This is reflected in \eq{eq:WProdBjorkenX} where $\mu^{-}$ production is sensitive to slightly higher x than $\mu^{+}$ production.
-
-Multiple proton-proton and proton-neutron hard scatterings takes place during \pPb collisions. In this case, the {\PW} bosons are mainly produced from interactions between the valence quarks and sea antiquarks of the nucleons. The dominant production modes of \Wp bosons correspond to up quark and down antiquark annihilation while for $\PW^{-}$ bosons correspond to down quark and up antiquark annihilation. The annihilation between light quarks and heavier antiquarks is also possible but highly suppressed according to the CKM matrix elements. Therefore, the inclusive {\PW} boson cross section measured in \pPb data is mostly sensitive to the proton and Pb-nucleus PDFs of light quarks and antiquarks.
-
-In addition, the {\PW} boson cross sections can be compared between different beam energies. According to Arleo, Chapon and Paukkunen~\cite{WProdScaling}, at small enough x values, the {\PW} boson cross section follows a power-like scaling as a function of $\snn$, where \eq{eq:WProd} can be approximately reduced to:
+where $f_{a}^{p/A}$ is the bound proton nPDF of a parton $a$ in a nucleus A, \cPaqd and \cPaqu are the down and up anti-quark nPDFs, respectively, $c_{i}$ are parameters, and the parametrisation scale $Q_{0}$ is fixed at $\SI{1.3}{\GeV}$. The strange quark and anti-quark nPDFs are assumed to be the same. The A-dependence of the nPDFs is parametrised in nCTEQ15 using the coefficients $c_{i}$, according to:
 
 \begin{equation}
-  \begin{alignedat}{2}
-    \frac{d\sigma^{\PWpm}}{d\eta}\left(\snn, \xi_{\mathrm{p }}\right) &\approx \left({\snn}\right)^{\alpha} \times F^{\pm}_{\mathrm{p,Pb}}\left(\xi_{\mathrm{p}} , \pt\right), &&\ \ \ \eta>>0, \\
-    \frac{d\sigma^{\PWpm}}{d\eta}\left(\snn, \xi_{\mathrm{Pb}}\right) &\approx \left({\snn}\right)^{\alpha} \times G^{\pm}_{\mathrm{p,Pb}}\left(\xi_{\mathrm{Pb}}, \pt\right), &&\ \ \ \eta<<0
-  \end{alignedat}
-  \label{eq:WProdScaling}
+ c_{i}\left(A\right) = c_{i,0} + c_{i,1}\left(1-A^{-c_{i,2}}\right)
 \end{equation}
 
-where $\alpha$ is the scaling parameter, and $\xi_{p} = \left(M_{\PW}\big/\sqrtsnn\right)e^{-\eta}$ and $\xi_{Pb} = \left(M_{\PW}\big/\sqrtsnn\right)e^{\eta}$ are the x values at $\pt=M_{\PW}/2$ in the proton and Pb ion, respectively. Moreover, the functions $F^{\pm}_{\pPb}$ and $G^{\pm}_{\pPb}$ do not depend explicitely on $s$ or $\eta$.
+The nCTEQ15 fits are performed using 16 free parameters. In addition, the nCTEQ15 treats the up and down  valence quark PDFs independently but it assumes no flavour dependence for nuclear modifications of the up and down anti-quarks.
 
-Furthermore, since the scaling parameter does not depend on the lepton pseudorapidity or the charge of the {\PW} boson, the dependence on $\snn$ cancels in ratios of {\PW} boson cross sections. We can then measure assymmetries to improve the sensitivity to different aspects of the {\PW} boson production. Two of the most commonly used are the lepton charge asymmetry defined in \eq{eq:MuonChargeAsymmetry} and the forward-backward ratio presented in \eq{eq:MuonForwardBackwardAsymmetry}. Thus, according to \eq{eq:WProdScaling}, the {\PW} boson asymmetries only depends on $\xi_{\mathrm{p}}$ and $\xi_{\mathrm{Pb}}$ for $|\eta|>>0.5\mathrm{ln}\left(\snn\big/M_{\PW}^{2}\right)$.
+\fig{fig:nCTEQ15} shows the nCTEQ15 results of the full nuclear lead PDFs $f^{\Pb}$ compared to the results from the EPS09 and HKN07 nPDFs. One can see that at $x \gtrsim 0.05$ and $Q^{2} = \SI{10}{\square\GeV}$ the up and down valence quark nPDFs dominates while at $x < 0.01$ the sea quarks and the gluons nPDFs becomes dominant.
 
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Figures/WBoson/Theory/nCTEQ15.png}
+ \caption{Results of the nCTEQ15 full nuclear PDFs for \Pb ions $f^{\Pb}$ at $Q = \SI{10}{\GeV}$. Figure taken from Ref.~\cite{nCTEQ15}.}
+ \label{fig:nCTEQ15}
+\end{figure}
+
+A comparison between the results of the nCTEQ15 and EPPS16 nuclear modifications is shown in \fig{fig:EPPS16vsnCTEQ15}. The nCTEQ15 expects more shadowing than EPPS16 for the down valence quarks and light sea quarks, while the opposite trend is observed for up valence quarks. Moreover, the uncertainties of the EPPS16 results are much larger than the nCTEQ15 results because the EPPS16 uses more  parameters to fit the nuclear modifications.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Figures/WBoson/Theory/EPPS16vsnCTEQ15.png}
+ \caption{Comparison between the EPPS16 (black curve with blue band) and the nCTEQ15 (red curves with hatching) nuclear modifications performed at $Q^{2} =\SI{10}{\square\GeV}$. Figure taken from Ref.~\cite{EPPS16}.}
+ \label{fig:EPPS16vsnCTEQ15}
+\end{figure}
+
+The main characteristics of the EPS09, EPPS16 and nCTEQ15 nuclear PDFs are summarized in \tab{tab:nPDFInfo}.
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{ c | c c c }
+   nPDF & EPS09 & EPPS16 & nCTEQ15 \\ \hline
+   Order & NLO & NLO & NLO \\
+   Fit & nucler modification & nuclear modification & nuclear PDF \\
+   Baseline PDF & CTEQ6 & CT14 & \\
+   Free parameters & 15 & 20 & 17 \\
+   Data points & 929 & 1811 & 708 \\
+   EMC DY dileptons in p-A & Yes & Yes & Yes \\
+   RHIC pions in d-A & Yes & Yes & Yes \\
+   SLAC $l^{\pm}$-A DIS & Yes & Yes & Yes \\
+   CHORUS $\nu$-A DIS & No & Yes & No \\
+   RHIC DY in $\pi$-A & No & Yes & No \\
+   LHC dijets in \pPb & No & Yes & No \\
+   LHC weak bosons in \pPb & No & Yes & No
+  \end{tabular}
+  \caption{Summary of the information of EPS09, EPPS16 and nCTEQ15 nuclear PDFs.}
+  \label{tab:nPDFInfo}
+\end{table}
+
+
+\subsection{Experimental results at LHC}\label{sec:WBoson_Introduction_Results}
+
+
+Measurements of the weak boson production in heavy-ion collisions have been performed by the LHC experiments. The latest results have been derived from \RunpPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$ and \RunPbPb collisions at $\sqrtsnn = \SI{2.56}{\TeV}$ and $\sqrtsnn = \SI{5.02}{\TeV}$. This subsection gives a brief summary on some of the results.
+
+\paragraph{\RunPbPb results.}  The CMS~\cite{CMS_W_PbPb_2p76TeV,CMS_Z_PbPb_2p76TeV} and ATLAS~\cite{ATLAS_W_PbPb_2p76TeV,ATLAS_Z_PbPb_2p76TeV} collaboration measured the \Wb- and \Z-boson production in \RunPbPb collisions at $\sqrtsnn = \SI{2.56}{\TeV}$ in the lepton decay channel. The ATLAS and CMS measurements were performed in the mid-rapidity region ($\abs{y} < 2.5$). The results are in good agreement with NLO pQCD calculations with and without nuclear PDF corrections. Moreover, the centrality dependence of the weak boson yields is observed to scale with \ncoll, within uncertainties. In the case of \Wb boson, the lepton charge asymmetry of \Wpm, defined as $(N^{+}_{\ell} - N^{-}_{\ell})/(N^{+}_{\ell} + N^{-}_{\ell})$, is found to be different from the results in \Runpp collisions, but this is understood to be simply associated to the different number of protons and neutrons in the \Pb nuclei, the isospin effect. The statistical precision of the results is not enough to provide significant constrains on the global fits to the PDFs.
+
+Measurements from the ALICE collaboration on the production of \Z bosons in \RunPbPb at $\sqrtsnn = \SI{5.20}{\TeV}$ complements the forward rapidity region ($2.5 < y < 4.0$). The ALICE results are in good agreement with model calculations including nuclear PDF corrections. On the contrary, the proton PDF calculations assuming only isospin effects deviates from the results by at most 3 standard deviations in the most central \RunPbPb collisions~\cite{ALICE_Z_PbPb_5p02TeV}, starting to be sensitive to nuclear effects in the forward (low Bjorken-x) region.
+
+
+\paragraph{\RunpPb results.} The ATLAS collaboration has measured the \Z-boson production in \RunpPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$. The \Z-boson cross section  as a function of the \Z-boson rapidity determined in the centre-of-mass frame, is displayed in \fig{fig:ATLAS_Z_pPb_5p02TeV}. The results are better described by the PDF model calculations including nuclear modifications, although the free-proton PDF calculations are not excluded within the precision of the measurement.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.45\textwidth]{Figures/WBoson/Theory/ATLAS_Z_XSec.png}
+ \caption{Distribution of the production cross section for $\ZToMuMu$ measured as a function of the \Z-boson rapidity measured in the centre-of-mass frame. Figure taken from Ref.~\cite{ATLAS_Z_pPb_5p02TeV}.}
+ \label{fig:ATLAS_Z_pPb_5p02TeV}
+\end{figure}
+
+The CMS and ALICE collaboration have published results on the production of \Wb bosons in \RunpPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$. The measurements of the \Wb-boson production cross section performed by the ALICE collaboration, as a function of the lepton rapidity in the centre-of-mass frame, are shown in \fig{fig:ALICE_W_pPb_5p02TeV}.The ALICE results are compared to NLO calculations using the CT10 proton PDF and NNLO calculations using the FEWZ generator and the MSTW200 proton PDF, with and without EPS09 nuclear PDF corrections. The cross section results are found to be in good agreement with the NLO model calculations while NNLO calculations without nuclear PDF modifications slightly overestimate the measurement at forward lepton rapidity ($2.03 < \abs{y_{\text{cms}}} < 3.53$).
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.66\textwidth]{Figures/WBoson/Theory/Cross_Section_ALICE.png}
+ \caption{Distribution of the production cross section for $\WToMuNuMi$ (left) and $\WToMuNuPl$ (right) measured as a function of the muon rapidity in the centre-of-mass frame. Figure taken from Ref.~\cite{ALICE_W_pPb_5p02TeV}.}
+ \label{fig:ALICE_W_pPb_5p02TeV}
+\end{figure}
+
+Finally, the \Wb-boson measurements of CMS are performed in the muon and electron decay channels as a function of the lepton pseudorapidity in the laboratory frame~\cite{HIN-13-007}. \fig{fig:CMS_W_pPb_5p02TeV} shows the measured cross sections for $\Wm\rightarrow\ell^{-}\overline{\nu}_{\ell}$ (left) and $\Wp\rightarrow\ell^{+}{\nu}_{\ell}$ (middle), and the lepton charge asymmetry (right), compared to the NLO pQCD calculations using the CT10 proton PDF with and without EPS09 nuclear corrections. Both theoretical calculations are found to be in good agreement with the measured cross sections within uncertainties, except in the backward region ($\etaLAB < -1.0$) for \Wm bosons, where a small excess is seen in the results. The small deviation is also reflected in the measured lepton charge asymmetry, where the model calculations overestimate the data in the region $-2.0 < \etaLAB < -1.0$. It was suggested at the time that the small dis-agreement between the PDF calculations and the data could be due to different flavour dependence between the up and down quark PDFs~\cite{HIN-13-007}.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.32\textwidth]{Figures/WBoson/Theory/CMS_W_5p02TeV_XSec_Wm.pdf}
+ \includegraphics[width=0.32\textwidth]{Figures/WBoson/Theory/CMS_W_5p02TeV_XSec_Wp.pdf}
+ \includegraphics[width=0.32\textwidth]{Figures/WBoson/Theory/CMS_W_5p02TeV_ChgAsym.pdf}
+ \caption{Distribution of the production cross section for $\Wm\rightarrow\ell^{-}\overline{\nu}_{\ell}$ (left) and $\Wp\rightarrow\ell^{+}{\nu}_{\ell}$ (middle), and the lepton charge asymmetry (right) measured as a function of the lepton pseudorapidity in the laboratory frame. The CT10 PDF calculations with EPS09 (green line) and without (red line) nuclear PDF corrections are included. The bottom panels present the ratio of the CT10+EPS09 (green line) and data (black points) normalised to the CT10 baseline. Figure taken from Ref.~\cite{HIN-13-007}.}
+ \label{fig:CMS_W_pPb_5p02TeV}
+\end{figure}
 
 % END OF SECTION

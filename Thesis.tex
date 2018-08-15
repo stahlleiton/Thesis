@@ -1,19 +1,57 @@
 \documentclass{ThesisStyle}
 \selectlanguage{english}
-\usepackage{amsmath,amssymb,amscd,mathrsfs}
+%\usepackage{amsmath,amssymb,amscd,mathrsfs}
+%\usepackage[mathscr]{euscript}
 \usepackage{xspace}
-\newcommand\hmmax{2}
 \usepackage[binary-units=true]{siunitx}
 \usepackage{lineno}
 \usepackage{graphicx}
 \usepackage{feynmp-auto}
+\usepackage{float}
 \usepackage{scalerel}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \tikzset{>=latex} % for LaTeX arrow head
 
 \newcommand{\mybrace}[1]{\scaleleftright[\dimexpr6pt+#1\dimexpr0.11pt]{.}{\rule[\dimexpr5pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{-1pt}}
+
+\DeclareRobustCommand{\euscr}[1]{\text{\usefont{U}{eus}{m}{n}#1}}
 \DeclareSIUnit{\Bit}{b}
+
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\usepackage{listings}
+\lstdefinelanguage{diff}{
+  morecomment=[f][\color{blue}]{@@},     % group identifier
+  morecomment=[f][\color{red}]-,         % deleted lines 
+  morecomment=[f][\color{darkgreen}]+,       % added lines
+  morecomment=[f][\color{magenta}]{---}, % Diff header lines (must appear after +,-)
+  morecomment=[f][\color{magenta}]{+++},
+}
+
+\usepackage{titlesec}
+\usepackage{etoolbox}
+\titleclass{\subsubsubsection}{straight}[\subsubsection]
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}}
+\titleformat{\subsubsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}{3.25ex \@plus1ex \@minus.2ex}{-1em}{\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}{3.25ex \@plus1ex \@minus .2ex}{-1em}{\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@subparagraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 \begin{document}
 
@@ -41,7 +79,7 @@
 \renewcommand{\contentsname}{Table of Contents}
 \maxtocdepth{subsection}
 \tableofcontents
-\addtocontents{toc}{\par\nobreak \mbox{}\hfill{\bf Page}\par\nobreak}
+\addtocontents{toc}{\par\nobreak \mbox{}\hfill{\textbf{Page}}\par\nobreak}
 \clearemptydoublepage
 
 
@@ -50,28 +88,36 @@
 %%%%%%%%%%% CHAPTERS
 \mainmatter
 
+\begin{linenumbers}
+
 \import{Chapters/Main/Introduction/}{Chapter.tex}
 \clearemptydoublepage
 
 \import{Chapters/Main/Experiment/}{Chapter.tex}
 \clearemptydoublepage
 
-\import{Chapters/Main/Charmonia/}{Chapter.tex}
+\import{Chapters/Main/WBoson/}{Chapter.tex}
 \clearemptydoublepage
 
-\begin{linenumbers}
-\import{Chapters/Main/WBoson/}{Chapter.tex}
-\end{linenumbers}
+\import{Chapters/Main/Charmonia/}{Chapter_EMPTY.tex}
 \clearemptydoublepage
 
 \import{Chapters/Main/Conclusion/}{Chapter.tex}
-\clearemptydoublepage
+%\clearemptydoublepage
+
+\end{linenumbers}
 
 
 %------------------------------------------------------------------------------
 
 %%%%%%%%%%% APPENDIX
 \appendix
+
+%\import{Chapters/Appendix/WBoson/POWHEG/}{POWHEG.tex}
+%\clearemptydoublepage
+
+\import{Chapters/Appendix/WBoson/SignalExtraction/}{Fits.tex}
+\clearemptydoublepage
 
 
 %%Change the geometry for signal extraction plots
@@ -85,7 +131,7 @@
 %%%%%%%%%%% BIBLIOGRAPHY
 \backmatter
 \bibliographystyle{kp}
-\bibliography{Bibliography/Introduction,Bibliography/WBoson_Analysis,Bibliography/WBoson_Theory,Bibliography/Experiment}
+\bibliography{Bibliography/Introduction,Bibliography/Experiment,Bibliography/WBoson_Theory,Bibliography/WBoson_Analysis,Bibliography/Charmonia_Theory,Bibliography/Charmonia_Analysis}
 \clearemptydoublepage
 
 

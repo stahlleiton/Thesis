@@ -1,0 +1,127 @@
+\subsection{Dataset} \label{sec:WBoson_Analysis_Samples_Data}
+
+The production of \Wb bosons is measured in \RunpPb collisions using data recorded by the CMS detector at the end of 2016. The dataset employed in this analysis is composed of events selected by the HLT trigger, requiring the presence of at least one identified muon candidate with $\pt > 12$~\GeVc. The data were reconstructed with CMSSW 8.0.30 and thoroughly validated by the CMS collaboration. Only sections of the dataset, recorded with all CMS subdetectors operating in optimal conditions, were processed. The total integrated luminosity of the recorded data corresponds to 173.4~\nbinv, currently known within 3.5\%~\cite{LUM-17-002}.
+
+The \RunpPb data-taking period was divided in two parts, as explained in \sect{sec:Experiment_LHC_Scheme}. In the first part of the \RunpPb run (labelled as \Pbp), the proton beam was circulating in the clockwise direction along the LHC ring, while in the second part (referred as \pPb), the proton beam was circulating counter-clockwise. The integrated luminosity recorded in the \Pbp and \pPb runs was 62.6~\nbinv and 110.8~\nbinv, respectively.
+
+Since the LHC dipole magnets apply the same magnetic rigidity (i.e. momentum-to-charge ratio) to both beams~\cite{LHCProtonNucleus}, the energy of the \Pb beam is constrained by the energy of the proton beam $E_{\Pp}$, and the number of nucleons ($A_{\Pb} = 208$) and electric charge ($Z_{\Pb} = 82$) of the \Pb nucleus. During the entire \RunpPb run, the energy of the proton beam was \SI{6.50}{\TeV} and as a result, the energy per nucleon $E_{\Pb}$ of the \Pb beam was then:
+
+\begin{equation}
+ E_{\Pb} = \frac{Z_{\Pb}}{A_{\Pb}}\times{E_{\Pp}} = \SI{2.56}{\TeV}
+ \label{eq:PbBeamEnergy}
+\end{equation}
+
+In addition, the energy of the nucleon-nucleon collisions in the centre-of-mass (CM) frame can be derived in this case using:
+
+\begin{equation}
+ \sqrtsnn = 2 \sqrt{\frac{Z_{\Pb}}{A_{\Pb}}} \times E_{\Pp} = \SI{8.16}{\TeV}
+\end{equation}
+
+Considering that the CMS detector is rapidity-symmetric with respect to the beam orientation, the \pPb and \Pbp samples are merged in order to maximize the statistics of the data. This is done by first flipping the sign of the pseudorapidity of particles from the \Pbp sample measured in the laboratory frame, and then combining them with the events from the \pPb sample. The combined samples corresponds to \RunpPb collisions with the proton always going toward positive pseudorapidity. From hereafter, all results in this analysis are derived using the combined \pPb sample.
+
+Due to the energy difference between the \RunpPb colliding beams, the nucleon-pair CM frame is not at rest with respect to the laboratory frame. Massless particles emitted in the CM frame experience a constant longitudinal boost given by:
+\begin{equation}
+ \abs{\Delta{\eta}} = \frac{1}{2}\times\abs{\ln\left(\frac{Z_{\Pb}}{A_{\Pb}}\right)} = 0.465
+ \label{eq:CMShift}
+\end{equation}
+
+As a consequence, the pseudorapidity measured in the CM frame (\etaCM) is derived from the one determined in the laboratory frame (\etaLAB), in the following way:
+\begin{equation}
+ \begin{aligned}
+  \etaCM &= \etaLAB - 0.465
+ \end{aligned}
+\end{equation}
+
+%%------------------------------------------------------------%%
+\subsection{Next-to-leading order simulations} \label{sec:WBoson_Analysis_Sample_MC}
+
+Fully reconstructed Monte Carlo (MC) simulations are used to describe the \Wb-boson signal, and the top-quark and electroweak background processes. The MC samples were generated at NLO using the POsitive Weight Hardest Emission Generator (\POWHEG) version 2~\cite{POWHEG,POWHEG_2,POWHEGBOX}. To account for QCD and electroweak theory corrections, the \POWHEGBOX packages \verb#W_ew-BMMNP#~\cite{POWHEGBOX_W_ew_BMNNP} and \verb#Z_ew-BMMNPV#~\cite{POWHEGBOX_Z_ew_BMNNP} were used to generate the $\pp\to\WToLepNu$ and $\pp\to\DYToLepLep$ processes, respectively. The $\pp\to\ttbar$ was generated using the \POWHEGBOX package \verb#hvq#~\cite{POWHEGBOX_hvq}, which is a heavy flavour quark generator at NLO QCD. 
+
+In order to simulate \RunpPb collisions, I added to the \POWHEG Fortran code a subroutine that modifies the PDFs of one of the incoming particles (referred as the \Pb nucleus) by applying the EPPS16 nuclear correction factors derived for $\Pb^{82+}$ nuclei~\footnote{The EPPS16 nuclear correction factors for each nuclei can be found in \url{https://www.jyu.fi/science/en/physics/research/highenergy/urhic/npdfs/epps16-nuclear-pdfs}}~\cite{EPPS16}, since the standard \POWHEG framework only generates \Runpp collision events. In this case, the \POWHEG event generation starts by evaluating the PDFs associated to both incoming particles (proton and \Pb nucleus) using the NLO CT14 PDF set~\cite{CT14}. Afterwards, the PDFs corresponding to the \Pb nucleus are modified with my subroutine, following the procedure defined in Ref.~\cite{EPPS16} and described in the following steps:
+
+\begin{enumerate}
+ \item The EPPS16 nuclear correction factors $R$ are applied to the PDFs computed by \POWHEG, in the following way:
+ 
+\begin{equation}
+ \begin{aligned}
+  \hat{f}^{\cPqd}_{\Pp} &= R^{\cPqd}_{s}f^{\cPaqd}_{\Pp} + R^{\cPqd}_{v}\left(f^{\cPqd}_{\Pp}-f^{\cPaqd}_{\Pp}\right)  \quad &; \quad \hat{f}^{\cPaqd}_{\Pp} &= R^{\cPqd}_{s}f^{\cPaqd}_{\Pp} \\
+  \hat{f}^{\cPqu}_{\Pp} &= R^{\cPqu}_{s}f^{\cPaqu}_{\Pp} + R^{\cPqu}_{v}\left(f^{\cPqu}_{\Pp}-f^{\cPaqu}_{\Pp}\right)  \quad &; \quad \hat{f}^{\cPaqu}_{\Pp} &= R^{\cPqu}_{s}f^{\cPaqu}_{\Pp} \\
+  \hat{f}^{x}_{\Pp} &= R^{x}_{s}f^{x}_{\Pp}  \quad &; \quad \hat{f}^{\overline{x}}_{\Pp} &= R^{x}_{s}f^{\overline{x}}_{\Pp} \, \quad\quad \text{where } x = \left\{ \cPqs,\, \cPqc,\, \cPqb \right\} \\
+  \hat{f}^{g}_{\Pp} &= R^{g}f^{g}_{\Pp}
+  \end{aligned}
+ \label{eq:PDFNuclearCorr}
+\end{equation}
+
+where $\hat{f}_{\Pp}$ represent the PDFs of a proton bound in the \Pb nucleus, $f_{\Pp}$ are the free proton PDFs obtain with NLO CT14, and $R^{x}_{s}$, $R^{x}_{v}$ and $R^{g}$ are the EPPS16 nuclear correction factors for sea quarks, valence quarks and gluons, accordingly.
+
+ \item The bound neutron PDFs ($\hat{f}_{\Pn}$) are then derived from the bound proton PDFs, by interchanging the up and down (anti-)quark PDFs (isospin symmetry between protons and neutrons), according to:
+ 
+\begin{equation}
+ \begin{aligned}
+  \hat{f}^{\cPqd}_{\Pn} &= \hat{f}^{\cPqu}_{\Pp} \quad &; \quad \hat{f}^{\cPqu}_{\Pn} &= \hat{f}^{\cPqd}_{\Pp} \\
+  \hat{f}^{\cPaqd}_{\Pn} &= \hat{f}^{\cPaqu}_{\Pp} \quad &; \quad \hat{f}^{\cPaqu}_{\Pn} &= \hat{f}^{\cPaqd}_{\Pp} \\
+ \end{aligned}
+ \label{eq:NeutronPDF}
+\end{equation}
+
+and assuming the same PDFs ($\hat{f}^{i}_{\Pn} = \hat{f}^{i}_{\Pp}$) for the other flavours.
+
+ \item The bound proton and neutron PDFs are combined to form the \Pb-nucleus PDFs ($f_{\Pb}$), taking into account the number of protons ($Z_{\Pb}$) and neutrons ($N_{\Pb} = A_{\Pb} - Z_{\Pb}$) in the \Pb nucleus, as done in:
+ 
+\begin{equation}
+ \begin{aligned}
+  f^{\cPqd}_{\Pb} &= \left(\frac{Z_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPqd}_{\Pp} + \left(\frac{N_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPqd}_{\Pn} &\quad ; \quad
+  f^{\cPaqd}_{\Pb} &= \left(\frac{Z_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPaqd}_{\Pp} + \left(\frac{N_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPaqd}_{\Pn} \\
+  f^{\cPqu}_{\Pb} &= \left(\frac{Z_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPqu}_{\Pp} + \left(\frac{N_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPqu}_{\Pn} &\quad ; \quad
+  f^{\cPaqu}_{\Pb} &= \left(\frac{Z_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPaqu}_{\Pp} + \left(\frac{N_{\Pb}}{A_{\Pb}}\right)\hat{f}^{\cPaqu}_{\Pn} \\
+  f^{i}_{\Pb} &= \hat{f}^{i}_{\Pp} && \hspace{-11em}\text{ for other flavours}
+ \end{aligned}
+ \label{eq:PbScaling}
+\end{equation}
+
+ \item The PDFs originally derived by \POWHEG are then replaced with the modified PDFs defined in \eq{eq:PbScaling}, and the rest of the event generation is done with the standard \POWHEG framework with no further changes.
+
+\end{enumerate}
+
+The parton showering is performed by hadronizing the \POWHEG events with \PYTHIA 8.212~\cite{PYTHIA8}, using the CUETP8M1 underlying event (UE) tune~\cite{PYTHIA8,UE_pp}. The full CMS detector response is simulated in all MC samples, based on \GEANTfour~\cite{GEANT4}, considering a realistic alignment and calibration of the beam spot and the different subdetectors of CMS, tuned on data. The MC events are reconstructed with the standard CMS \Runpp reconstruction software used during 2016 data taking.
+
+To consider a more realistic distribution of the underlying environment present in \RunpPb collisions, the MC signal events were embedded in a minimum bias (i.e. inelastic hadronic interactions) sample generated with \EPOSLHC~\cite{EPOS}, taking into account both \RunpPb boost directions. The \EPOSLHC MC samples were tuned to reproduce the global event properties of the \RunpPb data such as the charged-hadron transverse momentum spectrum and the particle multiplicity~\cite{dNdEta_pPb}. The list of simulated samples and the cross sections used in this analysis are summarized in \tab{tab:MCSamples}. The cross sections of the electroweak processes corresponds to the \POWHEG NLO cross sections scaled by $A_{\Pb}$, while the \ttbar cross section is taken from the inclusive cross section measured in \pPb collisions at $\sqrtsnn = \SI{8.16}{\TeV}$ by the CMS collaboration~\cite{HIN-17-002}.
+
+\begin{table} [h!]
+  \centering
+    \begin{tabular}{c c c c c c}
+      \hline
+      Process & Cross section [nb] & Generated events \\
+      \hline
+      $\pPb \to \WToMuNuPl$ & 1214 & 982714  \\
+      $\Pbp \to \WToMuNuPl$ & 1214 & 981874  \\
+      $\pPb \to \WToMuNuMi$ & 1083 & 995726  \\
+      $\Pbp \to \WToMuNuMi$ & 1083 & 998908  \\
+      $\pPb \to \WToTauNuPl$ & 1147 & 481125  \\
+      $\Pbp \to \WToTauNuPl$ & 1147 & 500000  \\
+      $\pPb \to \WToTauNuMi$ & 1023 & 495450  \\
+      $\Pbp \to \WToTauNuMi$ & 1023 & 498092  \\
+      \hline
+      $\pPb \to \DYToMuMu$ & 266 & 1000000  \\
+      $\Pbp \to \DYToMuMu$ & 266 & 1000000  \\
+      $\Pbp \to \DYToTauTau$ & 259 & 498444  \\
+      \hline
+      $\pPb \to \ttbar$ & $45 \pm 8$ & 99578  \\
+      $\Pbp \to \ttbar$ & $45 \pm 8$ & 100000  \\
+    \end{tabular}
+  \caption{Simulated NLO samples used for the \Wb-boson measurement in \RunpPb at \SI{8.16}{\TeV}. The listed cross sections are the \POWHEG NLO cross sections scaled by $A_{\Pb} = 208$, except for the \ttbar production cross section which is taken from the CMS measurement in \RunpPb  at \SI{8.16}{\TeV}~\cite{HIN-17-002}.}
+  \label{tab:MCSamples}
+\end{table}
+
+
+The \pPb and \Pbp simulated samples are also combined in the same way as done for data, but the generated events are weighed before merging the samples by applying a global weight, according to their \RunpPb boost direction, defined as:
+
+\begin{equation}
+  w_{\MC} = \frac{\sigma\times\Lumi_{\text{data}}}{N_{\gen}}
+  \label{eq:NormMC}
+\end{equation}
+
+where $\Lumi_{\text{data}}$ corresponds to the integrated luminosity recorded in each proton-lead run (110.8~\nbinv for \pPb and 62.6~\nbinv for \Pbp), $\sigma$ is the cross section associated to the simulated process (listed in \tab{tab:MCSamples}) and $N_{\gen}$ is the total number of generated events. The global weighing is applied to ensure that each MC sample is normalised to the corresponding integrated luminosity of the data.
+
+
+% END OF SUBSECTION
