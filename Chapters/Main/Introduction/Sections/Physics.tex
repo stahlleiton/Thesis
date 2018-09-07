@@ -183,7 +183,7 @@ where $\beta_{0}=7/\left(4\pi\right)$ and $\beta_{1}=13/\left(8\pi^{2}\right)$ a
 \label{eq:QCDCoupling}
 \end{equation}
 
-where $\Lambda_{\text{QCD}} \approx 255$~MeV~\cite{LambdaQCD}\footnote{Derived in the $\overline{\text{MS}}$ scheme for 2 quark flavours.} is the QCD Landau pole (i.e. the scale at which the coupling becomes infinite). The factorisation scale $\mu$ is generally associated to the energy scale $Q$ of a given process. This means that $\alpha_{s}\left(\mu^{2}\right)$ is not really a constant but depends on the energy scale, so it is also known as the QCD running coupling constant. Figure~\ref{fig:Alphas} presents the latest results on the measurement of $\alpha_{s}\left(Q^{2}\right)$ as a function of the energy scale $Q$~\cite{PDG}.
+where $\Lambda_{\text{QCD}} \approx \SI{255}{\MeV}$~\cite{LambdaQCD}\footnote{Derived in the $\overline{\text{MS}}$ scheme for 2 quark flavours.} is the QCD Landau pole (i.e. the scale at which the coupling becomes infinite). The factorisation scale $\mu$ is generally associated to the energy scale $Q$ of a given process. This means that $\alpha_{s}\left(\mu^{2}\right)$ is not really a constant but depends on the energy scale, so it is also known as the QCD running coupling constant. Figure~\ref{fig:Alphas} presents the latest results on the measurement of $\alpha_{s}\left(Q^{2}\right)$ as a function of the energy scale $Q$~\cite{PDG}.
 
 \begin{figure}[htbp]
  \centering
@@ -372,7 +372,7 @@ Another important process used to constrain PDFs is the Drell-Yan (DY) process o
 
 The first attempt to describe the temperature evolution of matter at high energies was performed by Rofl Hagedorn in 1965~\cite{Hagedorn1965}. Hagedorn considered matter at high energies as a gas made of hadrons and he employed a thermodynamical bootstrap approach to describe the hadron gas. After studying the mass spectrum of all the hadron species measured at the time, Hagedorn realised that the density of hadron species grows exponentially until it diverges at a temperature of $T_{H} \approx 158$~MeV, known as the Hagedorn temperature. Years later, with the advent of QCD, it was understood that the Hagedorn temperature described a transition from a hadron gas to a state of matter where quarks and gluons are asymptotically free called the quark-gluon plasma.
 
-The description of the QCD phase transition turned out to be complicated because the critical temperature is close to the QCD scale $\Lambda_{\text{QCD}} \approx 255$~MeV~\cite{LambdaQCD}, where perturbative calculations are no longer reliable. An alternative method to study the non-perturbative regime of QCD consists of solving numerically the QCD field equations on a discrete space-time grid using a method called lattice QCD. Nowadays, lattice QCD is able to describe the evolution of matter at finite temperatures and low densities. A sketch of the QCD phase diagram in terms of the temperature $T$ and the baryon chemical potential $\mu_{\B}$\footnote{The baryon chemical potential can be viewed as a measure of the excess of matter over anti-matter and it is proportional to the baryon density.}. is shown in \fig{fig:QCDPhaseDiagram}.
+The description of the QCD phase transition turned out to be complicated because the critical temperature is close to the QCD scale $\Lambda_{\text{QCD}} \approx \SI{255}{\MeV}$~\cite{LambdaQCD}, where perturbative calculations are no longer reliable. An alternative method to study the non-perturbative regime of QCD consists of solving numerically the QCD field equations on a discrete space-time grid using a method called lattice QCD. Nowadays, lattice QCD is able to describe the evolution of matter at finite temperatures and low densities. A sketch of the QCD phase diagram in terms of the temperature $T$ and the baryon chemical potential $\mu_{\B}$\footnote{The baryon chemical potential can be viewed as a measure of the excess of matter over anti-matter and it is proportional to the baryon density.}. is shown in \fig{fig:QCDPhaseDiagram}.
 
 \begin{figure}[!htb]
  \centering
@@ -402,7 +402,7 @@ In the meantime, the first nucleus-nucleus collider, known as the Relativistic H
 Currently, the largest heavy-ion collider is the Large Hadron Collider (LHC) at CERN, whose construction finished in 2008. The SPS is used as injector to the LHC, accelerating the Pb beams to energies of \SI{1.38}{\TeV}. The first nucleus-nucleus collisions at LHC took place in 2010 using Pb beams at \SI{2.76}{\TeV}. Since then, the LHC has collided different configurations involving ions, including p-Pb at \SI{2.76}{\TeV} (2013), Pb-Pb at 5.02~TeV (2015), p-Pb at \SI{8.16}{\TeV} (2016), Xe-Xe at \SI{5.44}{\TeV} (2017), and at the end of 2018 LHC is planning to provide a larger set of Pb-Pb collisions at \SI{5.02}{\TeV}. There are four detectors at the LHC called ALICE, CMS, ATLAS and LHCb. The four experiments are nowadays participating in the heavy-ion programme at LHC. Due to the large beam energies, the LHC is an ideal collider to study the QGP at very high temperatures, where one expects smaller QGP formation times and larger hot medium densities, compared to RHIC.
 
 
-\subsection{Geometry of nucleus-nucleus collisions}
+\subsection{Geometry of nucleus-nucleus collisions}\label{sec:Physics_HI_Glauber}
 
 The number of particles produced in a nucleus-nucleus collision depends on the geometry of the collision. Since nuclei are extended objects made of nucleons (i.e. protons and neutrons), the number of nucleon-nucleon (NN) interactions increases the more head-on or central is the collision. The nucleons that participate in the collision are called participants while those that do not participate are referred to as spectators. The overlap region of the collision depends on the impact parameter $\vec{b}$, which is the transverse distance between the centres of the two colliding nuclei as shown in \fig{fig:CollisionGeometry}.
 
@@ -557,7 +557,7 @@ Recently, the ALICE collaboration published in~\cite{StrangenessEnhancementExp_3
 \end{figure}
 
 
-\subsubsection{Jet quenching}
+\subsubsection{Jet quenching}\label{sec:Physics_HI_Probes_JetQuenching}
 
 Energetic partons are produced in the hard scattering at the beginning of the collision. These scattered partons fragment into other colour-charged particles, which then create an ensemble of hadrons during the hadronisation process. The baryons and mesons produced at the end of the collision tend to move along the same direction as the original fragmented parton, forming a localised spray of particles called jet. The jets can be reconstructed by clustering hadrons and other particles around a given direction using a jet sequential recombination algorithm (e.g. anti-$k_{t}$~\cite{AntikT}).
 
@@ -603,12 +603,13 @@ where $E_{T1}$ is the transverse energy of the most energetic jet among the pair
 \end{figure}
 
 
-\subsubsection{Quarkonium production}
+\subsubsection{Quarkonium production}\label{sec:Physics_HI_Probes_Quarkonium}
 
 Quarkonia (\QQbar) are mesons composed of a heavy quark and its own anti-quark. Quarkonia can be classified as charmonia or bottomonia if they are made of charm quarks or bottom quarks, respectively. The first excited state of charmonia is called \JPsi meson while for bottomonia is called \UpsOneS meson. The properties of quarkonia are non-perturbative but since the mass of the heavy quarks is comparable to the mass of the quarkonia, the quarks move inside the quarkonia much slower than the speed of light. As a result, the properties of quarkonia can be computed using an effective non-relativistic model. For instance, one way to describe the binding of the quarks is by using a Cornell potential~\cite{QuarkoniumPotential} given by:
 
 \begin{equation}
-  V_{\QQbar}\left(r\right) = -\frac{a}{r} + br
+ V_{\QQbar}\left(r\right) = -\frac{a}{r} + br
+ \label{eq:QQbar}
 \end{equation}
 
 where $r$ is the binding radius of the quarkonium, $a$ is the coulombic interaction coupling, and $b$ is the string tension. By solving the Schr{\"o}dinger equation for the \QQbar potential, one finds several higher excited states of charmonia (e.g. \PsiP) and bottomonia (e.g. \UpsTwoS and \UpsThreeS), with lower binding energies and larger radius (i.e. $r_{\UpsOneS} < r_{\UpsTwoS} < r_{\UpsThreeS}$).
@@ -624,7 +625,7 @@ The sequential suppression of bottomonium states has been observed at the LHC. F
  \label{fig:CMSUpsilonSuppression}
 \end{figure}
 
-The first evidence of \JPsi-meson anomalous suppression (i.e. beyond nuclear effects) was observed in \RunPbPb collisions at 158~\si{\GeV}/nucleon by the NA50 collaboration at SPS~\cite{SPSJpsiSuppression_1}. The results at SPS showed that the \JPsi-meson cross section measured in peripheral collisions was consistent with the expectations from nuclear absorption while in central collisions it was more suppressed~\cite{SPSJpsiSuppression_2}. The measurement of the \JPsi-meson production in Au-Au collisions at $\sqrtsnn = 200$~GeV at RHIC~\cite{JpsiRHIC} showed a similar level of suppression at mid-rapidity ($\abs{y} < 0.35$) compared to SPS, despite the higher energy density at RHIC. In addition, the production of \JPsi mesons at forward rapidity ($1.2 < \abs{y} < 2.2$) was found to be more suppressed than at mid-rapidity.
+The first evidence of \JPsi-meson anomalous suppression (i.e. beyond nuclear effects) was observed in \RunPbPb collisions at \SI{158}{\GeV}/nucleon by the NA50 collaboration at SPS~\cite{SPSJpsiSuppression_1}. The results at SPS showed that the \JPsi-meson cross section measured in peripheral collisions was consistent with the expectations from nuclear absorption while in central collisions it was more suppressed~\cite{SPSJpsiSuppression_2}. The measurement of the \JPsi-meson production in Au-Au collisions at $\sqrtsnn = \SI{200}{\GeV}$ at RHIC~\cite{JpsiRHIC} showed a similar level of suppression at mid-rapidity ($\abs{y} < 0.35$) compared to SPS, despite the higher energy density at RHIC. In addition, the production of \JPsi mesons at forward rapidity ($1.2 < \abs{y} < 2.2$) was found to be more suppressed than at mid-rapidity.
 
 To understand the measurements of \JPsi-meson production at SPS and RHIC, two explanations were proposed. The first one suggested that, apart from the anomalous suppression, the \JPsi meson production could also be enhanced at RHIC energies. According to~\cite{JpsiRegeneration}, the \JPsi mesons could be regenerated in the most central collisions from the combination of initially uncorrelated charm quarks (i.e. not produced in the same hard scattering). The number of directly produced \ccbar pairs in central nucleus-nucleus collisions is expected to be small at SPS energies, but it can reach values around 10 (200) charm-quark pairs at RHIC (LHC) energies~\cite{UncorrelatedCharms,UncorrelatedCharms_2}. The second explanation proposed that the production of \JPsi mesons at RHIC was mainly affected by an interplay between initial state effects (e.g. nuclear PDFs or CGC) and the dissociation of the excited states (e.g. $\chi_{c}$ and \PsiP) that contributes to the feed-down of the \JPsi meson.
 

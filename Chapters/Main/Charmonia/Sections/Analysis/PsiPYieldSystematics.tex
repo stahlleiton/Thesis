@@ -1,0 +1,67 @@
+\subsection{Systematic uncertainties on the \texorpdfstring{\PsiP}{psi(2S)}/\texorpdfstring{\JPsi}{J/psi} ratio}\label{sec:Charmonia_Analysis_PsiPoverJPsiRatioSystematics}
+
+This section is dedicated to the systematic uncertainties that contributes in the measurement of the \doubleRatio double ratio. Three sources of systematics are accounted for: the parametrisation of the dimuon invariant mass used in the signal extraction, the degree of cancellation of the charmonium efficiencies in the double ratio and the subtraction of the nonprompt charmonium component.
+
+\subsubsection{Uncertainty on the dimuon invariant mass parametrisation}\label{sec:Charmonia_Analysis_PsiPoverJPsiRatioSystematics_InvMass}
+
+A large part of the method used to determine the uncertainty on the signal and background \mMuMu shape  parametrisation is common to the one used for the prompt and nonprompt \JPsi meson yields, presented in \sect{sec:Charmonia_Analysis_JPsiYieldSystematics_InvMass}. Indeed, the \PsiP-to-\JPsi double ratio analysis was performed first and was less demanding in terms of systematic uncertainties, due to the limited \PsiP statistics. However, it served as a basis for the \JPsi-meson yield analysis and all the sources considered here were kept.
+
+The functional forms of the \JPsi-meson, \PsiP-meson and background invariant mass shape are varied accordingly and the fits to data are remade. The nominal background shape is used when varying the signal functional form and vice versa. The variations performed on the signal functional forms includes:
+\begin{itemize}
+ \item varying the CB parameters fixed to simulation ($\aJPsi$, $\nnJPsi$ and $\sigma_{\CB,2}/\sigma_{\CB,1}$) in the following way:
+  \begin{enumerate}
+   \item setting $\aJPsi$ free while keeping $\nnJPsi$ (and $\sigma_{\CB,2}/\sigma_{\CB,1}$ in \PbPb fits) fixed to simulation;
+   \item setting $\nnJPsi$ free while keeping $\aJPsi$ fixed (only done for \pp data since the \PbPb data fits did not converge);
+   \item fixing the CB parameters to their corresponding values derived from the prompt \PsiP-meson simulation, instead of the \JPsi-meson simulation.
+  \end{enumerate}
+  \item changing the signal shape model by using a Gaussian plus a Crystal Ball function (with common mean), instead of the nominal double Crystal Ball function. The alternative model parameters are tuned and fixed in the same way as done for the nominal model;
+\end{itemize}
+
+In the case of the background functional form, the following variations are done:
+\begin{itemize}
+ \item the fitted dimuon invariant mass range is changed to 2.2-4.2~\GeVcc, instead of 2.2-4.5~\GeVcc;
+ \item the background shape model is changed to an exponential of a Chebyshev function, instead of the nominal Chebyshev function. The LLR tests are remade to determine the best order of the exponent in each analysis bin;
+ \item the LLR test selection criteria is changed by varying the $\chi^{2}$-probability threshold to 10\% and 2.5\%, instead of nominal 5\%.
+\end{itemize}
+
+The difference between the \singleRatio ratio extracted from the varied data fits and the nominal results defines the uncertainty on the single ratio of charmonium yields. In the case of the two LLR test variations, the largest difference in the single ratios is considered. This procedure is performed separately for \Runpp and \RunPbPb collisions, and the corresponding uncertainties on the single ratios are then propagated to the double ratio.
+
+The uncertainties derived from each of the signal and background model variations are summed in quadrature. The largest relative uncertainty on the \singleRatio ratio, measured in \Runpp (\RunPbPb) collisions, corresponds to 1.9\% (18.5\%) from the signal parametrisation and 5.3\% (37.3\%) from the background parametrisation.
+
+\subsubsection{Uncertainty on the cancellation of the double ratio of efficiencies}\label{sec:Charmonia_Analysis_PsiPoverJPsiRatioSystematics_Effiency}
+
+The cancellation of the double ratio of \PsiP over \JPsi meson efficiencies is verified up to a finite degree of precision determined by the statistical precision of the simulations and the modelling of the charmonium kinematic spectra. In this case, the following sources of systematic uncertainties are taken into account: 
+\begin{itemize}
+ \item the statistical uncertainty of the double ratio of efficiencies extracted from the simulated samples (i.e. the error bars in \fig{fig:DoubleRatioEff});
+ \item the difference between unity and the value of the double ratio of efficiencies computed after weighing per-event the simulated dimuon \pt spectrum to the corresponding charmonium \pt distribution observed in data (the charmonium \pt spectrum in data is extracted from the nominal fits);
+ \item the spread of the double ratio of efficiencies determined with MC studies, considering the range of \pt spectra compatible with the \RunPbPb and \Runpp data. This is done by generating a hundred random \pt distributions of the charmonium \pt spectrum extracted from the nominal data fits, where each data point is randomised following a Gaussian distribution with mean and width equal to the nominal value and statistical uncertainty, respectively. Then the simulated dimuon \pt spectrum is weighed, event-by-event, to match each of the generated random \pt distributions, and in each case, the double ratio of efficiencies is computed. The RMS of the one hundred efficiency double ratio values is taken as the systematic uncertainty.
+\end{itemize}
+
+These three sources of uncertainties are summed in quadrature. In this case, the largest relative uncertainty on the double ratio of charmonium yields amounts to 20\%.
+
+\subsubsection{Uncertainty on the substraction of nonprompt charmonia}\label{sec:Charmonia_Analysis_PsiPoverJPsiRatioSystematics_NPCorr}
+
+The nominal method used to subtract the nonprompt charmonium contamination relies on simulations to determine the expected fraction of prompt and nonprompt charmonia passing and failing the \ctau selection. To determine the uncertainty on this procedure, a set of 2D fits are employed using the same procedure employed in Ref.~\cite{CMS_JPsi_PbPb_2p76TeV}, which is similar to the one presented in this chapter.
+
+The 2D fits are performed in two dimuon invariant mass ranges: 2.2-3.5~\GeVcc and 3.3-4.4~\GeVcc. The first one is used to extract the fraction of nonprompt \JPsi mesons in \Runpp and \RunPbPb data, while the second range is used to derive the nonprompt \PsiP meson fraction from \Runpp data only. The prompt charmonium yields are then computed using the nonprompt charmonium fractions extracted from the 2D fits ($f^{\text{NP}, \text{2D}}_{\psi}$), as given by:
+
+\begin{equation}
+ N^{\text{P}, \text{2D}}_{\psi} = \left(1 - f^{\text{NP}, \text{2D}}_{\psi}\right)N^{\text{tot}}_{\psi}
+ \label{eq:2DPsi2SSyst}
+\end{equation}
+
+where $N^{\text{tot}}_{\psi}$ is the total number of charmonia extracted from the nominal fits.
+
+In the case of \PsiP mesons in \RunPbPb collisions, the number of prompt \PsiP mesons is derived according to:
+
+\begin{equation}
+ N^{\text{P}, \text{2D}}_{\PsiP, \PbPb} =  N^{\text{P}, \text{nominal}}_{\PsiP, \PbPb}\times\left(\frac{N^{\text{P}, \text{2D}}_{\PsiP, \pp}}{N^{\text{P}, \text{nominal}}_{\PsiP, \pp}}\right)
+ \label{eq:2DPsi2SSyst_2}
+\end{equation}
+
+where $N^{\text{P}, \text{nominal}}_{\PsiP}$ is the number of prompt \PsiP mesons determined in the  nominal case, as presented in \sect{sec:Charmonia_Analysis_PsiPYieldExtraction_NonPromptCorr}. 
+
+The double ratio is then recomputed using the prompt charmonium yields derived from \eq{eq:2DPsi2SSyst} and \eq{eq:2DPsi2SSyst_2}. The difference between the double ratio of charmonium yields when accounting for the nonprompt charmonium contamination using the nominal method and using 2D fits, is taken as a systematic uncertainty. The largest relative uncertainty is found to be 17.7\%.
+
+
+% END OF SUBSECTION

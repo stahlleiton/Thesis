@@ -1,0 +1,81 @@
+\subsection{Dataset} \label{sec:Charmonia_Analysis_Data}
+
+The measurement of the nuclear modification of \PsiP and \JPsi mesons is performed using data recorded in 2015 by the CMS detector, in \Runpp and \RunPbPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$. The main datasets employed in the analyses, called \textit{DoubleMu0} for \Runpp and \textit{HIOniaDoubleMu0} for \RunPbPb, consist of events selected by the CMS trigger system, requiring the presence of at least two L1 muon candidates. An additional dataset selecting also L1 double muon events, referred as \textit{HIOniaPeripheral30100}, is employed to measure the charmonium production in peripheral \RunPbPb collisions (centrality range $30-100\%$), since it accumulated more integrated luminosity than HIOniaDoubleMu0\footnote{The data rate of HIOniaDoubleMu0 was reduced during part of the \RunPbPb run because it exceeded the bandwidth threshold of the Tier-0 computing centre.}.
+
+The \Runpp and \RunPbPb datasets were reconstructed with CMSSW 7.5.8, making use of the standard \Runpp and heavy-ion specific reconstruction algorithms employed during the data-taking period, respectively. After a meticulous check of the quality of the data by the CMS collaboration, the content of the datasets were filtered excluding events in which the tracker or the muon system were not operating in proper conditions. The total integrated luminosity of the data samples is presented in \tab{tab:lumi}.
+
+\begin{table}[htb!]
+ \centering
+ \begin{tabular}{c c c}
+  System & Primary dataset & Integrated luminosity \\
+  \hline
+  \RunPbPb & HIOniaDoubleMu0 & 351~\mubinv \\
+  \RunPbPb & HIOniaPeripheral30100 & 464~\mubinv \\
+  \Runpp & DoubleMu0 & 28~\pbinv \\
+ \end{tabular}
+ \caption{Total integrated luminosity of each dataset used in the analysis of the charmonium nuclear modification in \Runpp and \RunPbPb collisions at $\sqrtsnn = \SI{5.02}{\TeV}$.}
+ \label{tab:lumi}
+\end{table}
+
+%%------------------------------------------------------------%%
+\subsection{Charmonium simulations} \label{sec:Charmonia_Analysis_MC}
+
+The production of \PsiP and \JPsi mesons is described using fully reconstructed Monte-Carlo simulated samples. The simulations were made separately for charmonia produced directly from the hard scattering (prompt \JPsi and \PsiP mesons), and for \JPsi mesons produced from the decay of b hadrons (nonprompt \JPsi mesons), for both \Runpp and \RunPbPb collisions. The prompt \PsiP and \JPsi events were generated with \PYTHIA 8.209~\cite{PYTHIA8}, which models the charmonium production using NRQCD. Regarding the nonprompt \JPsi sample, the b hadrons ($\B^{\pm}, \B^{0}, \overline{\B}^{0}, \B^{0}_{\cPqs}, \overline{\B}^{0}_{\cPqs}$ mesons) were decayed with the \EVTGEN v1.3~\cite{EVTGEN} package interfaced to \PYTHIA 8.209. The CUETP8M1 underlying event \PYTHIA tune~\cite{PYTHIA_TUNE,UE_pp} was used in all samples. 
+
+Moreover, the underlying environment present in \RunPbPb collisions was first simulated with \HYDJET 1.9~\cite{HYDJET} and then embedded to each \PYTHIA signal event, by matching the position of the simulated interaction vertex. The full CMS detector response was simulated in all charmonium simulations, based on \GEANTfour~\cite{GEANT4}, and the \Runpp and \RunPbPb simulated collision events were reconstructed with the corresponding reconstruction algorithms used during 2015 data taking.
+
+In addition, the \RunPbPb simulations were produced in several ranges of charmonium or \B-meson \pt, in order to have similar statistics available in each \pt range. As a result, $w_{\pt}$ weights are used for each meson \pt range to combine the different \RunPbPb simulations and form a continuous \pt spectrum.
+
+Finally, in order to match the centrality distribution of the signal simulations to what is observed in data, each \RunPbPb event is weighed by the average \ncoll corresponding to the centrality range of the simulated collision. The differences between the data and simulated centrality distributions are due to the fact that the signal events were embedded into minimum bias \HYDJET events equally distributed in centrality, while the production of charmonium in data is biased towards more central collisions (i.e. scales with \ncoll). Thus, in summary, each \RunPbPb charmonium simulated event is weighed by:
+
+\begin{equation}
+ w_{\MC} = N^{gen} \frac{w_{p_{T}} \cdot \ncoll}{\sum_{i=1}^{N^{gen}}\left(w_{p_{T}}^{i} \cdot \ncoll^{i}\right)}
+\end{equation}
+
+where the weights are normalised so that their sum is effectively equal to the number of generated events. The list of charmonium simulations are summarized in \tab{tab:CharmoniaMCSamples}.
+
+\begin{table} [hbt!]
+  \centering
+  \resizebox{\textwidth}{!}{
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{c c c c c}
+      \hline
+      Process & Generator & Criteria & Acceptance & Events \\
+      \hline
+      \multirow{7}{*}{$\PbPb \to \JPsiToMuMu$} & \multirow{7}{*}{\PYTHIA+\HYDJET} & $\JPsi \pt [ 0,   3]~\GeVc$ & $2.5{\times}10^{-1}$ & 150659  \\
+       & & $\JPsi\, \pt [ 3,   6]~\GeVc$ & $1.7{\times}10^{-1}$ & 3842575 \\
+       & & $\JPsi\, \pt [ 6,   9]~\GeVc$ & $2.0{\times}10^{-2}$ & 2268977 \\
+       & & $\JPsi\, \pt [ 9,  12]~\GeVc$ & $4.0{\times}10^{-3}$ & 168628  \\
+       & & $\JPsi\, \pt [12,  15]~\GeVc$ & $1.2{\times}10^{-3}$ & 155793  \\
+       & & $\JPsi\, \pt [15,  30]~\GeVc$ & $7.2{\times}10^{-4}$ & 104729  \\
+       & & $\JPsi\, \pt [30,\inf]~\GeVc$ & $3.3{\times}10^{-5}$ & 47059   \\
+      \hline
+      \multirow{6}{*}{$\PbPb \to \PsiPToMuMu$} & \multirow{6}{*}{\PYTHIA+\HYDJET} & $\PsiP \pt [ 0,   3]~\GeVc$ & $2.4{\times}10^{-1}$ & 96623   \\
+       & & $\PsiP\, \pt [ 3,   6]~\GeVc$ & $2.1{\times}10^{-1}$ & 89880   \\
+       & & $\PsiP\, \pt [ 6,   9]~\GeVc$ & $3.1{\times}10^{-2}$ & 98836   \\
+       & & $\PsiP\, \pt [ 9,  12]~\GeVc$ & $6.4{\times}10^{-3}$ & 102038  \\
+       & & $\PsiP\, \pt [12,  15]~\GeVc$ & $2.0{\times}10^{-3}$ & 94370   \\
+       & & $\PsiP\, \pt [15,\inf]~\GeVc$ & $1.2{\times}10^{-3}$ & 49857   \\
+      \hline
+      \multirow{7}{*}{$\PbPb \to \BToJPsiToMuMu$} & \multirow{7}{*}{\EVTGEN+\PYTHIA+\HYDJET} & $\B \pt [ 0,   3]~\GeVc$ & $2.7{\times}10^{-1}$ & 140257  \\
+       & & $\B\, \pt [ 3,   6]~\GeVc$ & $1.5{\times}10^{-1}$ & 5192754 \\
+       & & $\B\, \pt [ 6,   9]~\GeVc$ & $5.0{\times}10^{-2}$ & 1786414 \\
+       & & $\B\, \pt [ 9,  12]~\GeVc$ & $1.0{\times}10^{-3}$ & 165143  \\
+       & & $\B\, \pt [12,  15]~\GeVc$ & $3.6{\times}10^{-3}$ & 141064  \\
+       & & $\B\, \pt [15,  30]~\GeVc$ & $2.1{\times}10^{-3}$ & 107742  \\
+       & & $\B\, \pt [30,\inf]~\GeVc$ & $1.4{\times}10^{-4}$ & 41803   \\
+      \hline
+      $\pp \to \JPsiToMuMu$    & \PYTHIA & & 1.0 & 60830490 \\
+      \hline
+      $\pp \to \PsiPToMuMu$    & \PYTHIA & & 1.0 & 60830490 \\
+      \hline
+      $\pp \to \BToJPsiToMuMu$ & \PYTHIA & & 1.0 & 69652510 \\
+      \hline
+    \end{tabular}
+  }
+  \caption{Simulations used in the analysis of the charmonium production in \RunPbPb and \Runpp collisions at \SI{5.02}{\TeV}.}
+  \label{tab:CharmoniaMCSamples}
+\end{table}
+
+
+% END OF SUBSECTION
