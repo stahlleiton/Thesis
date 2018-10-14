@@ -50,7 +50,7 @@ The uncertainty associated to the \ctau measurement, referred as \sigmactau, is 
  \sigmactau = \sqrt{ \mJPsi \cdot \frac{\pMuMuvec \cdot S \cdot \pMuMuvec}{\left(\pMuMu\right)^{2}} } 
 \end{equation}
 
-where $S$ is the the sum of the covariance matrices associated to the primary collision and \mumu vertex fits. The pseudoproper-decay length is measured in the CMS detector with a resolution of \SI{35}{\um}, allowing to resolve the decay vertex of b hadrons.
+where $S$ is the sum of the covariance matrices associated to the primary collision and \mumu vertex fits. The pseudoproper-decay length is measured in the CMS detector with a resolution of \SI{35}{\um}, allowing to resolve the decay vertex of b hadrons.
 
 \subsubsection{Dimuon invariant mass parametrisation}\label{sec:Charmonia_Analysis_JPsiYieldExtraction_InvMassPar}
 
@@ -77,7 +77,14 @@ The total \mMuMu functional form of the signal is then given by:
 
 where the two Crystal Ball functions are defined with common mean \mJPsi and tail parameters \aJPsi and \nnJPsi, and  the two CB widths are constrained such that $\sigma_{\CB,2} \geq \sigma_{\CB,1}$.
 
-The Crystal Ball parameters are optimised by fitting the prompt \JPsi-meson simulations. On the one hand, the parameters are found to be consistent within different collision systems and also as a function of collision centrality and dimuon \pt. On the other hand, the fits performed in the inclusive dimuon rapidity region ($\abs{\rapMuMu} < 2.4$) are different from those done in differential \rapMuMu regions. As a result, different sets of parameters are used for the differential and integrated rapidity regions,  extracted from the \Runpp and \RunPbPb prompt \JPsi-meson simulations. The set of parameters for the differential rapidity regions are determined from the corresponding rapidity-averaged values.
+The Crystal Ball parameters are optimised by fitting the prompt \JPsi-meson simulations. An example of such fits in \RunPbPb collisions is shown in \fig{fig:Mass_MC}. On the one hand, the parameters are found to be consistent within different collision systems and also as a function of collision centrality and dimuon \pt. On the other hand, the fits performed in the inclusive dimuon rapidity region ($\abs{\rapMuMu} < 2.4$) are different from those done in differential \rapMuMu regions. As a result, different sets of parameters are used for the differential and integrated rapidity regions,  extracted from the \Runpp and \RunPbPb prompt \JPsi-meson simulations. The set of parameters for the differential rapidity regions are determined from the corresponding rapidity-averaged values.
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[width=0.50\textwidth]{Figures/Charmonia/Analysis/JpsiSignalExtraction/mass/PLOT_MASS_MCJPSIPR_PbPb_Jpsi_DoubleCrystalBall_NoBkg_pt95110_rap1218_cent0200.pdf}
+\caption{Fit to the \mumu invariant mass distribution in \RunPbPb simulation derived at $9.5 < \pt < 11$~\GeVc in the rapidity region $1.2 < |\rap| < 1.8$. The black line represents the total fit model while the green and orange lines represent the shape of each CB component.}
+ \label{fig:Mass_MC}
+\end{figure}
 
 When fitting the \mMuMu distribution in \Runpp and \RunPbPb collision data, the tail parameters \aJPsi and \nnJPsi are fixed to the values extracted from simulation, while the ratio of CB widths ($\sigma_{\CB,2}/\sigma_{\CB,1}$) is also fixed to simulation only when fitting the \RunPbPb data. This is done because the data samples do not provide sufficient constraining power to reliably estimate the CB tail parameters. The set of parameters left free in both \Runpp and \RunPbPb data fits are \fJPsi, \mJPsi and $\sigma_{\CB,1}$, while $\sigma_{\CB,2}$ is left free only in the \Runpp data fits. The signal shape parameters extracted from simulations are summarised in \tab{tab:Avg_MCSignalShapeParam_rap}.
 
@@ -91,7 +98,7 @@ When fitting the \mMuMu distribution in \Runpp and \RunPbPb collision data, the 
     Differential & 0.78 & \color{blue}{\textbf{2.10}} & \color{blue}{\textbf{1.35}}  & \color{red}{\textbf{1.68}}  \\
     $\abs{\rap} < 2.4$ & 0.58 & \color{blue}{\textbf{1.94}} & \color{blue}{\textbf{1.64}}  & \color{red}{\textbf{2.06}}
   \end{tabular}
-  \caption{Parameters extracted from the prompt \JPsi-meson simulation and used to constrain the double Crystal Ball functions in each differential and integrated rapidity region. The parameters fixed to simulation in both \RunPbPb and \Runpp data fits are shown in bold blue colour, while those fixed to simulation only on \RunPbPb data are displayed in bold red colour. The \fJPsi values from simulation are only used to initialise them in the data fits.}
+  \caption{Parameters extracted from the prompt \JPsi-meson simulation and used to constrain the double Crystal Ball functions in each differential and integrated rapidity region. The parameters fixed to simulation in both \RunPbPb and \Runpp data fits are shown in bold blue colour, while those fixed to simulation only on \RunPbPb data are displayed in bold red colour. The \fJPsi values from simulation are only used for the initialisation step in the data fits.}
   \label{tab:Avg_MCSignalShapeParam_rap}
 \end{table}
 
@@ -106,7 +113,7 @@ where $T_{i}$ is a Chebyshev polynomial of order $i$ and $c_{i}$ is the correspo
   T_{0}\left(m\right) = 1 \quad\quad ; \quad\quad  T_{1}\left(m\right) = m \quad\quad ; \quad\quad  T_{i+1}\left(m\right) = 2mT_{i}\left(m\right) - T_{i-1}\left(m\right)
 \end{equation}
 
-The main advantage of using a Chebyshev function is that the fit parameters $c_{i}$ are fully uncorrelated between them, improving the convergence of the dimuon invariant mass fits. The order of the background \mMuMu model is varied between 0 and 6, and the best order for each analysis bin is chosen by performing a Log-Likelihood Ratio (LLR) test. The LLR test compares the resulting minimised Negative Log-Likelihood (NLL) of a Chebyshev fit of order $N$ to the NLL of a Chebyshev fit of order $N+1$ and $N+2$ (two subsequent orders are needed to account for the change between odd and even polynomials).
+The main advantage of using a Chebyshev function is that the fit parameters $c_{i}$ are uncorrelated with each other, improving the convergence of the dimuon invariant mass fits. The order of the background \mMuMu model is varied between 0 and 6, and the best order for each analysis bin is chosen by performing a Log-Likelihood Ratio (LLR) test. The LLR test compares the resulting minimised Negative Log-Likelihood (NLL) of a Chebyshev fit of order $N$ to the NLL of a Chebyshev fit of order $N+1$ and $N+2$ (two subsequent orders are needed to account for the change between odd and even polynomials).
 
 The difference between the NLL values derived from the fits using a Chebyshev polynomial of order $N$ and $M > N$, is proportional to a $\chi^2$ distribution with $2(M-N)$ number of degrees of freedom, in particular:
 
@@ -116,7 +123,7 @@ The difference between the NLL values derived from the fits using a Chebyshev po
  \label{eq:llr-test}
 \end{equation}
 
-For a given Chebyshev function of order $N$, the next order is considered to fit the data significantly better if the $\chi^{2}$ probabilities associated to the $N+1$ or $N+2$ orders are less than $5\%$. Thus, if in a given analysis bin, the next order does not significantly improve the quality of the fit, then the current order of the Chebyshev function is chosen. As an example, \tab{tab:LLRTEST} summarise the results of the LLR test performed in \RunPbPb data for dimuons within $0.6 < \abs{\rapMuMu} < 1.2$ and $9.5 \leq \ptMuMu < 11~\GeVc$, which in this case the first order is chosen since $p(\chi^{2}_{1 \rightarrow 2}, 2)$ and $p(\chi^{2}_{1 \rightarrow 3}, 4)$) are larger than $5\%$.
+For a given Chebyshev function of order $N$, the next order is considered to fit the data significantly better if the $\chi^{2}$ probabilities associated to the $N+1$ or $N+2$ orders are less than $5\%$. Thus, if in a given analysis bin, the next order does not significantly improve the quality of the fit, then the current order of the Chebyshev function is chosen. As an example, \tab{tab:LLRTEST} summarises the results of the LLR test performed in \RunPbPb data for dimuons within $0.6 < \abs{\rapMuMu} < 1.2$ and $9.5 \leq \ptMuMu < 11~\GeVc$, which in this case the first order is chosen since $p(\chi^{2}_{1 \rightarrow 2}, 2)$ and $p(\chi^{2}_{1 \rightarrow 3}, 4)$) are larger than $5\%$.
 
 \begin{table}[htb!]
  \centering
@@ -135,7 +142,7 @@ For a given Chebyshev function of order $N$, the next order is considered to fit
  \label{tab:LLRTEST}
 \end{table}
 
-Another example is given in \fig{fig:Mass}, where the fits to the dimuon invariant mass distribution in \RunPbPb and \Runpp collision data have been performed using a first order and second order Chebyshev function, respectively. Among all the analysis bins, the orders of the Chebyshev function selected by the LLR tests are no larger than first order in \RunPbPb fits and third order in \Runpp fits.
+Another example is given in \fig{fig:Mass}, where the fits to the dimuon invariant mass distribution in \RunPbPb and \Runpp collision data have been performed using a first order and second order Chebyshev function, respectively. Among all the analysis bins, the orders of the Chebyshev function selected by the LLR tests are not larger than first order in \RunPbPb fits and third order in \Runpp fits.
 
 \begin{figure}[htb!]
  \centering
@@ -147,7 +154,7 @@ Another example is given in \fig{fig:Mass}, where the fits to the dimuon invaria
 
 \subsubsection{Pseudoproper-decay length resolution}\label{sec:Charmonia_Analysis_JPsiYieldExtraction_CtauResPar}
 
-The \ctau resolution depends on the measurement of the dimuon momentum and its vertex position, and as a result, it is affected by the \ctau uncertainty (\sigmactau) of each event. In addition, since the \sigmactau depends on the \pt and rapidity of dimuon candidates, the \sigmactau distribution may differ between background and signal dimuons. In order to take into account the \ctau uncertainty in each event, the \ctau resolution of signal and background dimuons is modelled with:
+The \ctau resolution function depends on the measurement of the dimuon momentum and its vertex position, and as a result, it is affected by the \ctau uncertainty (\sigmactau) of each event. In addition, since the \sigmactau depends on the \pt and rapidity of dimuon candidates, the \sigmactau distribution may differ between background and signal dimuons. In order to take into account the \ctau uncertainty in each event, the \ctau resolution of signal and background dimuons is modelled with:
 
 \begin{equation}
  R_{\JPsi(\bkg)}\left(\ctau\right) = \int{\dd{\sigmactau}} R\left(\ctau | \sigmactau\right) \cdot \Punzi_{\JPsi(\bkg)}\left(\sigmactau\right)
@@ -170,7 +177,7 @@ In the \JPsi meson analysis, the \mumu invariant mass is used as discriminating 
  \end{split}
 \end{equation}
 
-where $N_{j}$ is the number of dimuon events from source $j$, and $V_{i, j}$ is the element of the covariance matrix associated to the $i^{\text{th}}$ and $j^{\text{th}}$ source ($i, j =$ \JPsi and background). The covariance matrix of each source is computed by inverting the following matrix:
+where $N_{j}$ is the number of dimuon events from source $j$, and $V_{i, j}$ is the element of the covariance matrix associated to the $i^{\text{th}}$ and $j^{\text{th}}$ sources ($i, j =$ \JPsi and background). The covariance matrix of each source is computed by inverting the following matrix:
 
 \begin{equation}
  V^{-1}_{i, j} = \frac{ M_{i}\left(m_{\mu \mu}\right) \cdot M_{j}\left(m_{\mu \mu}\right) }{  \sum_{i = \left\{\JPsi, bkg\right\}}{ N_{i} \cdot M_{i}\left(m_{\mu \mu}\right) } }
@@ -182,7 +189,7 @@ Once determined, the $\sW_{\JPsi}$ and  $\sW_{\bkg}$ weights are then applied to
  \centering
  \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/JpsiSignalExtraction/ctauError/PLOT_CTAUERR_DATA_PbPb_Jpsi_Bkg_pt65500_rap1218_cent0200.pdf}
  \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/JpsiSignalExtraction/ctauError/PLOT_CTAUERR_DATA_PP_Jpsi_Bkg_pt65500_rap1218_cent0200.pdf}
- \caption{Distributions of the \sigmactau for signal (red line), background (blue line) and all (green line) dimuons, extracted from \RunPbPb (left) and \Runpp (right) data. The dashed lines represents the \sigmactau range used to extract the template histograms. The bottom panel shows the ratio between the data and the total template histogram extracted using the sPlot technique.}
+ \caption{Distributions of the \sigmactau for signal (red line), background (blue line) and all (green line) dimuons, extracted from \RunPbPb (left) and \Runpp (right) data. The bottom panel shows the ratio between the data and the total template histogram extracted using the sPlot technique.}
  \label{fig:errDistr}
 \end{figure}
 
@@ -209,7 +216,7 @@ Two examples of \ctau resolution fits for \Runpp and \RunPbPb data are given in 
 
 \subsubsection{Pseudoproper-decay length parametrisation}\label{sec:Charmonia_Analysis_JPsiYieldExtraction_CtauPar}
 
-The \ctau distribution of \JPsiToMuMu events is separated in two components: prompt and nonprompt \JPsi mesons. In the case of background dimuons, the description of the \ctau distribution is also separated in a prompt and nonprompt component. On the one hand, the prompt background component represents \mumu pairs from background events whose dimuon vertex is consistent with the primary collision vertex, such as low mass Drell-Yan events. On the other hand, the nonprompt background component are made of uncorrelated muons faking  a displaced vertex.
+The \ctau distribution of \JPsiToMuMu events is separated in two components: prompt and nonprompt \JPsi mesons. In the case of background dimuons, the description of the \ctau distribution is also separated in a prompt and nonprompt component. On the one hand, the prompt background component represents \mumu pairs from background events whose dimuon vertex is consistent with the primary collision vertex, such as low mass Drell-Yan events. On the other hand, the nonprompt background components are made of uncorrelated muons faking a displaced vertex.
 
 \paragraph{Parametrisation of the \ctau true lineshape of \JPsi mesons.} The \ctau true lineshape of prompt \JPsi mesons is described with a Dirac delta function ($\delta\left(\ctau\right)$) and the one for  nonprompt \JPsi mesons is modelled with an exponential function. The signal \ctau true functional form is then given by:
 
@@ -220,7 +227,7 @@ The \ctau distribution of \JPsiToMuMu events is separated in two components: pro
 
 where \bJPsi is the fraction of nonprompt \JPsi mesons and $\lambda_{\B}$ represents the average decay length of b hadrons. The $\lambda_{\B}$ parameter is initialised, when performing the 2D fits on data, to the value obtained by fitting the generated \ctau distribution of the nonprompt \JPsi simulation.
 
-Examples of fits to the generated \ctau distribution of nonprompt \JPsi simulations are shown in \fig{fig:Jpsi_pbpb_2dfits_NPTrue} for \RunPbPb and \Runpp data (the $\lambda_{\B}$ parameter is labelled in the plots as $\lambda_{\text{DSS}}$~\footnote{The initial DSS stands for Decays on Single Side}).
+Examples of fits to the generated \ctau distribution of nonprompt \JPsi simulations are shown in \fig{fig:Jpsi_pbpb_2dfits_NPTrue} for \RunPbPb and \Runpp data (the $\lambda_{\B}$ parameter is labelled in the plots as $\lambda_{\text{DSS}}$~\footnote{The initial DSS stands for Decays on Single Side.}).
 
 \begin{figure}[htb!]
  \centering
@@ -261,7 +268,7 @@ where the \ctau resolution parameters have been fixed to data as detailed in \se
 
 \subsubsection{Two-dimensional fit to the \mMuMu and \ctau distributions}\label{sec:2Dfits}
 
-The 2D fits to the \mMuMu and \ctau distributions represents the last step in the procedure to extract the \JPsi-meson yields. The parameters used in the 2D fit model are fixed as explained in the previous sections, except for the average decay length of b hadrons $\lambda_{\B}$, the fraction of nonprompt \JPsi-mesons \bJPsi, the inclusive \JPsi-meson yield \nJPsi, and the background yield \nbkg. \fig{fig:2DFits_proj} shows an example of 2D fit extracted from \RunPbPb collision data.
+The 2D fits to the \mMuMu and \ctau distributions represent the last step in the procedure to extract the \JPsi-meson yields. The parameters used in the 2D fit model are fixed as explained in the previous sections, except for the average decay length of b hadrons $\lambda_{\B}$, the fraction of nonprompt \JPsi-mesons \bJPsi, the inclusive \JPsi-meson yield \nJPsi, and the background yield \nbkg. \fig{fig:2DFits_proj} shows an example of 2D fit extracted from \RunPbPb collision data.
 
 \subsubsection{Prompt and nonprompt \texorpdfstring{\JPsi}{J/psi} meson yields}\label{sec:JPsiYields}
 

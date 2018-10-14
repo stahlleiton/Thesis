@@ -1,13 +1,12 @@
 \documentclass{ThesisStyle}
 \selectlanguage{english}
-%\usepackage{amsmath,amssymb,amscd,mathrsfs}
-%\usepackage[mathscr]{euscript}
 \usepackage{xspace}
 \usepackage[binary-units=true]{siunitx}
 \usepackage{lineno}
 \usepackage{graphicx}
 \usepackage{feynmp-auto}
 \usepackage{float}
+\usepackage{floatpag}
 \usepackage{scalerel}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
@@ -56,7 +55,8 @@
 \includepdf[pages=1-]{Cover/Cover.pdf}
 \clearemptydoublepage
 
-\includepdf[pages=1-]{Cover/Abstract.pdf}
+\includepdf[pages=1-]{Cover/Abstract_FR.pdf}
+\includepdf[pages=1-]{Cover/Abstract_EN.pdf}
 \clearemptydoublepage
 
 %\includepdf[pages=1-]{frontmatter/Acknowledgements.pdf}
@@ -78,7 +78,7 @@
 %%%%%%%%%%% CHAPTERS
 \mainmatter
 
-\begin{linenumbers}
+%\begin{linenumbers}
 
 \import{Chapters/Main/Introduction/}{Chapter.tex}
 \clearemptydoublepage
@@ -95,7 +95,7 @@
 \import{Chapters/Main/Conclusion/}{Chapter.tex}
 \clearemptydoublepage
 
-\end{linenumbers}
+%\end{linenumbers}
 
 
 %------------------------------------------------------------------------------

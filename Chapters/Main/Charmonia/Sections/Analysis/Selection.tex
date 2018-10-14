@@ -18,7 +18,7 @@ In the case of \RunPbPb collisions, since the projectiles are more charged (82 p
  \item Cluster compatibility filter: rejects beam-scrapping events (i.e. muons produced when the beam particles hit the LHC collimators), by requiring that the shape of the silicon pixel clusters are compatible with tracks originating from the primary vertex.
 \end{itemize}
 
-and the \RunPbPb collision events are also required to contain at least one reconstructed primary vertex as done for \Runpp data. The efficiency of the GEF in \RunPbPb minimum bias events has been determined to be $99{\pm}2$\%. This  efficiency can surpass 100\% due to the remaining contamination of non-hadronic collisions in the sample. The number of \RunPbPb minimum bias events passing the GEF corresponds to $N_{\text{MB}} = 2.34 \times 10^{9}$ for HIOniaDoubleMu0 and $N_{\text{MB}} = 3.09 \times 10^{9}$ for HIOniaPeripheral30100.
+The \RunPbPb collision events are also required to contain at least one reconstructed primary vertex as done for \Runpp data. The efficiency of the GEF in \RunPbPb minimum bias events has been determined to be $99{\pm}2$\%. This  efficiency can surpass 100\% due to the remaining contamination of non-hadronic collisions in the sample. The number of \RunPbPb minimum bias events passing the GEF corresponds to $N_{\text{MB}} = 2.34 \times 10^{9}$ for HIOniaDoubleMu0 and $N_{\text{MB}} = 3.09 \times 10^{9}$ for HIOniaPeripheral30100.
 
 %%------------------------------------------------------------%%
 \subsubsection{Trigger} \label{sec:Charmonia_Analysis_Selection_Trigger}
@@ -33,16 +33,18 @@ To make sure that each muon employed in the analysis is associated to an online 
  \Delta{R}\left(\PGm_{\text{reco}} , \PGm_{\text{L1}}\right) = \sqrt{\left( \left(\eta_{\text{reco}} - \eta_{\text{L1}}\right)^{2} +  \left(\phi_{\text{reco}} - \phi_{\text{L1}}\right)^{2} \right)} < 0.3
 \end{equation}
 
+The standard $\Delta{R}<0.3$ threshold is employed in CMS analyses using L1 muon triggers~\cite{CMSTrigger}. Since L1 muons are reconstructed only in the muon stations, their position ($\eta$, $\phi$) resolution is worse than for HLT L3 muons (which includes also the inner-tracker information). As a consequence, a wider $\Delta{R}$ matching criteria is utilised for L1 muons compared to the one used in the \PW-boson analysis ($\Delta{R}<0.1$).
+
 %%------------------------------------------------------------%%
 
 \subsubsection{Centrality determination in \RunPbPb collisions}
 
-The centrality percentiles of \RunPbPb collisions are derived by sampling the distribution of the total energy deposited in the HF calorimeters in bins of 0.5\% of the total hadronic cross section. The HF energy distribution is determined in minimum-bias events (i.e. requiring at least one collision) passing the GEF. The yield as a function of the HF energy is then corrected for the efficiency of the minimum-bias trigger and the GEF selection. \fig{fig:energyHF} presents the distribution of the total HF energy in \RunPbPb collisions separated in centrality classes.
+The centrality percentiles of \RunPbPb collisions are derived by sampling the distribution of the total energy deposited in the HF calorimeters in bins of 0.5\% of the total hadronic cross section. The HF energy distribution is determined in minimum-bias events (i.e. requiring a bunch crossing and a coincidence between signals from the $-z$ and $+z$ sides of the HF calorimeters) passing the GEF. The yield as a function of the HF energy is then corrected for the efficiency of the minimum-bias trigger and the GEF selection. \fig{fig:energyHF} presents the distribution of the total HF energy in \RunPbPb collisions separated in centrality classes.
 
 \begin{figure}[htb!]
  \centering
  \includegraphics[width=0.55\textwidth]{Figures/Charmonia/Analysis/EventSelection/EHF.pdf}
- \caption{Distribution of the total energy deposited in the HF calorimeters in \RunPbPb collisions at \SI{5.02}{\TeV}, for minimum-bias events passing the GEF selection. The different centrality classes are shown. Figure taken from the private Ref.~\cite{Centrality_PbPb}.}
+ \caption{Distribution of the total energy deposited in the HF calorimeters in \RunPbPb collisions at \SI{5.02}{\TeV}, for minimum-bias events passing the GEF selection. The different centrality classes are shown. Figure taken from the internal analysis note~\cite{Centrality_PbPb}.}
  \label{fig:energyHF}
 \end{figure}
 
@@ -77,7 +79,7 @@ Muon candidates are identified using a \textit{soft} selection. Contrary to the 
 %%------------------------------------------------------------%%
 \subsubsection{Muon kinematic cut} \label{sec:Charmonia_Analysis_Selection_MuonKinematic}
 
-The single muon kinematic selection is optimised, using the \JPsi meson simulated samples, by requiring (in different muon $\pt-\eta$ bins) that the number of muon candidates passing the trigger, reconstruction and identification algorithms is more than $10\%$ of the number of generated muons. The muon kinematic cuts are described in \eq{eq:SingleMuonAccCuts} and shown in \fig{fig:SingleMuonAccEff}.
+The single muon kinematic selection is optimised, using the \JPsi-meson simulated samples, by requiring (in different muon $\pt-\eta$ bins) that the number of muon candidates passing the trigger, reconstruction and identification algorithms is more than $10\%$ of the number of generated muons. The muon kinematic cuts are described in \eq{eq:SingleMuonAccCuts} and shown in \fig{fig:SingleMuonAccEff}.
 
 \begin{equation}
  \centering
@@ -102,7 +104,7 @@ The single muon kinematic selection is optimised, using the \JPsi meson simulate
 %%------------------------------------------------------------%%
 \subsubsection{Charmonium selection} \label{sec:Charmonia_Analysis_Selection_CharmoniumSelection}
 
-The \JPsiToMuMu and \PsiPToMuMu candidate selection consists of the detection of two low-\pt muons of opposite electric charge, each passing all identification criteria explained in \sect{sec:Charmonia_Analysis_Selection_MuonIdentification}, the kinematic cuts detailed in \sect{sec:Charmonia_Analysis_Selection_MuonKinematic}, and the trigger matching condition mentioned in \sect{sec:Charmonia_Analysis_Selection_Trigger}. Moreover, each dimuon candidate is required to have a $\chi^2$ probability larger than $1\%$ that the two muons derive from a common vertex.
+The \JPsiToMuMu and \PsiPToMuMu candidate selection consists of the detection of two low-\pt muons of opposite electric charge, each passing all identification criteria explained in \sect{sec:Charmonia_Analysis_Selection_MuonIdentification}, the kinematic cuts detailed in \sect{sec:Charmonia_Analysis_Selection_MuonKinematic}, and the trigger matching condition mentioned in \sect{sec:Charmonia_Analysis_Selection_Trigger}. Moreover, each dimuon candidate is required to have a $\chi^2$ probability larger than $1\%$ that the two muons derive from a common vertex. This selection is used in most CMS quarkonium analyses to remove a large fraction of background events while keeping, by construction, 99\% of signal events (two muons coming from the same vertex).
 
 
 % END OF SUBSECTION

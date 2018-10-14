@@ -10,8 +10,8 @@ The functional forms of the \JPsi-meson, \PsiP-meson and background invariant ma
 \begin{itemize}
  \item varying the CB parameters fixed to simulation ($\aJPsi$, $\nnJPsi$ and $\sigma_{\CB,2}/\sigma_{\CB,1}$) in the following way:
   \begin{enumerate}
-   \item setting $\aJPsi$ free while keeping $\nnJPsi$ (and $\sigma_{\CB,2}/\sigma_{\CB,1}$ in \PbPb fits) fixed to simulation;
-   \item setting $\nnJPsi$ free while keeping $\aJPsi$ fixed (only done for \pp data since the \PbPb data fits did not converge);
+   \item setting $\aJPsi$ free while keeping $\nnJPsi$ (and $\sigma_{\CB,2}/\sigma_{\CB,1}$ in \RunPbPb fits) fixed to simulation;
+   \item setting $\nnJPsi$ free while keeping $\aJPsi$ fixed (only done for \Runpp data since the \RunPbPb data fits did not converge);
    \item fixing the CB parameters to their corresponding values derived from the prompt \PsiP-meson simulation, instead of the \JPsi-meson simulation.
   \end{enumerate}
   \item changing the signal shape model by using a Gaussian plus a Crystal Ball function (with common mean), instead of the nominal double Crystal Ball function. The alternative model parameters are tuned and fixed in the same way as done for the nominal model;
@@ -24,9 +24,10 @@ In the case of the background functional form, the following variations are done
  \item the LLR test selection criteria is changed by varying the $\chi^{2}$-probability threshold to 10\% and 2.5\%, instead of nominal 5\%.
 \end{itemize}
 
-The difference between the \singleRatio ratio extracted from the varied data fits and the nominal results defines the uncertainty on the single ratio of charmonium yields. In the case of the two LLR test variations, the largest difference in the single ratios is considered. This procedure is performed separately for \Runpp and \RunPbPb collisions, and the corresponding uncertainties on the single ratios are then propagated to the double ratio.
+For each source of uncertainty (choice of signal and background models), the maximum difference between the \singleRatio ratio extracted from the varied data fits and the nominal results defines the uncertainty on the single ratio of charmonium yields. This procedure is performed separately for \Runpp and \RunPbPb collisions, and the corresponding uncertainties on the single ratios are then propagated to the double ratio.
 
-The uncertainties derived from each of the signal and background model variations are summed in quadrature. The largest relative uncertainty on the \singleRatio ratio, measured in \Runpp (\RunPbPb) collisions, corresponds to 1.9\% (18.5\%) from the signal parametrisation and 5.3\% (37.3\%) from the background parametrisation.
+The largest relative uncertainty on the \singleRatio ratio from the signal parametrisation derives from changing the signal shape model and corresponds to 1.9\% (18.5\%) in \Runpp (\RunPbPb) collisions. In the case of the background parametrisation, the largest relative uncertainty arises from the LLR test (5.3\%) in \Runpp data and from changing the background shape model (37.3\%) in \RunPbPb data.
+
 
 \subsubsection{Uncertainty on the cancellation of the double ratio of efficiencies}\label{sec:Charmonia_Analysis_PsiPoverJPsiRatioSystematics_Effiency}
 

@@ -6,9 +6,9 @@ The signal and background event yields are extracted by fitting the \ptmiss dist
 
  \item QCD jet: constitute high-\pt muons produced from semi-leptonic decays of heavy-flavour hadrons formed within jets. Such muons are generally surrounded by a large hadronic activity and their contribution is significantly suppressed by selecting isolated muons ($\iso < 0.15$). However, muons from hadron decays can sometimes pass the isolation criteria and thus, a small fraction of the QCD jet background remains in the signal region.
 
- \item $\DYToMuMu$: a high-\pt muon produced from a \Z-boson decay or Drell--Yan. The contribution from this process is suppressed by applying the \DYToMuMu veto, which excludes events containing at least one pair of well-identified isolated muons, each with $\pt > 15$~\GeVc. The \DYToMuMu events, in which one of the two muons is produced outside of the CMS coverage ($\abs{\etaLAB}<$ 2.4) or does not satisfy the muon selection criteria, survive the veto. Such events are expected to contribute more in the CMS endcap regions ($|\eta| > 2.0$), where one of the muons from the \DYToMuMu decay escape the detector producing a large \ptmiss.
+ \item $\DYToMuMu$: a high-\pt muon produced from a \Z-boson decay or Drell--Yan. The contribution from this process is suppressed by applying the \DYToMuMu veto, which excludes events containing at least one pair of well-identified isolated muons, each with $\pt > 15$~\GeVc. The \DYToMuMu events, in which one of the two muons is produced outside of the CMS coverage ($\abs{\etaLAB}<$ 2.4) or does not satisfy the muon selection criteria, survive the veto. Such events are expected to contribute more in the CMS endcap regions ($|\eta| > 2.0$), where one of the muons from the \DYToMuMu decay escapes the detector producing a large \ptmiss.
 
- \item $\ttbar\rightarrow\mu\nu_{\mu}+X$: a high-\pt muon from semi-leptonic decays of top (anti-)quarks. The inclusive cross section of top-quark pair production in \pPb at $\sqrtsnn = \SI{8.16}{\TeV}$, has been measured by the CMS collaboration to be $\sigma_{\ttbar} = 45 \pm 8~\nbinv$~\cite{HIN-17-002}. The \ttbar process is expected to have a very small impact in the signal region due its small inclusive cross section and its branching ratio (13.4\%) to muons~\cite{PDG}.
+ \item $\ttbar\rightarrow\mu\nu_{\mu}+X$: a high-\pt muon from semi-leptonic decays of top (anti-)quarks. The inclusive cross section of top-quark pair production in \pPb at $\sqrtsnn = \SI{8.16}{\TeV}$, has been measured by the CMS collaboration to be $\sigma_{\ttbar} = 45 \pm 8$~nb~\cite{HIN-17-002}. The \ttbar process is expected to have a very small impact in the signal region due its small inclusive cross section and its branching ratio (13.4\%) to muons~\cite{PDG}.
 
  \item $\WToTauNu \rightarrow\mu\nu_{\mu} + X$: consists of the leptonic decay of a \Wb boson into a \PGt lepton, which then decays into a high-\pt muon.
 
@@ -16,17 +16,17 @@ The signal and background event yields are extracted by fitting the \ptmiss dist
  
 \end{itemize}
 
-The largest source of background in the signal region correspond to QCD jets which represents approximately 18\% of events in data. Among the electroweak background processes, the dominant one is the \DYToMuMu background. The electroweak background amounts to roughly 12\% of the events in the signal region, divided as: \DYToMuMu ($9\%$), \WToTauNu ($2\%$) and \DYToTauTau ($1\%$). The \ttbar background contributes roughly $0.5\%$ of  events. Other electroweak processes such as double boson decays ($\Wb\Wb$, $\Wb\Z$ and $\Z\Z$) have been checked to contribute less than 0.03\%, so they are not considered.
+The largest source of background in the signal region corresponds to QCD jets which represent approximately 18\% of events in data. Among the electroweak background processes, the dominant one is the \DYToMuMu background. The electroweak background amounts to roughly 12\% of the events in the signal region, divided as: \DYToMuMu ($9\%$), \WToTauNu ($2\%$) and \DYToTauTau ($1\%$). The \ttbar background contributes roughly $0.5\%$ of  events. Other electroweak processes such as double boson decays ($\Wb\Wb$, $\Wb\Z$ and $\Z\Z$) have been checked to contribute less than 0.03\%, so they are not considered.
 
 The shape of the QCD jet background is modelled using a functional form derived from data as explained in \sect{sec:WBoson_Analysis_SignalExtraction_QCDBackground} and the shapes of the signal, \ttbar background and electroweak background are estimated using the \ptmiss distribution from simulations, as described in \sect{sec:WBoson_Analysis_SignalExtraction_EWKBackground}. \sect{sec:WBoson_Analysis_SignalExtraction_FitModel} introduces the model used to extract the signal. The event yields obtained from the fits are presented in \sect{sec:WBoson_Analysis_SignalExtraction_RawYields} and corrected for efficiency in \sect{sec:WBoson_Analysis_SignalExtraction_CorrectedYields}.
 
 \subsubsection{Modelling of the QCD jet background}\label{sec:WBoson_Analysis_SignalExtraction_QCDBackground}
 
-The QCD jet background cannot be simulated reliably in \RunpPb collisions due to the imprecise knowledge of the production cross sections and nuclear modifications of hadrons, and the inaccurate modelling of the event activity. Thus, a data-driven approach is used to determine the QCD jet shape.
+The QCD jet background cannot be simulated reliably in \RunpPb collisions due to the imprecise knowledge of the production cross sections and nuclear modifications of hadrons, and the inaccurate modelling of the event activity. Thus, a data-driven approach is used to determine the \ptmiss distribution of the QCD jet background.
 
-The overall procedure consist of the following steps: first parametrise the \ptmiss shape of the QCD jet background in a region dominated by non-isolated muons, then determine the dependence of the QCD jet functional form with respect to the muon isolation and finally extrapolate the QCD jet shape to low muon isolation values, namely in the signal region.
+The overall procedure consists of the following steps: first the parametrisation of the QCD jet \ptmiss distribution in a region dominated by non-isolated muons, then the determination of the dependence of the QCD jet \ptmiss functional form with respect to the muon isolation and finally the extrapolation of the  QCD jet \ptmiss functional form to low muon isolation values, namely in the signal region.
 
-The shape of the QCD jet background is parametrised by a modified Rayleigh distribution, defined as:
+The \ptmiss distribution of the QCD jet background is parametrised by a modified Rayleigh distribution, defined as:
 
 \begin{equation}
  f_{\text{QCD}}\left(\ptmiss\right) = \ptmiss{\cdot}\exp\left(-\frac{\left(\ptmiss\right)^{2}}{2\left( \sigma_{0} + \sigma_{1}\cdot\ptmiss + \sigma_{2}\cdot\left( \ptmiss \right)^{2} \right)^{2}} \right)
@@ -35,7 +35,7 @@ The shape of the QCD jet background is parametrised by a modified Rayleigh distr
 
 where $\sigma_{0}$, $\sigma_{1}$, and $\sigma_{2}$ are free parameters extracted by performing an unbinned maximum-likelihood fit to the \ptmiss distribution in a control sample from data. The events in the control sample are selected by applying all signal selection requirements, except the muon isolation cut. The fits are performed separately for positive and negative charged muon events.
 
-To derive the muon isolation dependence of the QCD jet background parameters, the \ptmiss spectrum in the control sample is fitted with the QCD jet functional form, in five bins of the muon isolation variable with the following boundaries: [ 0.4 , 0.5 , 0.6 , 0.7 , 0.8 , 0.9 ]. Lower muon isolation values ($\iso < 0.4$) are discarded, due to the large contamination from weak boson decays. The results of the QCD jet background fits, corresponding to the lowest and highest muon isolation regions, are shown in \fig{fig:QCD_Fits}.
+To derive the muon isolation dependence of the QCD jet background parameters, the \ptmiss spectrum in the control sample is fitted with the QCD jet \ptmiss functional form, in five bins of the muon isolation variable with the following boundaries: [ 0.4 , 0.5 , 0.6 , 0.7 , 0.8 , 0.9 ]. Lower muon isolation values ($\iso < 0.4$) are discarded, due to the large contamination from weak boson decays. The results of the QCD jet background fits, corresponding to the lowest and highest muon isolation regions, are shown in \fig{fig:QCD_Fits}.
 
 \begin{figure}[htb!]
  \centering
@@ -82,7 +82,9 @@ The $\sigma_{0}$, $\sigma_{1}$, and $\sigma_{2}$ parameters are extrapolated to 
  \label{tab:QCD_Extrapolation}
 \end{table}
 
-The dependence of the extrapolated QCD jet shape on the muon \etaMuCM is checked by splitting the control sample in different \etaMuCM bins, and then repeating the QCD jet shape extraction procedure for each \etaMuCM bin. The results of the extrapolated values of $\sigma_{0}$, $\sigma_{1}$, and $\sigma_{2}$, determined for each \etaMuCM bin, are compared in \fig{fig:QCD_Extrapolation_Eta} to the results obtained in the \etaMuCM-inclusive range.
+The QCD jet \ptmiss distribution is estimated separately for positive and negative charged muon events to account for possible differences between the $\mu^{+}$ and $\mu^{-}$ yields arising from the detector response, acceptance and/or muon production from hadron decays. Although the differences are expected to be small, they are still computed separately to be conservative.
+
+The dependence of the extrapolated \ptmiss functional form of the QCD jet background on the muon \etaMuCM is checked by splitting the control sample in different \etaMuCM bins, and then repeating the QCD jet shape extraction procedure for each \etaMuCM bin. The results of the extrapolated values of $\sigma_{0}$, $\sigma_{1}$, and $\sigma_{2}$, determined for each \etaMuCM bin, are compared in \fig{fig:QCD_Extrapolation_Eta} to the results obtained in the \etaMuCM-inclusive range.
 
 \begin{figure}[htb!]
  \centering
@@ -102,11 +104,11 @@ It is observed that the $\sigma_{0}$, $\sigma_{1}$, and $\sigma_{2}$ parameters,
 
 \subsubsection{Modelling of the signal, \ttbar and electroweak backgrounds}\label{sec:WBoson_Analysis_SignalExtraction_EWKBackground}
 
-The \ptmiss  distribution of the signal, as well as, the \ttbar and electroweak background events, are estimated using the corresponding \POWHEG simulations mentioned in \sect{sec:WBoson_Analysis_Sample_MC}. The simulated events for each process are required to satisfy the signal selection criteria summarised in \sect{sec:WBoson_Analysis_Selection_WSelection}.
+The \ptmiss  distribution of the signal, as well as the \ttbar and electroweak background events, are estimated using the corresponding \POWHEG simulations mentioned in \sect{sec:WBoson_Analysis_Sample_MC}. The simulated events for each process are required to satisfy the signal selection criteria summarised in \sect{sec:WBoson_Analysis_Selection_WSelection}.
 
 In order to improve the description of the data, several corrections are applied to the simulations. First, the simulated HF energy distribution is weighed as explained in \sect{sec:WBoson_Analysis_Corrections_EventActivityReweighing}. Then, the generated weak boson \pt distribution from the \WToMuNu, \WToTauNu, \DYToMuMu and \DYToTauTau simulations, is weighed as described in \sect{sec:WBoson_Analysis_Corrections_WeakBosonPTReweighing} And finally, the recoil of \WToMuNu, \WToTauNu and \DYToMuMu events is calibrated as detailed in \sect{sec:WBoson_Analysis_Corrections_RecoilCalib}, improving the agreement of the \ptmiss distribution between data and simulation.
 
-Once the simulations have been corrected, the \ptmiss shape of the signal, \ttbar background and electroweak background, is determined by building a template histogram of the simulated \ptmiss distribution (2~\GeVc bin width). These template histograms are then used in the fitting procedure describe in the next section.
+Once the simulations have been corrected, the \ptmiss distribution of the signal, \ttbar background and electroweak background, are determined by building a template histogram of the simulated \ptmiss distribution (2~\GeVc bin width). These template histograms are then used in the fitting procedure describe in the next section.
 
 
 \subsubsection{Fit model}\label{sec:WBoson_Analysis_SignalExtraction_FitModel}
@@ -120,10 +122,10 @@ The total fit model includes six contributions: the signal \WToMuNu template ($\
  \label{eq:FitModel}
 \end{equation}
 
-where $N_{\Wb}$ and $N_{\QCD}$ are the normalisation factors of the \WToMuNu signal and QCD jet background, $r_{\ttbar}$ represents the ratio of \ttbar background events over the number of signal events ($N_{\ttbar}\big/N_{\Wb}$), and 
+where $N_{\Wb}$ and $N_{\QCD}$ are the normalisation factors of the \WToMuNu signal and QCD jet background component, $r_{\ttbar}$ represents the ratio of \ttbar background events over the number of signal events ($N_{\ttbar}\big/N_{\Wb}$), and 
 $r_{\DYToMu}$, $r_{\DYToTau}$ and $r_{\WToTau}$ are the corresponding ratios for the \DYToMuMu, \DYToTauTau and \WToTauNu background processes, respectively.
 
-The shapes of the signal, \ttbar background and electroweak background processes are defined based on template histograms extracted from simulations. Being very small and with a moderately discriminating shape, the  electroweak and \ttbar background components cannot be directly and independently fitted on data. Instead, we take advantage that their nuclear modification should be small and close to the one of the \Wb-boson signal. Thus, the ratios of \DYToMuMu, \DYToTauTau, \WToTauNu and \ttbar events over the number of \WToMuNu events, are fixed to the results from simulations after having normalised all the MC samples to the recorded integrated luminosity of data as detailed in \sect{sec:WBoson_Analysis_Sample_MC} and applied all analysis corrections and selection criteria.
+The \ptmiss distributions of the signal, \ttbar background and electroweak background processes are defined based on template histograms extracted from simulations. Being very small and with a moderately discriminating shape, the  electroweak and \ttbar background components cannot be directly and independently fitted on data. Instead, we take advantage that their nuclear modification should be small and close to the one of the \Wb-boson signal. Thus, the ratios of \DYToMuMu, \DYToTauTau, \WToTauNu and \ttbar events over the number of \WToMuNu events, are fixed to the results from simulations after having normalised all the MC samples to the recorded integrated luminosity of data as detailed in \sect{sec:WBoson_Analysis_Sample_MC} and applied all analysis corrections and selection criteria.
 
 The QCD jet background contribution is taken into account by means of a functional form depending on three parameters. For the fits to the \ptmiss distribution in the signal region, the $\sigma_{0}$ , $\sigma_{1}$ and $\sigma_{2}$ parameters are fixed to the extrapolated values mentioned in \tab{tab:QCD_Extrapolation}, and the normalisation is left free.
 
@@ -134,7 +136,7 @@ The \ptmiss distribution is fitted separately for \WToMuNuPl and \WToMuNuMi even
  \includegraphics[width=0.45\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/LIN/PLOT_MET_DATA_WToMuMi_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-286_193_MuIso_0_15.pdf}
 %%
  \includegraphics[width=0.45\textwidth]{Figures/WBoson/Analysis/SignalExtraction/Signal/LIN/PLOT_MET_DATA_WToMuPl_PA_Model_TEMP_WDYDYToTauWToTauTTbar_ModifiedRayleigh_QCD_MuEtaCM_-286_193_MuIso_0_15.pdf}
- \caption{The \ptmiss distribution for \WToMuNuMi (left) and  \WToMuNuPl (right) events within the \etaMuCM-inclusive range, shown in linear scale. Unbinned fits to the data (black points) are performed with six contributions, stacked from top to bottom: \WToMuNu (yellow), QCD jet (light blue), \DYToMuMu (green), \WToTauNu (red), \DYToTauTau (dark blue) and \ttbar (orange). The lower panel, on each figure, display the ratio of the measurements over the result of the fit. The $\chi^{2}$ test value over the number of degrees of freedom is also shown.}
+ \caption{The \ptmiss distribution for \WToMuNuMi (left) and  \WToMuNuPl (right) events within the \etaMuCM-inclusive range, shown in linear scale. Unbinned fits to the data (black points) are performed with six contributions, stacked from top to bottom: \WToMuNu (yellow), QCD jet (light blue), \DYToMuMu (green), \WToTauNu (red), \DYToTauTau (dark blue) and \ttbar (orange). The lower panel, on each figure, display the ratio of the measurements over the result of the fit. The Baker-Cousins~\cite{BakerCousins_Chi2} $\chi^{2}$ test value over the number of degrees of freedom is also shown.}
  \label{fig:SignalFit}
 \end{figure}
 

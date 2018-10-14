@@ -37,7 +37,7 @@
 \usepackage{verbatim}					%Permits pre-formated text insertion
 \usepackage{upgreek }					%Calls other kind of greek alphabet
 \usepackage{latexsym}					%Extra symbols
-\usepackage[square,numbers,sort&compress]{natbib} %Calls bibliography commands
+\usepackage[square,numbers]{natbib} %Calls bibliography commands %,sort&compress
 \usepackage{url}						%Supports url commands
 \usepackage{etex}						%eTeXÃs extended support for counters
 \usepackage{fixltx2e}					%Eliminates some in felicities of the

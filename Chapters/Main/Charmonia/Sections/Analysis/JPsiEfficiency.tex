@@ -17,8 +17,8 @@ where $N^{\mu\mu}_{\text{data}}$ and $N^{\mu\mu}_{\text{MC}}$ are the number of 
 
 \begin{figure}[htb!]
  \centering
- \includegraphics[width=0.48\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/JPsiWeights/PbPb_P_006.pdf}
- \includegraphics[width=0.48\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/JPsiWeights/PP_P_006.pdf}
+ \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/JPsiWeights/PbPb_P_006.pdf}
+ \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/JPsiWeights/PP_P_006.pdf}
  \caption{Data-to-simulation ratios of the prompt \JPsi-meson \pt distribution measured in the $|\rapMuMu| < 0.6$ rapidity region, in \RunPbPb (left) and \Runpp (right) collisions.}
  \label{fig:JPsiWeights}
 \end{figure}
@@ -46,16 +46,16 @@ The \JPsi-meson acceptance derived from the prompt \JPsi simulations is presente
 
 \subsubsection{Efficiency of \texorpdfstring{\JPsi}{J/psi} mesons}\label{sec:Charmonia_Analysis_Efficiency_JPsiEfficiency}
 
-The \JPsiToMuMu simulations are used to measure the efficiency of prompt and nonprompt \JPsi mesons, in \Runpp and \RunPbPb collisions. In this case, a reconstructed \mumu pair is considered to be an offline dimuon if it satisfies the charmonium selection requirements detailed in Sections  \ref{sec:Charmonia_Analysis_Selection_MuonIdentification} to  \ref{sec:Charmonia_Analysis_Selection_CharmoniumSelection}. Among these selection criteria, each reconstructed muon is required to satisfy the muon kinematic selection and identification criteria, and match the trigger. Also, the two muon tracks of the offline dimuon are required to derive from a common vertex with $\chi^{2}$ probability larger than 1\%. 
+The \JPsiToMuMu simulations are used to measure the efficiency of prompt and nonprompt \JPsi mesons, in \Runpp and \RunPbPb collisions. In this case, a reconstructed \mumu pair satisfying the charmonium selection requirements, detailed in Sections \ref{sec:Charmonia_Analysis_Selection_MuonIdentification} to  \ref{sec:Charmonia_Analysis_Selection_CharmoniumSelection}, is referred to as a dimuon candidate in the following. Among these selection criteria, each reconstructed muon is required to satisfy the muon kinematic selection and identification criteria, and match the trigger. Also, the two muon tracks of the dimuon candidate are required to derive from a common vertex with $\chi^{2}$ probability larger than 1\%. 
 
-The \JPsi-meson efficiency is defined as the fraction of generated \mumu pairs in the acceptance that can be matched to an offline dimuon, with each generated muon satisfying the kinematic selection. The matching between a generated and an offline \mumu pair is performed by requiring that each generated and reconstructed muon of same charge are within $\Delta{R}(\mu_{\mathrm{gen}},\mu_{\mathrm{reco}}) < 0.03$. The \pt and rapidity spectra of  the offline and generated dimuons are weighed per event with the $w^{\JPsi}$ kinematic weights, as was done in the previous section. The \JPsi-meson efficiency ($\effJPsi$) is computed as a function of the dimuon \pt and rapidity, according to:
+The \JPsi-meson efficiency is defined as the fraction of generated \mumu pairs in the acceptance that can be matched to a dimuon candidate, with each generated muon satisfying the kinematic selection. The matching between a generated dimuon and a dimuon candidate is performed by requiring that each generated and reconstructed muon of same charge are within $\Delta{R}(\mu_{\mathrm{gen}},\mu_{\mathrm{reco}}) < 0.03$. The \pt and rapidity spectra of the dimuon candidates and generated dimuons are weighed per event with the $w^{\JPsi}$ kinematic weights, as was done in the previous section. The \JPsi-meson efficiency ($\effJPsi$) is computed as a function of the dimuon \pt and rapidity, according to:
 
 \begin{equation}
- \effJPsi\left(\ptMuMu , \rapMuMu\right) = \frac{N^{\JPsiToMuMu}_{\text{offline}}\left(\ptMuMu , \rapMuMu\right)}{N^{\JPsiToMuMu}_{\gen, \text{\PGm in CMS}} \left(\ptMuMu , \rapMuMu\right)}
+ \effJPsi\left(\ptMuMu , \rapMuMu\right) = \frac{N^{\JPsiToMuMu}_{\text{candidate}}\left(\ptMuMu , \rapMuMu\right)}{N^{\JPsiToMuMu}_{\gen,\; \text{\PGm in CMS}} \left(\ptMuMu , \rapMuMu\right)}
  \label{eq:JPsiMCEfficiency}
 \end{equation}
 
-where $N^{\JPsiToMuMu}_{\text{offline}}$ and $N^{\JPsiToMuMu}_{\gen, \text{\PGm in CMS}}$ are the number of offline and generated pairs of muons within the kinematic acceptance of the analysis, accordingly.
+where $N^{\JPsiToMuMu}_{\text{candidate}}$ and $N^{\JPsiToMuMu}_{\gen,\; \text{\PGm in CMS}}$ are the number of dimuon candidates and generated dimuons within the kinematic acceptance of the analysis, accordingly.
 
 \subsubsection{Efficiency of \texorpdfstring{\JPsi}{J/psi} mesons corrected with the tag-and-probe method}\label{sec:Charmonia_Analysis_Efficiency_JPsiCorrectedEfficiency}
 
@@ -67,9 +67,9 @@ After comparing the \tnp efficiencies extracted from data and simulation, it is 
 
 \begin{figure}[htb!]
  \centering
- \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/TnP/tpTreeSF2_PbPb_RD_MC_PT.pdf}
- \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/TnP/tpTreeSF3_pp_RD_MC_PT.pdf}
- \caption{Muon trigger efficiencies as a function of the probe \pt. The efficiencies are extracted, using the \tnp method, from data (blue) and simulation (red) in \RunPbPb collisions at $1.8<|\etaMu|<2.1$ (left) and \Runpp collisions at $2.1<|\etaMu|<2.4$ (right). The bottom panels show the data-to-simulation efficiency ratio. The results of the fits to the efficiencies are also shown. Figures taken from the private Ref.~\cite{Muon_TnP_PbPb}.}
+ \includegraphics[width=0.48\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/TnP/tpTreeSF2_PbPb_RD_MC_PT.pdf}
+ \includegraphics[width=0.48\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/TnP/tpTreeSF3_pp_RD_MC_PT.pdf}
+ \caption{Muon trigger efficiencies as a function of the probe \pt. The efficiencies are extracted, using the \tnp method, from data (blue) and simulation (red) in \RunPbPb collisions at $1.8<|\etaMu|<2.1$ (left) and \Runpp collisions at $2.1<|\etaMu|<2.4$ (right). The bottom panels show the data-to-simulation efficiency ratio. The results of the fits to the efficiencies are also shown. Figures taken from the internal analysis note~\cite{Muon_TnP_PbPb}.}
  \label{fig:TnPJpsi}
 \end{figure}
 
@@ -79,19 +79,21 @@ The muon trigger efficiencies are measured with respect to the probe \pt, in fou
  w_{\text{trig}}\left(\pt, |\eta|\right) = \left[\frac{f^{\data}_{\text{trig}}\left(\pt\right)}{f^{\MC}_{\text{trig}}\left(\pt\right)}\right]\left({|\eta|}\right)
 \end{equation}
 
-To apply the \tnp corrections, the \JPsi-meson efficiency is recomputed by weighing each offline dimuon with the \tnp-correction weights for each muon to trigger, according to:
+To apply the \tnp corrections, the \JPsi-meson efficiency is recomputed by weighing each dimuon candidate  with the \tnp-correction weights for each muon to trigger, according to:
 
 \begin{equation}
- \effJPsi = \frac{\left[\sum\limits_{i=1}^{N^{\JPsiToMuMu}_{\text{offline}}} w_{\text{trig}}\left(\pt^{\mu,{+}}, |{\eta^{\mu,{+}}}|\right) \cdot w_{\text{trig}}\left(\pt^{\mu,{-}}, |{\eta^{\mu,{-}}}|\right)\right]}{N^{\JPsiToMuMu}_{\gen, \text{\PGm in CMS}}}
+ \effJPsi = \frac{\left[\sum\limits_{i=1}^{N^{\JPsiToMuMu}_{\text{candidate}}} w_{\text{trig}}\left(\pt^{\mu,{+}}, |{\eta^{\mu,{+}}}|\right) \cdot w_{\text{trig}}\left(\pt^{\mu,{-}}, |{\eta^{\mu,{-}}}|\right)\right]}{N^{\JPsiToMuMu}_{\gen,\; \text{\PGm in CMS}}}
 \end{equation}
 
-where $\pt^{\mu,{+}(\mu,{-})}$ is the transverse momentum of positive (negative) charged muons, and $\eta^{\mu,{+}(\mu,{-})}$ is the corresponding pseudorapidity. The \tnp corrections increase the \JPsi-meson efficiency by 35\% at $3 < \ptMuMu < 6.5$~\GeVc, while the range of variation at $\ptMuMu > 10$~\GeVc is less than 4\%. The corrected \JPsi-meson efficiencies are shown for \Runpp and \RunPbPb simulated events in \fig{fig:JPsiCorrEff_PP} and  \fig{fig:JPsiCorrEff_PbPb}, respectively.
+where $\pt^{\mu,{+}(\mu,{-})}$ is the transverse momentum of positive (negative) charged muons, and $\eta^{\mu,{+}(\mu,{-})}$ is the corresponding pseudorapidity.
+
+In the worst case, for $3 < \ptMuMu < 4.5$~\GeVc, the \tnp correction increases the \JPsi-meson efficiency by a factor of 1.35 (from 31\% to 42\%) and 1.38 (from 16\% to 22\%) in \Runpp and \RunPbPb collisions, respectively. This is mostly due to a bad emulation of the L1 trigger at low \pt in the simulation, proving the importance of the data-driven efficiency correction. The effect decreases with \pt ending up with corrections of less than $4\%$ for $\pt > 10$~\GeVc. The corrected \JPsi-meson efficiencies are shown for \Runpp and \RunPbPb simulated events in \fig{fig:JPsiCorrEff_PP} and \fig{fig:JPsiCorrEff_PbPb}, respectively.
 
 \begin{figure}[htb!]
  \centering
- \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/Efficiency/jpsi_pbpb_pt_rap.pdf}
- \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/Efficiency/npjpsi_pp_rap.pdf}
- \caption{Corrected efficiencies of prompt \JPsi mesons measured in \Runpp collisions, as a function of \ptMuMu (left) and rapidity (right) in different rapidity regions. The error bars represent statistical uncertainties.}
+ \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/Efficiency/jpsi_pp_pt_rap.pdf}
+ \includegraphics[width=0.45\textwidth]{Figures/Charmonia/Analysis/SignalEfficiency/Efficiency/jpsi_pp_rap.pdf}
+ \caption{Corrected efficiencies of prompt \JPsi mesons measured in \Runpp collisions. Left: as a function of \ptMuMu in different rapidity regions. Right: as function of rapidity. The error bars represent statistical uncertainties.}
  \label{fig:JPsiCorrEff_PP}
 \end{figure}
 

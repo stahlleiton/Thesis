@@ -20,14 +20,15 @@ The impact of the GEF was checked both in data and simulation. Only 0.08$\%$ of 
 %%------------------------------------------------------------%%
 \subsubsection{Trigger} \label{sec:WBoson_Analysis_Selection_Trigger}
 
-The events used in this analysis were selected online with the HLT trigger \verb#HLT_PAL3Mu12#. This trigger requires a fully reconstructed L3 muon with $\pt > 12$~\GeVc. The HLT trigger was seeded with the L1 trigger path \verb#L1_SingleMu7#, which pass events with at least one L1 muon with $\pt > 7$~\GeVc. It is to be noted that only muons of \pt greater than 25~\GeVc are considered in the offline analysis, and that this trigger is extremely efficient for those.
+The events used in this analysis were selected online with the HLT trigger \verb#HLT_PAL3Mu12#. This trigger requires a fully reconstructed L3 muon with $\pt > 12$~\GeVc. The HLT trigger was seeded with the L1 trigger path \verb#L1_SingleMu7#, which pass events with at least one L1 muon with $\pt > 7$~\GeVc. It is to be noted that only muons of \pt greater than 25~\GeVc are considered in the offline analysis, and such trigger is extremely efficient for those.
 
-A reconstructed muons is considered matched to the trigger, if it matches the L3 muon that fired the trigger. The matching criteria between the reconstructed muon and the L3 muon requires:
+A reconstructed muon is considered matched to the trigger, if it matches the L3 muon that fired the trigger. The matching criteria between the reconstructed muon and the L3 muon requires:
 
 \begin{equation}
  \Delta{R}\left(\mu_{\text{reco}} , \mu_{\text{HLT}}\right) = \sqrt{\left(\eta^{\mu}_{reco} - \eta^{\mu}_{HLT}\right)^{2} + \left(\phi^{\mu}_{reco} - \phi^{\mu}_{HLT}\right)^{2}} < 0.1
 \end{equation}
 
+The $\Delta{R} < 0.1$ matching criteria is a standard threshold commonly used in CMS analyses employing L3 muon triggers~\cite{MuonReco}. It has been selected taking into account the $\eta$ and $\phi$ resolutions of muon tracks reconstructed with the HLT L3 and offline muon algorithms.
 
 %%------------------------------------------------------------%%
 \subsubsection{Muon selection} \label{sec:WBoson_Analysis_Selection_MuonIdentification}
@@ -36,7 +37,6 @@ Muon candidates are identified using a standard \textit{tight} selection, optimi
 
 \begin{itemize}
 \item The muon track fit has at least a $\chi^{2}$ per degree of freedom less than ten, ensuring a minimal fit quality.
-%\item The muon track has at least one hit in the muon detectors, making sure that the information from the inner tracker and the muon system is consistent.
 \item The muon track segments are matched to at least two muon stations, making the selection consistent with the muon trigger logic.
 \item The transverse impact parameter (longitudinal distance) of the muon track is consistent with the primary vertex within \SI{2}{\mm} (\SI{5}{\mm}), to reduce the background from cosmic rays and muon decays in flight (e.g. from pion, kaon and heavy-flavour hadron decays). 
 \item The muon track has at least one hit in the pixel detector to further suppress muons from decays in flight.
@@ -51,8 +51,6 @@ Apart from the \textit{tight} identification criteria, muon candidates are also 
 \end{equation}
 
 Finally, muon candidates are required to have $\pt > 25$~\GeVc and be within $|\etaLAB| < 2.4$. If more than one muon is found with $\pt > 25$~\GeVc and passing the identification criteria in a given event, then the corresponding muon with the highest \pt is used. This happens in 3\% of events in data but are later suppressed down to 0.001\% of events with the \DYToMuMu veto described in the next section.
-
-%When evaluating the signal event efficiency, any difference in the performance of the muon selection between simulation and data is corrected in simulation through the use of the tag-and-probe corrections described in \sect{sec:WBoson_Analysis_Efficiency_Corrected}.
 
 
 %%------------------------------------------------------------%%
@@ -87,7 +85,7 @@ The conditions used to define the signal and control regions of interest are ill
 \begin{figure}[htb]
  \centering
  \includegraphics[width=0.8\textwidth]{Figures/WBoson/Analysis/EventSelection/FlowChar.png}
- \caption{Flowchart illustrating the way the events are classified}
+ \caption{Flowchart illustrating the way the events are classified.}
  \label{fig:EventSelectionDiagram}
 \end{figure}
 

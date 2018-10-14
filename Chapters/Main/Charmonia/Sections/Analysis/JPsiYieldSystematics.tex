@@ -4,7 +4,7 @@ This section describes the procedure used to derive the systematic uncertainties
 
 \subsubsection{Uncertainty on the dimuon invariant mass parametrisation}\label{sec:Charmonia_Analysis_JPsiYieldSystematics_InvMass}
 
-The uncertainty associated to the modelling of the \mMuMu distribution arise from the parametrisation of the signal and background invariant mass shape. It is determined by varying the different components of the \mMuMu functional form and redoing the 2D data fits, while using the nominal \ctau functional form.
+The uncertainty associated to the modelling of the \mMuMu distribution arises from the parametrisation of the signal and background invariant mass shape. It is determined by varying the different components of the \mMuMu functional form and redoing the 2D data fits, while using the nominal \ctau functional form.
 
 \paragraph{Parametrisation of the \texorpdfstring{\JPsi}{J/psi}-meson invariant mass distribution.} In order to estimate the systematic uncertainty associated to the choice of the \JPsi-meson invariant mass shape, two variations are performed:
 \begin{itemize}
@@ -27,11 +27,13 @@ where the sum runs over different \pt and centrality bins in the same rapidity r
     \Runpp   & 16 & 21 &     \\
     \RunPbPb & 21 & 54 & 30  \\
   \end{tabular}
-  \caption{Relative width used in the Gaussian penalty functions for the tail parameters $\aJPsi$ and $n$, and the ratio of CB widths. The Gaussian width is shown relative to the nominal parameter value.}
+  \caption{Relative width used in the Gaussian penalty functions for the tail parameters $\aJPsi$ and $\nnJPsi$, and the ratio of CB widths. The Gaussian width is shown relative to the nominal parameter value.}
   \label{tab:parsRMS}
 \end{table}
 
-The systematic uncertainty associated to the determination of the signal mass parameters from simulations is then estimated by performing the data fits with the Gaussian penalty functions, and the difference between the varied \JPsi-meson yields and the nominal results is taken as the uncertainty.
+The $\nnJPsi$ parameter presents the largest relative width due to the lack of statistics in data, especially in \RunPbPb collisions, to effectively constrain its value. Nonetheless, it is to be noted that the tails contribute to a very small fraction of the signal events as seen in \fig{fig:Mass_MC}. Thus, variations of the CB tail parameters do not impact significantly the signal yields extracted from data.
+
+The systematic uncertainty associated to the determination of the signal mass parameters from simulations is estimated by performing the data fits with the Gaussian penalty functions, and the difference between the varied \JPsi-meson yields and the nominal results is taken as the uncertainty.
 
  \item \textbf{Variation of the \JPsi-meson invariant mass model}: the functional form of the signal invariant mass shape is changed from the nominal double Crystal Ball function to a Crystal Ball plus a Gaussian function (with common mean parameters), defined as:
 
@@ -82,14 +84,14 @@ The method and result of these four sources are detailed below, and the resultin
 
 \paragraph{Parametrisation of the \ctau resolution.} The systematic uncertainty due to the parametrisation of the \ctau resolution is estimated by extracting the \ctau resolution parameters from \JPsi-meson simulations instead of the data. The \ctau resolution parameters are extracted from simulated samples of prompt \JPsi mesons by fitting the nominal \ctau resolution model (weighed sum of three Gaussians) to the simulated \ctau distribution. The varied \ctau resolution parameters are then used to remake the 2D fits and the uncertainty is derived from the difference between the varied \JPsi-meson yields and the nominal ones. This systematic uncertainty amounts in \Runpp (\RunPbPb) collisions to 1.5\% (4.7\%) for prompt \JPsi mesons and 5.3\% (9.6\%) for nonprompt \JPsi mesons.
 
-\paragraph{Parametrisation of the nonprompt \JPsi-meson \ctau shape.} The systematic uncertainty associated to the modelling of the \ctau distribution of nonprompt \JPsi mesons is computed by replacing the nominal signal functional form (convolution of exponential decay with \ctau resolution model) with an unbinned template of the reconstructed \ctau distribution derived from simulation of nonprompt \JPsi mesons. The \ctau templates are made using a kernel estimation technique~\cite{RooKeysPDF}, implemented in the RooFit framework, which parametrise the distribution of a given variable by superimposing a Gaussian function to each data point. The uncertainty is then determined from the difference between the varied signal yields and the nominal results, and reaches up to 0.8\% (3.4\%) for prompt \JPsi mesons and 2.1\% (12.1\%) for nonprompt \JPsi mesons, in \Runpp (\RunPbPb) collisions.
+\paragraph{Parametrisation of the nonprompt \JPsi-meson \ctau shape.} The systematic uncertainty associated to the modelling of the \ctau distribution of nonprompt \JPsi mesons is computed by replacing the nominal signal functional form (convolution of exponential decay with \ctau resolution model) with an unbinned template of the reconstructed \ctau distribution derived from simulation of nonprompt \JPsi mesons. The \ctau templates are made using a kernel estimation technique~\cite{RooKeysPDF}, implemented in the RooFit framework, which parametrises the distribution of a given variable by superimposing a Gaussian function to each data point. The uncertainty is then determined from the difference between the varied signal yields and the nominal results, and reaches up to 0.8\% (3.4\%) for prompt \JPsi mesons and 2.1\% (12.1\%) for nonprompt \JPsi mesons, in \Runpp (\RunPbPb) collisions.
 
 \paragraph{Parametrisation of the background \ctau shape.} The systematic uncertainty related to the choice of background \ctau model is determined by replacing the nominal background functional form (three exponential decay functions convolved with the \ctau resolution model) with an unbinned template. The template is built from the \ctau distribution of the \sPlot background-like dataset employed in \sect{sec:Charmonia_Analysis_JPsiYieldExtraction_CtauPar}, using the RooFit kernel estimation technique. This uncertainty contributes in \Runpp (\RunPbPb) collisions up to 0.5\% (10\%) for prompt \JPsi mesons and 1.2\% (22.3\%) for nonprompt \JPsi mesons.
 
 
 \subsubsection{Uncertainty on the \texorpdfstring{\JPsi}{J/psi}-meson efficiency}\label{sec:Charmonia_Analysis_JPsiYieldSystematics_Efficiency}
 
-There are two main sources of systematics that affects the measurement of the \JPsi-meson efficiencies: the \tnp-correction weights used to correct the simulated efficiencies and the charmonium $\ptMuMu$-$\rapMuMu$ weights applied to improve the modelling of the \JPsi-meson \pt and rapidity. Among these two, the largest uncertainty is obtained from the \tnp corrections, which is dominated by the uncertainty on the extraction of the standalone-muon reconstruction efficiency in data.
+There are two main sources of systematics that affect the measurement of the \JPsi-meson efficiencies: the \tnp-correction weights used to correct the simulated efficiencies and the charmonium $\ptMuMu$-$\rapMuMu$ weights applied to improve the modelling of the \JPsi-meson \pt and rapidity. Among these two, the largest uncertainty is obtained from the \tnp corrections, which is dominated by the uncertainty on the extraction of the standalone-muon reconstruction efficiency in data.
 
 \paragraph{Tag-and-probe correction.} The uncertainty associated to the \tnp correction derives from the measurement of the \tnp data efficiency of muon identification, trigger, tracking and standalone-muon reconstruction.
 
