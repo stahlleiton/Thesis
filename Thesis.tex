@@ -55,10 +55,6 @@
 \includepdf[pages=1-]{Cover/Cover.pdf}
 \clearemptydoublepage
 
-\includepdf[pages=1-]{Cover/Abstract_FR.pdf}
-\includepdf[pages=1-]{Cover/Abstract_EN.pdf}
-\clearemptydoublepage
-
 %\includepdf[pages=1-]{frontmatter/Acknowledgements.pdf}
 %\clearemptydoublepage
 
@@ -78,8 +74,6 @@
 %%%%%%%%%%% CHAPTERS
 \mainmatter
 
-%\begin{linenumbers}
-
 \import{Chapters/Main/Introduction/}{Chapter.tex}
 \clearemptydoublepage
 
@@ -95,25 +89,19 @@
 \import{Chapters/Main/Conclusion/}{Chapter.tex}
 \clearemptydoublepage
 
-%\end{linenumbers}
-
-
 %------------------------------------------------------------------------------
 
 %%%%%%%%%%% APPENDIX
 \appendix
+
+\import{Chapters/Appendix/Summary/}{French.tex}
+\clearemptydoublepage
 
 \import{Chapters/Appendix/WBoson/SignalExtraction/}{Fits.tex}
 \clearemptydoublepage
 
 \import{Chapters/Appendix/Charmonia/}{Binning.tex}
 \clearemptydoublepage
-
-
-%%Change the geometry for signal extraction plots
-%\newgeometry{margin=1cm,includefoot}
-%\restoregeometry
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %------------------------------------------------------------------------------
@@ -138,6 +126,9 @@
 \addtocontents{lof}{\par\nobreak\textbf{{\scshape Figure} \hfill Page}\par\nobreak}
 \clearemptydoublepage
 
+\newpage\null\thispagestyle{empty}
+\includepdf[pages=1]{Cover/Abstract.pdf}
+%\newpage\null\thispagestyle{empty}
 
 % END OF THESIS
 \end{document}
